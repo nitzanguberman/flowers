@@ -36,14 +36,20 @@ git checkout develop
 
 ## Pushing to GitHub
 
-The repo belongs to `nitzanguberman` but the macOS keychain stores `nitzang_mobileye` credentials for github.com, which causes 403 errors on plain `git push`. Use the token explicitly:
+**Always use the GitHub MCP server — never `git push` directly.**
 
-```bash
-TOKEN=$(security find-internet-password -s github.com -a nitzanguberman -w 2>/dev/null)
-git remote set-url origin "https://${TOKEN}@github.com/nitzanguberman/flowers.git"
-git push
-git remote set-url origin https://github.com/nitzanguberman/flowers.git
-```
+The macOS keychain stores `nitzang_mobileye` credentials for github.com, so plain `git push` always fails with 403. The MCP server (`~/.claude/.mcp.json`) is configured with the correct `nitzanguberman` token and loads automatically.
+
+### Push workflow
+1. `git add && git commit` locally (preserves local history)
+2. Use MCP `push_files` tool to publish to GitHub:
+   - `owner`: `nitzanguberman`, `repo`: `flowers`
+   - `branch`: `develop` (or `main` for production deploys)
+   - `files`: array of `{ path, content }` for every changed file
+   - `message`: commit message
+3. Sync local SHA to remote: `git fetch && git reset --hard origin/<branch>`
+
+If MCP tools aren't available, restart the Claude Code session (MCP loads on startup via `enableAllProjectMcpServers: true` in `~/.claude/settings.json`).
 
 ## Stack
 
