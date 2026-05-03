@@ -326,31 +326,44 @@
   <button id="restart-btn">סשן נוסף</button>
 </div>
 
-<script>
-const STORAGE_KEY = 'flowers_game_v1';
-const USER_KEY    = 'flowers_current_user';
-const BOX_COLORS  = ['#dc3545','#fd7e14','#ffc107','#20c997','#2d6a4f'];
-const BOX_LABELS  = ['כל סשן','כל 2 סשנים','כל 4 סשנים','כל 8 סשנים','כל 16 סשנים'];
-const BOX_NAMES   = ['חדש','מתחיל','מכיר','טוב','שולט!'];
+<script type="module">
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js';
+import { getFirestore, doc, getDoc, setDoc } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js';
 
-let allFlowers = [];
-let sessionQueue = [];
-let currentIdx = 0;
-let sessionScore = 0;
-let currentUser = null;
+// ── Firebase config — paste your config from the Firebase console ──
+const firebaseConfig = {
+  apiKey: "PASTE_API_KEY",
+  authDomain: "PASTE.firebaseapp.com",
+  projectId: "PASTE_PROJECT_ID",
+  storageBucket: "PASTE.appspot.com",
+  messagingSenderId: "PASTE_SENDER_ID",
+  appId: "PASTE_APP_ID"
+};
+const app = initializeApp(firebaseConfig);
+const db  = getFirestore(app);
 
-// ── Storage helpers ──────────────────────────────────────────
-function loadStore() {
-  try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; }
-  catch { return {}; }
+// ── Firestore helpers ─────────────────────────────────────────
+async function loadUserData(name) {
+  const snap = await getDoc(doc(db, 'users', name));
+  return snap.exists() ? snap.data() : { sessionCount: 0, flowers: {} };
 }
-function saveStore(store) {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(store));
+async function saveUserData(name, userData) {
+  await setDoc(doc(db, 'users', name), userData);
 }
-function getUserData(store, name) {
-  if (!store[name]) store[name] = { sessionCount: 0, flowers: {} };
-  return store[name];
-}
+
+const USER_KEY   = 'flowers_current_user';
+const BOX_COLORS = ['#dc3545','#fd7e14','#ffc107','#20c997','#2d6a4f'];
+const BOX_LABELS = ['כל סשן','כל 2 סשנים','כל 4 סשנים','כל 8 סשנים','כל 16 סשנים'];
+const BOX_NAMES  = ['חדש','מתחיל','מכיר','טוב','שולט!'];
+
+let allFlowers    = [];
+let sessionQueue  = [];
+let currentIdx    = 0;
+let sessionScore  = 0;
+let currentUser   = null;
+let currentUserData = null;
+
+// ── Flower state ──────────────────────────────────────────────
 function getFlowerState(userData, file) {
   if (!userData.flowers[file]) {
     userData.flowers[file] = { box: 1, lastSession: -999, correct: 0, total: 0 };
@@ -403,20 +416,20 @@ function showLogin() {
   document.getElementById('name-input').focus();
 }
 
-function doLogin(name) {
+async function doLogin(name) {
   name = name.trim();
   if (!name) return;
   localStorage.setItem(USER_KEY, name);
   currentUser = name;
   document.getElementById('login-screen').style.display = 'none';
-  startSession();
+  await startSession();
 }
 
 document.getElementById('login-btn').addEventListener('click', () => {
-  doLogin(document.getElementById('name-input').value);
+  doLogin(document.getElementById('name-input').value).catch(console.error);
 });
 document.getElementById('name-input').addEventListener('keydown', e => {
-  if (e.key === 'Enter') doLogin(document.getElementById('name-input').value);
+  if (e.key === 'Enter') doLogin(document.getElementById('name-input').value).catch(console.error);
 });
 document.getElementById('switch-user').addEventListener('click', () => {
   localStorage.removeItem(USER_KEY);
@@ -429,16 +442,19 @@ document.getElementById('switch-user').addEventListener('click', () => {
 });
 
 // ── Session ───────────────────────────────────────────────────
-function startSession() {
-  const store = loadStore();
-  const userData = getUserData(store, currentUser);
-  userData.sessionCount++;
-  saveStore(store);
+async function startSession() {
+  document.getElementById('loading').style.display = 'block';
+  document.getElementById('loading').textContent = 'טוען נתוני משתמש... 🌸';
 
-  sessionQueue = buildSessionQueue(userData);
+  currentUserData = await loadUserData(currentUser);
+  currentUserData.sessionCount++;
+  await saveUserData(currentUser, currentUserData);
+
+  sessionQueue = buildSessionQueue(currentUserData);
   currentIdx = 0;
   sessionScore = 0;
 
+  document.getElementById('loading').style.display = 'none';
   document.getElementById('username-label').textContent = currentUser;
   document.getElementById('score').textContent = '0';
   document.getElementById('header').style.display = 'flex';
@@ -451,9 +467,7 @@ function startSession() {
 // ── Question ──────────────────────────────────────────────────
 function showQuestion() {
   const flower = sessionQueue[currentIdx];
-  const store = loadStore();
-  const userData = getUserData(store, currentUser);
-  const state = getFlowerState(userData, flower.file);
+  const state  = getFlowerState(currentUserData, flower.file);
 
   document.getElementById('photo').src = '../' + flower.file;
   document.getElementById('progress').textContent =
@@ -495,10 +509,8 @@ function handleAnswer(btn, chosen, correct) {
     });
   }
 
-  // Update spaced repetition state
-  const store = loadStore();
-  const userData = getUserData(store, currentUser);
-  const state = getFlowerState(userData, correct.file);
+  // Update spaced repetition state in memory
+  const state = getFlowerState(currentUserData, correct.file);
   state.total++;
   if (isCorrect) {
     state.correct++;
@@ -506,8 +518,10 @@ function handleAnswer(btn, chosen, correct) {
   } else {
     state.box = 1;
   }
-  state.lastSession = userData.sessionCount;
-  saveStore(store);
+  state.lastSession = currentUserData.sessionCount;
+
+  // Persist to Firestore (fire-and-forget — keeps UI snappy)
+  saveUserData(currentUser, currentUserData).catch(console.error);
 
   // Show info
   const infoBox = document.getElementById('info-box');
@@ -549,17 +563,13 @@ function showSummary() {
     pct >= 40  ? 'לא רע! כדאי להתאמן עוד קצת 🌱' :
                  'המשך להתאמן, אתה תשתפר! 💪';
 
-  // Progress table
-  const store = loadStore();
-  const userData = getUserData(store, currentUser);
   const boxCounts = [0, 0, 0, 0, 0];
   allFlowers.forEach(f => {
-    const s = getFlowerState(userData, f.file);
+    const s = getFlowerState(currentUserData, f.file);
     boxCounts[s.box - 1]++;
   });
 
   const table = document.getElementById('progress-table');
-  // Remove old rows (keep header)
   while (table.rows.length > 1) table.deleteRow(1);
   boxCounts.forEach((count, i) => {
     if (count === 0) return;
@@ -573,7 +583,9 @@ function showSummary() {
   document.getElementById('summary').style.display = 'block';
 }
 
-document.getElementById('restart-btn').addEventListener('click', startSession);
+document.getElementById('restart-btn').addEventListener('click', () => {
+  startSession().catch(console.error);
+});
 
 // ── Boot ──────────────────────────────────────────────────────
 (async () => {
@@ -588,7 +600,7 @@ document.getElementById('restart-btn').addEventListener('click', startSession);
     const saved = localStorage.getItem(USER_KEY);
     if (saved) {
       currentUser = saved;
-      startSession();
+      await startSession();
     } else {
       showLogin();
     }
@@ -596,8 +608,7 @@ document.getElementById('restart-btn').addEventListener('click', startSession);
     document.getElementById('loading').style.display = 'none';
     const errEl = document.getElementById('error');
     errEl.style.display = 'block';
-    errEl.innerHTML = `<strong>שגיאה:</strong> ${e.message}<br><br>
-      וודא שהרצת את identify.py ושפתחת את הדפדפן דרך שרת HTTP.`;
+    errEl.innerHTML = `<strong>שגיאה:</strong> ${e.message}`;
   }
 })();
 </script>
