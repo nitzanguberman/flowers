@@ -330,19 +330,17 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js';
 import { getFirestore, doc, getDoc, setDoc } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js';
 
-// ── Firebase config — paste your config from the Firebase console ──
 const firebaseConfig = {
-  apiKey: "PASTE_API_KEY",
-  authDomain: "PASTE.firebaseapp.com",
-  projectId: "PASTE_PROJECT_ID",
-  storageBucket: "PASTE.appspot.com",
-  messagingSenderId: "PASTE_SENDER_ID",
-  appId: "PASTE_APP_ID"
+  apiKey: "AIzaSyChw-uXFymNKrZIVOE2DZbVtGBfuQOpcn4",
+  authDomain: "flowers-game-5e085.firebaseapp.com",
+  projectId: "flowers-game-5e085",
+  storageBucket: "flowers-game-5e085.firebasestorage.app",
+  messagingSenderId: "851425514637",
+  appId: "1:851425514637:web:04a2009058dda3d9ae3ec4"
 };
 const app = initializeApp(firebaseConfig);
 const db  = getFirestore(app);
 
-// ── Firestore helpers ─────────────────────────────────────────
 async function loadUserData(name) {
   const snap = await getDoc(doc(db, 'users', name));
   return snap.exists() ? snap.data() : { sessionCount: 0, flowers: {} };
@@ -363,7 +361,6 @@ let sessionScore  = 0;
 let currentUser   = null;
 let currentUserData = null;
 
-// ── Flower state ──────────────────────────────────────────────
 function getFlowerState(userData, file) {
   if (!userData.flowers[file]) {
     userData.flowers[file] = { box: 1, lastSession: -999, correct: 0, total: 0 };
@@ -371,7 +368,6 @@ function getFlowerState(userData, file) {
   return userData.flowers[file];
 }
 
-// ── Spaced repetition ────────────────────────────────────────
 function isDue(state, sessionCount) {
   const interval = Math.pow(2, state.box - 1);
   return (sessionCount - state.lastSession) >= interval;
@@ -381,7 +377,6 @@ function buildSessionQueue(userData) {
   const sc = userData.sessionCount;
   let due = allFlowers.filter(f => isDue(getFlowerState(userData, f.file), sc));
 
-  // Need at least 4 flowers for multiple-choice options
   if (due.length < 4) {
     const notDue = allFlowers
       .filter(f => !due.includes(f))
@@ -395,7 +390,6 @@ function buildSessionQueue(userData) {
   return shuffle([...due]);
 }
 
-// ── Utilities ────────────────────────────────────────────────
 function shuffle(arr) {
   for (let i = arr.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -410,7 +404,6 @@ function getOptions(correct) {
   return shuffle([...pool.slice(0, 3), correct]);
 }
 
-// ── Login ─────────────────────────────────────────────────────
 function showLogin() {
   document.getElementById('login-screen').style.display = 'block';
   document.getElementById('name-input').focus();
@@ -441,7 +434,6 @@ document.getElementById('switch-user').addEventListener('click', () => {
   showLogin();
 });
 
-// ── Session ───────────────────────────────────────────────────
 async function startSession() {
   document.getElementById('loading').style.display = 'block';
   document.getElementById('loading').textContent = 'טוען נתוני משתמש... 🌸';
@@ -464,7 +456,6 @@ async function startSession() {
   showQuestion();
 }
 
-// ── Question ──────────────────────────────────────────────────
 function showQuestion() {
   const flower = sessionQueue[currentIdx];
   const state  = getFlowerState(currentUserData, flower.file);
@@ -473,8 +464,7 @@ function showQuestion() {
   document.getElementById('progress').textContent =
     `שאלה ${currentIdx + 1} מתוך ${sessionQueue.length}`;
   document.getElementById('box-badge').textContent = `${BOX_NAMES[state.box - 1]} (רמה ${state.box}/5)`;
-  document.getElementById('box-badge').style.background =
-    BOX_COLORS[state.box - 1] + '22';
+  document.getElementById('box-badge').style.background = BOX_COLORS[state.box - 1] + '22';
   document.getElementById('box-badge').style.color = BOX_COLORS[state.box - 1];
 
   const options = getOptions(flower);
@@ -492,7 +482,6 @@ function showQuestion() {
   document.getElementById('info-box').style.display = 'none';
 }
 
-// ── Answer ────────────────────────────────────────────────────
 function handleAnswer(btn, chosen, correct) {
   document.querySelectorAll('.choice').forEach(b => b.classList.add('disabled'));
 
@@ -509,7 +498,6 @@ function handleAnswer(btn, chosen, correct) {
     });
   }
 
-  // Update spaced repetition state in memory
   const state = getFlowerState(currentUserData, correct.file);
   state.total++;
   if (isCorrect) {
@@ -520,10 +508,8 @@ function handleAnswer(btn, chosen, correct) {
   }
   state.lastSession = currentUserData.sessionCount;
 
-  // Persist to Firestore (fire-and-forget — keeps UI snappy)
   saveUserData(currentUser, currentUserData).catch(console.error);
 
-  // Show info
   const infoBox = document.getElementById('info-box');
   if (correct.info || correct.photo_url) {
     document.getElementById('info-text').textContent = correct.info || '';
@@ -543,7 +529,6 @@ function handleAnswer(btn, chosen, correct) {
   document.getElementById('next-btn').style.display = 'block';
 }
 
-// ── Next / Summary ────────────────────────────────────────────
 document.getElementById('next-btn').addEventListener('click', () => {
   currentIdx++;
   if (currentIdx >= sessionQueue.length) showSummary();
@@ -587,7 +572,6 @@ document.getElementById('restart-btn').addEventListener('click', () => {
   startSession().catch(console.error);
 });
 
-// ── Boot ──────────────────────────────────────────────────────
 (async () => {
   try {
     const resp = await fetch('../flowers.json');
