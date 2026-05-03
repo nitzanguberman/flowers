@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>משחק פרחים</title>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Heebo', 'Segoe UI', Arial, sans-serif;
+    background: #f0f7ee;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    color: #1a1a1a;
+    direction: rtl;
+    text-align: right;
+  }
+
+  header {
+    width: 100%;
+    max-width: 560px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  h1 { font-size: 1.4rem; color: #2d6a4f; }
+
+  #score-box {
+    background: #2d6a4f;
+    color: #fff;
+    border-radius: 20px;
+    padding: 4px 16px;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  #progress {
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 12px;
+    text-align: right;
+    width: 100%;
+    max-width: 560px;
+  }
+
+  #card {
+    width: 100%;
+    max-width: 560px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+  }
+
+  #photo {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+  }
+
+  #question {
+    padding: 16px 20px 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #2d6a4f;
+    text-align: right;
+  }
+
+  #choices {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 12px 20px 20px;
+    direction: rtl;
+  }
+
+  .choice {
+    background: #f8f8f8;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    padding: 12px;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.15s, border-color 0.15s, transform 0.1s;
+    user-select: none;
+  }
+
+  .choice:hover:not(.disabled) {
+    border-color: #2d6a4f;
+    background: #e8f5e0;
+    transform: scale(1.02);
+  }
+
+  .choice .he { font-size: 1.1rem; font-weight: bold; direction: rtl; }
+  .choice .en { font-size: 0.78rem; color: #888; margin-top: 3px; direction: ltr; }
+
+  .choice.correct { background: #d4edda; border-color: #28a745; }
+  .choice.wrong   { background: #f8d7da; border-color: #dc3545; }
+  .choice.reveal  { background: #d4edda; border-color: #28a745; }
+  .choice.disabled { cursor: default; }
+
+  #info-box {
+    display: none;
+    margin: 0 20px 12px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #c8e6c9;
+    background: #f0f7ee;
+  }
+
+  #info-img {
+    width: 100%;
+    max-height: 180px;
+    object-fit: cover;
+    display: block;
+  }
+
+  #info-text {
+    padding: 10px 14px;
+    font-size: 0.88rem;
+    color: #333;
+    line-height: 1.6;
+    text-align: left;
+    direction: ltr;
+    border-left: 4px solid #2d6a4f;
+  }
+
+  #next-btn {
+    display: none;
+    margin: 0 20px 20px;
+    width: calc(100% - 40px);
+    padding: 12px;
+    background: #2d6a4f;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.15s;
+    font-family: inherit;
+  }
+  #next-btn:hover { background: #1b4332; }
+
+  /* Summary screen */
+  #summary {
+    display: none;
+    width: 100%;
+    max-width: 560px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    padding: 40px 24px;
+    text-align: center;
+  }
+
+  #summary h2 { font-size: 2rem; color: #2d6a4f; margin-bottom: 8px; }
+  #summary .final-score { font-size: 3rem; font-weight: bold; color: #1b4332; margin: 16px 0; }
+  #summary p { color: #555; margin-bottom: 24px; }
+
+  #restart-btn {
+    padding: 12px 32px;
+    background: #2d6a4f;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  #restart-btn:hover { background: #1b4332; }
+
+  #loading {
+    margin-top: 60px;
+    font-size: 1.2rem;
+    color: #2d6a4f;
+  }
+
+  #error {
+    display: none;
+    margin-top: 60px;
+    color: #dc3545;
+    text-align: center;
+    max-width: 400px;
+  }
+</style>
+</head>
+<body>
+
+<div id="loading">טוען פרחים... 🌸</div>
+<div id="error"></div>
+
+<header id="header" style="display:none">
+  <h1>🌸 משחק פרחים</h1>
+  <div id="score-box">ניקוד: <span id="score">0</span></div>
+</header>
+
+<div id="progress" style="display:none"></div>
+
+<div id="card" style="display:none">
+  <img id="photo" src="" alt="פרח">
+  <div id="question">איזה פרח זה?</div>
+  <div id="choices"></div>
+  <div id="info-box">
+    <img id="info-img" src="" alt="">
+    <div id="info-text"></div>
+  </div>
+  <button id="next-btn">הבא ◀</button>
+</div>
+
+<div id="summary">
+  <h2>סיום! 🎉</h2>
+  <div class="final-score"><span id="final-score"></span></div>
+  <p id="summary-text"></p>
+  <button id="restart-btn" onclick="startGame()">שחק שוב</button>
+</div>
+
+<script>
+let flowers = [];
+let queue = [];
+let current = 0;
+let score = 0;
+
+async function loadFlowers() {
+  const resp = await fetch('../flowers.json');
+  if (!resp.ok) throw new Error('לא ניתן לטעון את flowers.json');
+  return resp.json();
+}
+
+function shuffle(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+function getOptions(correctIdx) {
+  const pool = flowers.filter((_, i) => i !== correctIdx);
+  shuffle(pool);
+  const wrong = pool.slice(0, 3);
+  const opts = [...wrong, flowers[correctIdx]];
+  return shuffle(opts);
+}
+
+function showQuestion() {
+  const flower = queue[current];
+  const flowerIdx = flowers.indexOf(flower);
+
+  document.getElementById('photo').src = '../' + flower.file;
+  document.getElementById('progress').textContent =
+    `שאלה ${current + 1} מתוך ${queue.length}`;
+
+  const options = getOptions(flowerIdx);
+  const choicesEl = document.getElementById('choices');
+  choicesEl.innerHTML = '';
+
+  options.forEach(opt => {
+    const btn = document.createElement('div');
+    btn.className = 'choice';
+    btn.innerHTML = `<div class="he">${opt.name_he}</div><div class="en">${opt.name_en}</div>`;
+    btn.addEventListener('click', () => handleAnswer(btn, opt, flower, options));
+    choicesEl.appendChild(btn);
+  });
+
+  document.getElementById('next-btn').style.display = 'none';
+  document.getElementById('info-box').style.display = 'none';
+}
+
+function handleAnswer(btn, chosen, correct, options) {
+  const allBtns = document.querySelectorAll('.choice');
+  allBtns.forEach(b => b.classList.add('disabled'));
+
+  if (chosen === correct) {
+    btn.classList.add('correct');
+    score++;
+    document.getElementById('score').textContent = score;
+  } else {
+    btn.classList.add('wrong');
+    allBtns.forEach(b => {
+      if (b.querySelector('.he').textContent === correct.name_he) {
+        b.classList.add('reveal');
+      }
+    });
+  }
+
+  const infoBox = document.getElementById('info-box');
+  const infoImg = document.getElementById('info-img');
+  const infoText = document.getElementById('info-text');
+
+  if (correct.info || correct.photo_url) {
+    infoText.textContent = correct.info || '';
+    infoText.style.display = correct.info ? 'block' : 'none';
+    if (correct.photo_url) {
+      infoImg.src = correct.photo_url;
+      infoImg.style.display = 'block';
+    } else {
+      infoImg.style.display = 'none';
+    }
+    infoBox.style.display = 'block';
+  } else {
+    infoBox.style.display = 'none';
+  }
+
+  document.getElementById('next-btn').style.display = 'block';
+}
+
+document.getElementById('next-btn').addEventListener('click', () => {
+  current++;
+  if (current >= queue.length) {
+    showSummary();
+  } else {
+    showQuestion();
+  }
+});
+
+function showSummary() {
+  document.getElementById('card').style.display = 'none';
+  document.getElementById('progress').style.display = 'none';
+  document.getElementById('header').style.display = 'none';
+
+  const total = queue.length;
+  const pct = Math.round((score / total) * 100);
+  document.getElementById('final-score').textContent = `${score} / ${total}`;
+  document.getElementById('summary-text').textContent =
+    pct === 100 ? 'מושלם! אתה מומחה פרחים! 🌟' :
+    pct >= 70  ? 'כל הכבוד! עשית עבודה נהדרת 🌻' :
+    pct >= 40  ? 'לא רע! כדאי להתאמן עוד קצת 🌱' :
+                 'המשך להתאמן, אתה תשתפר! 💪';
+  document.getElementById('summary').style.display = 'block';
+}
+
+function startGame() {
+  score = 0;
+  current = 0;
+  queue = shuffle([...flowers]);
+
+  document.getElementById('summary').style.display = 'none';
+  document.getElementById('score').textContent = '0';
+  document.getElementById('header').style.display = 'flex';
+  document.getElementById('progress').style.display = 'block';
+  document.getElementById('card').style.display = 'block';
+  showQuestion();
+}
+
+(async () => {
+  try {
+    flowers = await loadFlowers();
+    if (flowers.length < 4) {
+      throw new Error('צריך לפחות 4 פרחים כדי לשחק');
+    }
+    document.getElementById('loading').style.display = 'none';
+    startGame();
+  } catch (e) {
+    document.getElementById('loading').style.display = 'none';
+    const errEl = document.getElementById('error');
+    errEl.style.display = 'block';
+    errEl.innerHTML = `<strong>שגיאה:</strong> ${e.message}<br><br>
+      וודא שהרצת את identify.py ושפתחת את הדפדפן דרך שרת HTTP.`;
+  }
+})();
+</script>
+</body>
+</html>
