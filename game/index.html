@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>משחק פרחים</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -132,6 +133,14 @@
     background: none;
     border: none;
     font-family: inherit;
+  }
+  #report-user {
+    font-size: 0.9rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
   }
 
   /* ── Progress text ── */
@@ -393,6 +402,7 @@
     <h1>🌸 משחק פרחים</h1>
     <div id="user-tag">
       <span id="username-label"></span>
+      <button id="report-user">📊</button>
       <button id="switch-user">שנה</button>
     </div>
   </div>
@@ -621,6 +631,10 @@ document.getElementById('login-btn').addEventListener('click', () => {
 document.getElementById('name-input').addEventListener('keydown', e => {
   if (e.key === 'Enter') doLogin(document.getElementById('name-input').value).catch(console.error);
 });
+document.getElementById('report-user').addEventListener('click', () => {
+  showReport(currentUser, currentUserData);
+});
+
 document.getElementById('switch-user').addEventListener('click', () => {
   localStorage.removeItem(USER_KEY);
   document.getElementById('header').style.display = 'none';
