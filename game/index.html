@@ -21,18 +21,60 @@
     text-align: right;
   }
 
+  /* ── Login screen ── */
+  #login-screen {
+    display: none;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 80px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    padding: 40px 32px;
+    text-align: center;
+  }
+  #login-screen h1 { font-size: 2rem; color: #2d6a4f; margin-bottom: 8px; }
+  #login-screen p  { color: #777; margin-bottom: 28px; font-size: 0.95rem; }
+  #login-screen input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-family: inherit;
+    text-align: right;
+    direction: rtl;
+    margin-bottom: 14px;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  #login-screen input:focus { border-color: #2d6a4f; }
+  #login-btn {
+    width: 100%;
+    padding: 12px;
+    background: #2d6a4f;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.15s;
+  }
+  #login-btn:hover { background: #1b4332; }
+
+  /* ── Header ── */
   header {
     width: 100%;
     max-width: 560px;
     display: flex;
-    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 16px;
   }
-
-  h1 { font-size: 1.4rem; color: #2d6a4f; }
-
+  .header-right { display: flex; align-items: center; gap: 10px; }
+  h1 { font-size: 1.3rem; color: #2d6a4f; }
   #score-box {
     background: #2d6a4f;
     color: #fff;
@@ -41,7 +83,25 @@
     font-size: 1rem;
     font-weight: bold;
   }
+  #user-tag {
+    font-size: 0.85rem;
+    color: #555;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 6px;
+  }
+  #switch-user {
+    font-size: 0.75rem;
+    color: #2d6a4f;
+    cursor: pointer;
+    text-decoration: underline;
+    background: none;
+    border: none;
+    font-family: inherit;
+  }
 
+  /* ── Progress text ── */
   #progress {
     font-size: 0.85rem;
     color: #555;
@@ -51,6 +111,7 @@
     max-width: 560px;
   }
 
+  /* ── Game card ── */
   #card {
     width: 100%;
     max-width: 560px;
@@ -59,30 +120,38 @@
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     overflow: hidden;
   }
-
   #photo {
     width: 100%;
-    height: 320px;
+    height: 300px;
     object-fit: cover;
     display: block;
   }
-
   #question {
-    padding: 16px 20px 8px;
-    font-size: 1.1rem;
+    padding: 14px 20px 4px;
+    font-size: 1.05rem;
     font-weight: bold;
     color: #2d6a4f;
-    text-align: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #box-badge {
+    font-size: 0.75rem;
+    background: #e8f5e0;
+    color: #2d6a4f;
+    border-radius: 10px;
+    padding: 2px 8px;
+    font-weight: normal;
   }
 
+  /* ── Choices ── */
   #choices {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
-    padding: 12px 20px 20px;
+    padding: 12px 20px 16px;
     direction: rtl;
   }
-
   .choice {
     background: #f8f8f8;
     border: 2px solid #ddd;
@@ -93,21 +162,15 @@
     transition: background 0.15s, border-color 0.15s, transform 0.1s;
     user-select: none;
   }
-
-  .choice:hover:not(.disabled) {
-    border-color: #2d6a4f;
-    background: #e8f5e0;
-    transform: scale(1.02);
-  }
-
-  .choice .he { font-size: 1.1rem; font-weight: bold; direction: rtl; }
-  .choice .en { font-size: 0.78rem; color: #888; margin-top: 3px; direction: ltr; }
-
+  .choice:hover:not(.disabled) { border-color: #2d6a4f; background: #e8f5e0; transform: scale(1.02); }
+  .choice .he { font-size: 1.05rem; font-weight: bold; direction: rtl; }
+  .choice .en { font-size: 0.75rem; color: #888; margin-top: 3px; direction: ltr; }
   .choice.correct { background: #d4edda; border-color: #28a745; }
   .choice.wrong   { background: #f8d7da; border-color: #dc3545; }
   .choice.reveal  { background: #d4edda; border-color: #28a745; }
   .choice.disabled { cursor: default; }
 
+  /* ── Info box ── */
   #info-box {
     display: none;
     margin: 0 20px 12px;
@@ -116,14 +179,7 @@
     border: 1px solid #c8e6c9;
     background: #f0f7ee;
   }
-
-  #info-img {
-    width: 100%;
-    max-height: 180px;
-    object-fit: cover;
-    display: block;
-  }
-
+  #info-img { width: 100%; max-height: 180px; object-fit: cover; display: block; }
   #info-text {
     padding: 10px 14px;
     font-size: 0.88rem;
@@ -134,6 +190,7 @@
     border-left: 4px solid #2d6a4f;
   }
 
+  /* ── Next button ── */
   #next-btn {
     display: none;
     margin: 0 20px 20px;
@@ -146,12 +203,12 @@
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.15s;
     font-family: inherit;
+    transition: background 0.15s;
   }
   #next-btn:hover { background: #1b4332; }
 
-  /* Summary screen */
+  /* ── Summary screen ── */
   #summary {
     display: none;
     width: 100%;
@@ -159,13 +216,35 @@
     background: #fff;
     border-radius: 20px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    padding: 40px 24px;
+    padding: 32px 24px;
     text-align: center;
   }
+  #summary h2 { font-size: 1.8rem; color: #2d6a4f; margin-bottom: 6px; }
+  #summary .final-score { font-size: 2.8rem; font-weight: bold; color: #1b4332; margin: 12px 0; }
+  #summary p { color: #555; margin-bottom: 20px; }
 
-  #summary h2 { font-size: 2rem; color: #2d6a4f; margin-bottom: 8px; }
-  #summary .final-score { font-size: 3rem; font-weight: bold; color: #1b4332; margin: 16px 0; }
-  #summary p { color: #555; margin-bottom: 24px; }
+  .progress-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 24px;
+    font-size: 0.9rem;
+    direction: rtl;
+    text-align: right;
+  }
+  .progress-table th {
+    background: #e8f5e0;
+    color: #2d6a4f;
+    padding: 8px 12px;
+    font-weight: bold;
+  }
+  .progress-table td { padding: 7px 12px; border-bottom: 1px solid #eee; }
+  .progress-table tr:last-child td { border-bottom: none; }
+  .box-dot {
+    display: inline-block;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    margin-left: 6px;
+  }
 
   #restart-btn {
     padding: 12px 32px;
@@ -180,12 +259,8 @@
   }
   #restart-btn:hover { background: #1b4332; }
 
-  #loading {
-    margin-top: 60px;
-    font-size: 1.2rem;
-    color: #2d6a4f;
-  }
-
+  /* ── Loading / error ── */
+  #loading { margin-top: 60px; font-size: 1.2rem; color: #2d6a4f; }
   #error {
     display: none;
     margin-top: 60px;
@@ -200,8 +275,23 @@
 <div id="loading">טוען פרחים... 🌸</div>
 <div id="error"></div>
 
-<header id="header" style="display:none">
+<!-- Login -->
+<div id="login-screen">
   <h1>🌸 משחק פרחים</h1>
+  <p>הכנס את שמך כדי לעקוב אחר ההתקדמות שלך</p>
+  <input id="name-input" type="text" placeholder="השם שלך" maxlength="30">
+  <button id="login-btn">כניסה</button>
+</div>
+
+<!-- Game -->
+<header id="header" style="display:none">
+  <div class="header-right">
+    <h1>🌸 משחק פרחים</h1>
+    <div id="user-tag">
+      <span id="username-label"></span>
+      <button id="switch-user">שנה</button>
+    </div>
+  </div>
   <div id="score-box">ניקוד: <span id="score">0</span></div>
 </header>
 
@@ -209,7 +299,10 @@
 
 <div id="card" style="display:none">
   <img id="photo" src="" alt="פרח">
-  <div id="question">איזה פרח זה?</div>
+  <div id="question">
+    <span>איזה פרח זה?</span>
+    <span id="box-badge"></span>
+  </div>
   <div id="choices"></div>
   <div id="info-box">
     <img id="info-img" src="" alt="">
@@ -218,25 +311,78 @@
   <button id="next-btn">הבא ◀</button>
 </div>
 
+<!-- Summary -->
 <div id="summary">
   <h2>סיום! 🎉</h2>
   <div class="final-score"><span id="final-score"></span></div>
   <p id="summary-text"></p>
-  <button id="restart-btn" onclick="startGame()">שחק שוב</button>
+  <table class="progress-table" id="progress-table">
+    <tr>
+      <th>קופסה</th>
+      <th>פרחים</th>
+      <th>מתי חוזר</th>
+    </tr>
+  </table>
+  <button id="restart-btn">סשן נוסף</button>
 </div>
 
 <script>
-let flowers = [];
-let queue = [];
-let current = 0;
-let score = 0;
+const STORAGE_KEY = 'flowers_game_v1';
+const USER_KEY    = 'flowers_current_user';
+const BOX_COLORS  = ['#dc3545','#fd7e14','#ffc107','#20c997','#2d6a4f'];
+const BOX_LABELS  = ['כל סשן','כל 2 סשנים','כל 4 סשנים','כל 8 סשנים','כל 16 סשנים'];
+const BOX_NAMES   = ['חדש','מתחיל','מכיר','טוב','שולט!'];
 
-async function loadFlowers() {
-  const resp = await fetch('../flowers.json');
-  if (!resp.ok) throw new Error('לא ניתן לטעון את flowers.json');
-  return resp.json();
+let allFlowers = [];
+let sessionQueue = [];
+let currentIdx = 0;
+let sessionScore = 0;
+let currentUser = null;
+
+// ── Storage helpers ──────────────────────────────────────────
+function loadStore() {
+  try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; }
+  catch { return {}; }
+}
+function saveStore(store) {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(store));
+}
+function getUserData(store, name) {
+  if (!store[name]) store[name] = { sessionCount: 0, flowers: {} };
+  return store[name];
+}
+function getFlowerState(userData, file) {
+  if (!userData.flowers[file]) {
+    userData.flowers[file] = { box: 1, lastSession: -999, correct: 0, total: 0 };
+  }
+  return userData.flowers[file];
 }
 
+// ── Spaced repetition ────────────────────────────────────────
+function isDue(state, sessionCount) {
+  const interval = Math.pow(2, state.box - 1);
+  return (sessionCount - state.lastSession) >= interval;
+}
+
+function buildSessionQueue(userData) {
+  const sc = userData.sessionCount;
+  let due = allFlowers.filter(f => isDue(getFlowerState(userData, f.file), sc));
+
+  // Need at least 4 flowers for multiple-choice options
+  if (due.length < 4) {
+    const notDue = allFlowers
+      .filter(f => !due.includes(f))
+      .sort((a, b) => {
+        const sa = getFlowerState(userData, a.file);
+        const sb = getFlowerState(userData, b.file);
+        return sa.box - sb.box || (sc - sb.lastSession) - (sc - sa.lastSession);
+      });
+    due = due.concat(notDue.slice(0, 4 - due.length));
+  }
+  return shuffle([...due]);
+}
+
+// ── Utilities ────────────────────────────────────────────────
 function shuffle(arr) {
   for (let i = arr.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -245,31 +391,86 @@ function shuffle(arr) {
   return arr;
 }
 
-function getOptions(correctIdx) {
-  const pool = flowers.filter((_, i) => i !== correctIdx);
+function getOptions(correct) {
+  const pool = allFlowers.filter(f => f !== correct);
   shuffle(pool);
-  const wrong = pool.slice(0, 3);
-  const opts = [...wrong, flowers[correctIdx]];
-  return shuffle(opts);
+  return shuffle([...pool.slice(0, 3), correct]);
 }
 
+// ── Login ─────────────────────────────────────────────────────
+function showLogin() {
+  document.getElementById('login-screen').style.display = 'block';
+  document.getElementById('name-input').focus();
+}
+
+function doLogin(name) {
+  name = name.trim();
+  if (!name) return;
+  localStorage.setItem(USER_KEY, name);
+  currentUser = name;
+  document.getElementById('login-screen').style.display = 'none';
+  startSession();
+}
+
+document.getElementById('login-btn').addEventListener('click', () => {
+  doLogin(document.getElementById('name-input').value);
+});
+document.getElementById('name-input').addEventListener('keydown', e => {
+  if (e.key === 'Enter') doLogin(document.getElementById('name-input').value);
+});
+document.getElementById('switch-user').addEventListener('click', () => {
+  localStorage.removeItem(USER_KEY);
+  document.getElementById('header').style.display = 'none';
+  document.getElementById('card').style.display = 'none';
+  document.getElementById('progress').style.display = 'none';
+  document.getElementById('summary').style.display = 'none';
+  document.getElementById('name-input').value = '';
+  showLogin();
+});
+
+// ── Session ───────────────────────────────────────────────────
+function startSession() {
+  const store = loadStore();
+  const userData = getUserData(store, currentUser);
+  userData.sessionCount++;
+  saveStore(store);
+
+  sessionQueue = buildSessionQueue(userData);
+  currentIdx = 0;
+  sessionScore = 0;
+
+  document.getElementById('username-label').textContent = currentUser;
+  document.getElementById('score').textContent = '0';
+  document.getElementById('header').style.display = 'flex';
+  document.getElementById('progress').style.display = 'block';
+  document.getElementById('card').style.display = 'block';
+  document.getElementById('summary').style.display = 'none';
+  showQuestion();
+}
+
+// ── Question ──────────────────────────────────────────────────
 function showQuestion() {
-  const flower = queue[current];
-  const flowerIdx = flowers.indexOf(flower);
+  const flower = sessionQueue[currentIdx];
+  const store = loadStore();
+  const userData = getUserData(store, currentUser);
+  const state = getFlowerState(userData, flower.file);
 
   document.getElementById('photo').src = '../' + flower.file;
   document.getElementById('progress').textContent =
-    `שאלה ${current + 1} מתוך ${queue.length}`;
+    `שאלה ${currentIdx + 1} מתוך ${sessionQueue.length}`;
+  document.getElementById('box-badge').textContent = `${BOX_NAMES[state.box - 1]} (רמה ${state.box}/5)`;
+  document.getElementById('box-badge').style.background =
+    BOX_COLORS[state.box - 1] + '22';
+  document.getElementById('box-badge').style.color = BOX_COLORS[state.box - 1];
 
-  const options = getOptions(flowerIdx);
+  const options = getOptions(flower);
   const choicesEl = document.getElementById('choices');
   choicesEl.innerHTML = '';
-
   options.forEach(opt => {
     const btn = document.createElement('div');
     btn.className = 'choice';
     btn.innerHTML = `<div class="he">${opt.name_he}</div><div class="en">${opt.name_en}</div>`;
-    btn.addEventListener('click', () => handleAnswer(btn, opt, flower, options));
+    btn.addEventListener('click', () => handleAnswer(btn, opt, flower));
     choicesEl.appendChild(btn);
   });
 
@@ -277,30 +478,43 @@ function showQuestion() {
   document.getElementById('info-box').style.display = 'none';
 }
 
-function handleAnswer(btn, chosen, correct, options) {
-  const allBtns = document.querySelectorAll('.choice');
-  allBtns.forEach(b => b.classList.add('disabled'));
+// ── Answer ────────────────────────────────────────────────────
+function handleAnswer(btn, chosen, correct) {
+  document.querySelectorAll('.choice').forEach(b => b.classList.add('disabled'));
 
-  if (chosen === correct) {
+  const isCorrect = chosen === correct;
+
+  if (isCorrect) {
     btn.classList.add('correct');
-    score++;
-    document.getElementById('score').textContent = score;
+    sessionScore++;
+    document.getElementById('score').textContent = sessionScore;
   } else {
     btn.classList.add('wrong');
-    allBtns.forEach(b => {
-      if (b.querySelector('.he').textContent === correct.name_he) {
-        b.classList.add('reveal');
-      }
+    document.querySelectorAll('.choice').forEach(b => {
+      if (b.querySelector('.he').textContent === correct.name_he) b.classList.add('reveal');
     });
   }
 
-  const infoBox = document.getElementById('info-box');
-  const infoImg = document.getElementById('info-img');
-  const infoText = document.getElementById('info-text');
+  // Update spaced repetition state
+  const store = loadStore();
+  const userData = getUserData(store, currentUser);
+  const state = getFlowerState(userData, correct.file);
+  state.total++;
+  if (isCorrect) {
+    state.correct++;
+    state.box = Math.min(state.box + 1, 5);
+  } else {
+    state.box = 1;
+  }
+  state.lastSession = userData.sessionCount;
+  saveStore(store);
 
+  // Show info
+  const infoBox = document.getElementById('info-box');
   if (correct.info || correct.photo_url) {
-    infoText.textContent = correct.info || '';
-    infoText.style.display = correct.info ? 'block' : 'none';
+    document.getElementById('info-text').textContent = correct.info || '';
+    document.getElementById('info-text').style.display = correct.info ? 'block' : 'none';
+    const infoImg = document.getElementById('info-img');
     if (correct.photo_url) {
       infoImg.src = correct.photo_url;
       infoImg.style.display = 'block';
@@ -315,52 +529,69 @@ function handleAnswer(btn, chosen, correct, options) {
   document.getElementById('next-btn').style.display = 'block';
 }
 
+// ── Next / Summary ────────────────────────────────────────────
 document.getElementById('next-btn').addEventListener('click', () => {
-  current++;
-  if (current >= queue.length) {
-    showSummary();
-  } else {
-    showQuestion();
-  }
+  currentIdx++;
+  if (currentIdx >= sessionQueue.length) showSummary();
+  else showQuestion();
 });
 
 function showSummary() {
   document.getElementById('card').style.display = 'none';
   document.getElementById('progress').style.display = 'none';
-  document.getElementById('header').style.display = 'none';
 
-  const total = queue.length;
-  const pct = Math.round((score / total) * 100);
-  document.getElementById('final-score').textContent = `${score} / ${total}`;
+  const total = sessionQueue.length;
+  const pct = Math.round((sessionScore / total) * 100);
+  document.getElementById('final-score').textContent = `${sessionScore} / ${total}`;
   document.getElementById('summary-text').textContent =
     pct === 100 ? 'מושלם! אתה מומחה פרחים! 🌟' :
     pct >= 70  ? 'כל הכבוד! עשית עבודה נהדרת 🌻' :
     pct >= 40  ? 'לא רע! כדאי להתאמן עוד קצת 🌱' :
                  'המשך להתאמן, אתה תשתפר! 💪';
+
+  // Progress table
+  const store = loadStore();
+  const userData = getUserData(store, currentUser);
+  const boxCounts = [0, 0, 0, 0, 0];
+  allFlowers.forEach(f => {
+    const s = getFlowerState(userData, f.file);
+    boxCounts[s.box - 1]++;
+  });
+
+  const table = document.getElementById('progress-table');
+  // Remove old rows (keep header)
+  while (table.rows.length > 1) table.deleteRow(1);
+  boxCounts.forEach((count, i) => {
+    if (count === 0) return;
+    const row = table.insertRow();
+    row.innerHTML = `
+      <td><span class="box-dot" style="background:${BOX_COLORS[i]}"></span>קופסה ${i + 1}</td>
+      <td>${count} פרחים</td>
+      <td>${BOX_LABELS[i]}</td>`;
+  });
+
   document.getElementById('summary').style.display = 'block';
 }
 
-function startGame() {
-  score = 0;
-  current = 0;
-  queue = shuffle([...flowers]);
+document.getElementById('restart-btn').addEventListener('click', startSession);
 
-  document.getElementById('summary').style.display = 'none';
-  document.getElementById('score').textContent = '0';
-  document.getElementById('header').style.display = 'flex';
-  document.getElementById('progress').style.display = 'block';
-  document.getElementById('card').style.display = 'block';
-  showQuestion();
-}
-
+// ── Boot ──────────────────────────────────────────────────────
 (async () => {
   try {
-    flowers = await loadFlowers();
-    if (flowers.length < 4) {
-      throw new Error('צריך לפחות 4 פרחים כדי לשחק');
-    }
+    const resp = await fetch('../flowers.json');
+    if (!resp.ok) throw new Error('לא ניתן לטעון את flowers.json');
+    allFlowers = await resp.json();
+    if (allFlowers.length < 4) throw new Error('צריך לפחות 4 פרחים כדי לשחק');
+
     document.getElementById('loading').style.display = 'none';
-    startGame();
+
+    const saved = localStorage.getItem(USER_KEY);
+    if (saved) {
+      currentUser = saved;
+      startSession();
+    } else {
+      showLogin();
+    }
   } catch (e) {
     document.getElementById('loading').style.display = 'none';
     const errEl = document.getElementById('error');
