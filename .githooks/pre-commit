@@ -1,0 +1,17 @@
+#!/bin/sh
+# Block commits that include flowers.json changes without running reset_progress.py first.
+
+if git diff --cached --name-only | grep -q "^flowers\.json$"; then
+  FLOWERS_MTIME=$(stat -f "%m" flowers.json 2>/dev/null || stat -c "%Y" flowers.json)
+  RESET_MTIME=$(stat -f "%m" .last_reset 2>/dev/null || stat -c "%Y" .last_reset 2>/dev/null || echo 0)
+
+  if [ "$RESET_MTIME" -lt "$FLOWERS_MTIME" ]; then
+    echo ""
+    echo "❌ flowers.json changed but reset_progress.py hasn't been run since."
+    echo "   Run:  make reset-progress  (or: make update-flowers)"
+    echo ""
+    exit 1
+  fi
+fi
+
+exit 0

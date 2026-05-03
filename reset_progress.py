@@ -102,6 +102,8 @@ def main():
     if args.dry_run:
         print("Dry run — לא בוצעו שינויים.")
     else:
+        # Touch sentinel file so the pre-commit hook knows reset was run
+        open(".last_reset", "w").close()
         print("סיום.")
 
 

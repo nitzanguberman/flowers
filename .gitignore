@@ -3,3 +3,4 @@ __pycache__/
 *.pyc
 identify.py
 photos/flowers/
+.last_reset
