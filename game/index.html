@@ -33,8 +33,38 @@
     padding: 40px 32px;
     text-align: center;
   }
-  #login-screen h1 { font-size: 2rem; color: #2d6a4f; margin-bottom: 8px; }
-  #login-screen p  { color: #777; margin-bottom: 28px; font-size: 0.95rem; }
+  #login-screen h1 { font-size: 2rem; color: #2d6a4f; margin-bottom: 20px; }
+  #user-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 14px; width: 100%; }
+  .user-btn {
+    width: 100%;
+    padding: 14px 16px;
+    background: #f0f7ee;
+    border: 2px solid #c8e6c9;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-family: inherit;
+    color: #1b4332;
+    cursor: pointer;
+    text-align: right;
+    direction: rtl;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .user-btn:hover { background: #d4edda; border-color: #2d6a4f; }
+  #add-user-btn {
+    width: 100%;
+    padding: 11px;
+    background: none;
+    border: 2px dashed #aaa;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    color: #777;
+    cursor: pointer;
+    margin-top: 4px;
+    transition: border-color 0.15s, color 0.15s;
+  }
+  #add-user-btn:hover { border-color: #2d6a4f; color: #2d6a4f; }
+  #new-user-form { width: 100%; margin-bottom: 8px; }
   #login-screen input {
     width: 100%;
     padding: 12px 16px;
@@ -278,9 +308,12 @@
 <!-- Login -->
 <div id="login-screen">
   <h1>🌸 משחק פרחים</h1>
-  <p>הכנס את שמך כדי לעקוב אחר ההתקדמות שלך</p>
-  <input id="name-input" type="text" placeholder="השם שלך" maxlength="30">
-  <button id="login-btn">כניסה</button>
+  <div id="user-list"></div>
+  <div id="new-user-form" style="display:none">
+    <input id="name-input" type="text" placeholder="השם שלך" maxlength="30">
+    <button id="login-btn">כניסה</button>
+  </div>
+  <button id="add-user-btn">+ משתמש חדש</button>
 </div>
 
 <!-- Game -->
@@ -328,7 +361,7 @@
 
 <script type="module">
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js';
-import { getFirestore, doc, getDoc, setDoc } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js';
+import { getFirestore, doc, getDoc, setDoc, collection, getDocs } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js';
 
 const firebaseConfig = {
   apiKey: "AIzaSyChw-uXFymNKrZIVOE2DZbVtGBfuQOpcn4",
@@ -404,10 +437,32 @@ function getOptions(correct) {
   return shuffle([...pool.slice(0, 3), correct]);
 }
 
-function showLogin() {
-  document.getElementById('login-screen').style.display = 'block';
-  document.getElementById('name-input').focus();
+async function showLogin() {
+  const screen = document.getElementById('login-screen');
+  screen.style.display = 'block';
+
+  const list = document.getElementById('user-list');
+  list.innerHTML = '<div style="color:#aaa;font-size:0.9rem;padding:8px 0">טוען משתמשים...</div>';
+
+  const snap = await getDocs(collection(db, 'users'));
+  list.innerHTML = '';
+  snap.docs
+    .sort((a, b) => a.id.localeCompare(b.id))
+    .forEach(d => {
+      const btn = document.createElement('button');
+      btn.className = 'user-btn';
+      btn.textContent = d.id;
+      btn.addEventListener('click', () => doLogin(d.id).catch(console.error));
+      list.appendChild(btn);
+    });
 }
+
+document.getElementById('add-user-btn').addEventListener('click', () => {
+  const form = document.getElementById('new-user-form');
+  form.style.display = 'block';
+  document.getElementById('add-user-btn').style.display = 'none';
+  document.getElementById('name-input').focus();
+});
 
 async function doLogin(name) {
   name = name.trim();
@@ -431,7 +486,9 @@ document.getElementById('switch-user').addEventListener('click', () => {
   document.getElementById('progress').style.display = 'none';
   document.getElementById('summary').style.display = 'none';
   document.getElementById('name-input').value = '';
-  showLogin();
+  document.getElementById('new-user-form').style.display = 'none';
+  document.getElementById('add-user-btn').style.display = 'block';
+  showLogin().catch(console.error);
 });
 
 async function startSession() {
@@ -586,7 +643,7 @@ document.getElementById('restart-btn').addEventListener('click', () => {
       currentUser = saved;
       await startSession();
     } else {
-      showLogin();
+      await showLogin();
     }
   } catch (e) {
     document.getElementById('loading').style.display = 'none';
