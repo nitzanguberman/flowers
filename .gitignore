@@ -1,0 +1,5 @@
+photos/
+.DS_Store
+flowers.json
+__pycache__/
+*.pyc
