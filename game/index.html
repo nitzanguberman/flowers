@@ -50,6 +50,9 @@
     transition: background 0.15s, border-color 0.15s;
   }
   .user-btn:hover { background: #d4edda; border-color: #2d6a4f; }
+  .user-btn { display: flex; justify-content: space-between; align-items: center; }
+  .user-name { font-weight: bold; }
+  .user-stats { font-size: 0.78rem; color: #555; font-weight: normal; direction: rtl; }
   #add-user-btn {
     width: 100%;
     padding: 11px;
@@ -449,9 +452,18 @@ async function showLogin() {
   snap.docs
     .sort((a, b) => a.id.localeCompare(b.id))
     .forEach(d => {
+      const data = d.data();
+      const flowers = data.flowers || {};
+      const mastered = Object.values(flowers).filter(f => f.box === 5).length;
+      const total    = Object.values(flowers).length;
+      const sessions = data.sessionCount || 0;
+
       const btn = document.createElement('button');
       btn.className = 'user-btn';
-      btn.textContent = d.id;
+      btn.innerHTML = `
+        <span class="user-name">${d.id}</span>
+        <span class="user-stats">${sessions} סשנים · ${mastered}/${total} שולט!</span>
+      `;
       btn.addEventListener('click', () => doLogin(d.id).catch(console.error));
       list.appendChild(btn);
     });
