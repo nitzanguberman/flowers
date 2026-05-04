@@ -220,7 +220,7 @@ def main():
         info    = meta.get("info", "")
 
         entry = {
-            "file":      os.path.join("photos", filename),
+            "file":      os.path.join(args.photos_dir, filename),
             "name_en":   name_en,
             "name_he":   name_he,
             "sci_name":  sci_name,
