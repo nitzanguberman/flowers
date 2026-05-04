@@ -2,5 +2,10 @@
 .DS_Store
 __pycache__/
 *.pyc
+.venv/
 identify.py
 photos/flowers/
+photos_tiuli/
+flowers_tiuli.json
+tiuli_seed_test.json
+flowers.json.bak

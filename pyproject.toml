@@ -1,0 +1,10 @@
+[project]
+name = "flowers"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "openai>=1.0",
+    "requests>=2.31",
+    "python-dotenv>=1.0",
+    "beautifulsoup4>=4.14.3",
+]
