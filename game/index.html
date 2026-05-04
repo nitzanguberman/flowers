@@ -760,7 +760,12 @@ function showCollectionPicker() {
     btn.addEventListener('click', () => {
       currentCollection = col;
       document.getElementById('collection-screen').style.display = 'none';
-      startSession().catch(console.error);
+      startSession().catch(err => {
+        document.getElementById('loading').style.display = 'none';
+        showCollectionPicker();
+        document.getElementById('collection-welcome').textContent = `שגיאה: ${err.message}`;
+        document.getElementById('collection-welcome').style.color = '#dc3545';
+      });
     });
     list.appendChild(btn);
   });
