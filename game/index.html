@@ -198,7 +198,8 @@
     aspect-ratio: 16 / 8.2;
     height: auto;
     max-height: 420px;
-    object-fit: cover;
+    object-fit: contain;
+    background: #f0f7ee;
     display: block;
   }
   #question {
@@ -221,6 +222,9 @@
   }
 
   /* ── Choices ── */
+  #answer-panel {
+    display: block;
+  }
   #choices {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -263,7 +267,7 @@
     width: 100%;
     aspect-ratio: 16 / 8.2;
     height: auto;
-    max-height: 420px;
+    max-height: 220px;
     object-fit: contain;
     background: #f0f7ee;
     display: block;
@@ -275,7 +279,7 @@
     line-height: 1.6;
     text-align: right;
     direction: rtl;
-    border-right: 4px solid #2d6a4f;
+    border-top: 4px solid #2d6a4f;
   }
 
   /* ── Next button ── */
@@ -295,6 +299,42 @@
     transition: background 0.15s;
   }
   #next-btn:hover { background: #1b4332; }
+  #card.answered #answer-panel {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(240px, 0.72fr);
+    gap: 14px;
+    padding: 14px 20px 14px;
+    align-items: start;
+  }
+  #card.answered #choices {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 0;
+  }
+  #card.answered .choice {
+    min-height: 70px;
+    padding: 10px 12px;
+  }
+  #card.answered .choice.hidden-after-answer {
+    display: none;
+  }
+  #card.answered #info-box { margin: 0; }
+  #card.answered #info-img { max-height: 150px; }
+  #card.answered #info-text {
+    font-size: 0.84rem;
+    line-height: 1.45;
+  }
+  #card.answered #next-btn {
+    position: fixed;
+    left: 50%;
+    bottom: max(12px, env(safe-area-inset-bottom));
+    transform: translateX(-50%);
+    z-index: 20;
+    width: calc(100% - 40px);
+    max-width: 680px;
+    margin: 0 auto;
+    box-shadow: 0 10px 28px rgba(27, 67, 50, 0.22);
+  }
 
   /* ── Summary screen ── */
   #summary {
@@ -489,7 +529,10 @@
     #report-user { width: 30px; }
     #progress { font-size: 0.86rem; }
     #card { border-radius: 14px; }
-    #photo { aspect-ratio: 4 / 3; }
+    #photo {
+      aspect-ratio: 4 / 3;
+      max-height: min(48vh, 420px);
+    }
     #question {
       align-items: flex-start;
       gap: 8px;
@@ -508,6 +551,30 @@
     }
     .choice .he { font-size: 1.02rem; }
     .choice .en { font-size: 0.88rem; }
+    #info-img { max-height: 140px; }
+    #info-text {
+      padding: 8px 12px;
+      font-size: 0.82rem;
+      line-height: 1.45;
+    }
+    #card.answered #photo { max-height: min(34vh, 300px); }
+    #card.answered #answer-panel {
+      grid-template-columns: 1fr;
+      gap: 8px;
+      padding: 10px 16px 12px;
+    }
+    #card.answered .choice {
+      min-height: 48px;
+      padding: 7px 10px;
+    }
+    #card.answered .choice .he { font-size: 0.95rem; }
+    #card.answered .choice .en { display: none; }
+    #card.answered #info-img { display: none !important; }
+    #next-btn {
+      margin-bottom: 12px;
+      padding: 10px;
+    }
+    #card.answered #next-btn { width: calc(100% - 32px); }
   }
 </style>
 </head>
@@ -569,10 +636,12 @@
     <span>איזה פרח זה?</span>
     <span id="box-badge"></span>
   </div>
-  <div id="choices"></div>
-  <div id="info-box">
-    <img id="info-img" src="" alt="">
-    <div id="info-text"></div>
+  <div id="answer-panel">
+    <div id="choices"></div>
+    <div id="info-box">
+      <img id="info-img" src="" alt="">
+      <div id="info-text"></div>
+    </div>
   </div>
   <button id="next-btn">הבא ◀</button>
 </div>
@@ -935,6 +1004,7 @@ function showQuestion() {
   const flower = sessionQueue[currentIdx];
   const state  = getFlowerState(currentUserData, flower.file);
 
+  document.getElementById('card').classList.remove('answered');
   setQuestionPhoto(flower);
   document.getElementById('progress').textContent =
     `שאלה ${currentIdx + 1} מתוך ${sessionQueue.length}`;
@@ -950,6 +1020,7 @@ function showQuestion() {
     btn.type = 'button';
     btn.className = 'choice';
     btn.dataset.answerKey = answerKey(opt);
+    btn.dataset.isCorrect = opt === flower ? 'true' : 'false';
     btn.innerHTML = `<div class="he">${opt.name_he}</div><div class="en">${opt.name_en}</div>`;
     btn.addEventListener('click', () => handleAnswer(btn, opt, flower));
     choicesEl.appendChild(btn);
@@ -957,9 +1028,13 @@ function showQuestion() {
 
   document.getElementById('next-btn').style.display = 'none';
   document.getElementById('info-box').style.display = 'none';
+  requestAnimationFrame(() => {
+    document.getElementById('card').scrollIntoView({ block: 'start' });
+  });
 }
 
 function handleAnswer(btn, chosen, correct) {
+  document.getElementById('card').classList.add('answered');
   document.querySelectorAll('.choice').forEach(b => {
     b.classList.add('disabled');
     b.disabled = true;
@@ -977,6 +1052,12 @@ function handleAnswer(btn, chosen, correct) {
       if (b.dataset.answerKey === answerKey(correct)) b.classList.add('reveal');
     });
   }
+
+  document.querySelectorAll('.choice').forEach(b => {
+    const isSelected = b === btn;
+    const isCorrectChoice = b.dataset.isCorrect === 'true';
+    if (!isSelected && !isCorrectChoice) b.classList.add('hidden-after-answer');
+  });
 
   const state = getFlowerState(currentUserData, correct.file);
   state.total++;
