@@ -17,6 +17,8 @@ import time
 
 import anthropic
 import requests
+from dotenv import load_dotenv
+load_dotenv()
 
 INAT_OBSERVATIONS = "https://api.inaturalist.org/v1/observations"
 INAT_TAXA         = "https://api.inaturalist.org/v1/taxa"

@@ -1,5 +1,6 @@
-OPENAI_API_KEY    ?= $(shell echo $$OPENAI_API_KEY)
-ANTHROPIC_API_KEY ?= $(shell echo $$ANTHROPIC_API_KEY)
+-include .env
+export OPENAI_API_KEY
+export ANTHROPIC_API_KEY
 PHOTOS            ?= photos
 OUTPUT            ?= flowers.json
 COMPRESS           = for f in photos/*.jpeg photos/*.jpg; do [ -f "$$f" ] && sips -Z 1200 --setProperty formatOptions 80 "$$f" --out "$$f"; done

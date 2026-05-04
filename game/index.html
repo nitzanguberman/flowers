@@ -443,15 +443,8 @@
 <script type="module">
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js';
 import { getFirestore, doc, getDoc, setDoc, collection, getDocs } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js';
+import { firebaseConfig } from './firebase-config.js';
 
-const firebaseConfig = {
-  apiKey: "AIzaSyChw-uXFymNKrZIVOE2DZbVtGBfuQOpcn4",
-  authDomain: "flowers-game-5e085.firebaseapp.com",
-  projectId: "flowers-game-5e085",
-  storageBucket: "flowers-game-5e085.firebasestorage.app",
-  messagingSenderId: "851425514637",
-  appId: "1:851425514637:web:04a2009058dda3d9ae3ec4"
-};
 const app = initializeApp(firebaseConfig);
 const db  = getFirestore(app);
 
