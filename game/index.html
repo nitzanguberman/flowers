@@ -747,7 +747,7 @@ document.getElementById('switch-user-from-collection').addEventListener('click',
 
 function showCollectionPicker() {
   document.getElementById('collection-screen').style.display = 'block';
-  document.getElementById('collection-welcome').textContent = `שלום, ${currentUser}! בחר קולקציה:`;
+  document.getElementById('collection-welcome').textContent = `שלום, ${currentUser}! בחר אוסף:`;
 
   const lastCol = currentUserData ? currentUserData.lastCollection : null;
   const list = document.getElementById('collection-list');
@@ -776,7 +776,7 @@ async function startSession() {
   document.getElementById('loading').textContent = 'טוען... 🌸';
 
   const resp = await fetch('../' + currentCollection.file);
-  if (!resp.ok) throw new Error('לא ניתן לטעון את הקולקציה');
+  if (!resp.ok) throw new Error('לא ניתן לטעון את האוסף');
   allFlowers = await resp.json();
   if (allFlowers.length < 4) throw new Error('צריך לפחות 4 פרחים כדי לשחק');
 
