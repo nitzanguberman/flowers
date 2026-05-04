@@ -36,25 +36,38 @@ def to_large_url(url: str) -> str:
     return re.sub(r"/(square|small|medium|thumb)\.(jpe?g|png)", r"/large.\2", url)
 
 
-def fetch_photo_url_from_observations(sci_name: str) -> Optional[str]:
-    """Best research-grade Israel observation photo (large size)."""
+def photo_id(url: str) -> str:
+    """Extract numeric photo ID from iNaturalist URL for deduplication."""
+    m = re.search(r"/photos/(\d+)/", url)
+    return m.group(1) if m else url
+
+
+def fetch_obs_photos(sci_name: str, place_id: Optional[int] = None, n: int = 2) -> list:
+    """Return up to n distinct research-grade observation photo URLs (large)."""
+    params = {
+        "taxon_name": sci_name,
+        "quality_grade": "research",
+        "photos": "true",
+        "order_by": "votes",
+        "per_page": 15,
+    }
+    if place_id:
+        params["place_id"] = place_id
+    urls, seen_ids = [], set()
     try:
-        r = requests.get(INAT_OBSERVATIONS, headers=HEADERS, timeout=15, params={
-            "taxon_name": sci_name,
-            "place_id": ISRAEL_PLACE_ID,
-            "quality_grade": "research",
-            "photos": "true",
-            "order_by": "votes",
-            "per_page": 5,
-        })
+        r = requests.get(INAT_OBSERVATIONS, headers=HEADERS, timeout=15, params=params)
         for obs in r.json().get("results", []):
             for photo in obs.get("photos", []):
-                url = photo.get("url", "")
-                if url:
-                    return to_large_url(url)
+                url = to_large_url(photo.get("url", ""))
+                pid = photo_id(url)
+                if url and pid not in seen_ids:
+                    urls.append(url)
+                    seen_ids.add(pid)
+                if len(urls) == n:
+                    return urls
     except Exception as e:
-        print(f"    [observations API error] {e}", file=sys.stderr)
-    return None
+        print(f"    [obs API error] {e}", file=sys.stderr)
+    return urls
 
 
 def fetch_photo_url_from_taxa(sci_name: str) -> Optional[str]:
@@ -164,26 +177,44 @@ def main():
             results.append(existing[sci_name])
             continue
 
-        # 1. Fetch photo URL
-        photo_url = fetch_photo_url_from_observations(sci_name)
-        source = "observations"
-        if not photo_url:
-            photo_url = fetch_photo_url_from_taxa(sci_name)
-            source = "taxa"
-        if not photo_url:
+        # 1. Fetch 2 distinct photos (quiz + info panel)
+        # Quiz: best Israel observation; Info: different photo from any source
+        israel_urls = fetch_obs_photos(sci_name, place_id=ISRAEL_PLACE_ID, n=2)
+        taxa_url    = fetch_photo_url_from_taxa(sci_name)
+
+        if israel_urls:
+            quiz_url = israel_urls[0]
+            source   = "israel"
+        elif taxa_url:
+            quiz_url = taxa_url
+            source   = "taxa"
+        else:
             print("NO PHOTO — skipping")
             continue
 
-        # 2. Download photo
+        # Build a pool of candidate info URLs distinct from quiz
+        quiz_pid = photo_id(quiz_url)
+        candidates = (
+            [u for u in israel_urls[1:] if photo_id(u) != quiz_pid] +
+            ([taxa_url] if taxa_url and photo_id(taxa_url) != quiz_pid else [])
+        )
+        if not candidates:
+            # Last resort: fetch global observations excluding quiz photo
+            global_urls = fetch_obs_photos(sci_name, place_id=None, n=5)
+            candidates = [u for u in global_urls if photo_id(u) != quiz_pid]
+
+        info_url = candidates[0] if candidates else quiz_url
+
+        # 2. Download quiz photo locally
         slug      = sci_name_to_slug(sci_name)
-        ext       = "jpeg" if ".jpeg" in photo_url else "jpg"
+        ext       = "jpeg" if ".jpeg" in quiz_url else "jpg"
         filename  = f"inat_{slug}.{ext}"
         dest_path = os.path.join(args.photos_dir, filename)
-        if not download_photo(photo_url, dest_path):
+        if not download_photo(quiz_url, dest_path):
             print("DOWNLOAD FAILED — skipping")
             continue
 
-        # 3. Generate Hebrew metadata via Claude
+        # 3. Generate Hebrew metadata
         meta    = generate_metadata(client, sci_name, name_en, name_he)
         name_he = name_he or meta.get("name_he", name_en)
         info    = meta.get("info", "")
@@ -194,7 +225,7 @@ def main():
             "name_he":   name_he,
             "sci_name":  sci_name,
             "info":      info,
-            "photo_url": photo_url,
+            "photo_url": info_url,  # different photo shown in info panel
         }
         results.append(entry)
         print(f"{name_he}  [{source}]")

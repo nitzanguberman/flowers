@@ -1,0 +1,7218 @@
+[
+  {
+    "tiuli_id": 13,
+    "name_he": "פרג אגסי",
+    "name_en": "Corn Poppy",
+    "sci_name": "Papaver umbonatum",
+    "family_he": "פרגיים",
+    "bloom_months": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  {
+    "tiuli_id": 48,
+    "name_he": "תורמוס ההרים",
+    "name_en": "Blue Lupine",
+    "sci_name": "Lupinus pilosus",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      2,
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 15,
+    "name_he": "כלנית מצויה",
+    "name_en": "Crown Anemone",
+    "sci_name": "Anemone coronaria",
+    "family_he": "נוריתיים",
+    "bloom_months": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      10,
+      12
+    ]
+  },
+  {
+    "tiuli_id": 167,
+    "name_he": "צבעוני ההרים",
+    "name_en": "Sun's-eye Tulip",
+    "sci_name": "Tulipa agenensis",
+    "family_he": "שושניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 82,
+    "name_he": "דם-המכבים האדום",
+    "name_en": "Red Everlasting",
+    "sci_name": "Helichrysum sanguineum",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 268,
+    "name_he": "אירוס ארץ-ישראלי",
+    "name_en": "Palestine Iris",
+    "sci_name": "Iris palaestina",
+    "family_he": "אירוסיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 77,
+    "name_he": "נרקיס מצוי",
+    "name_en": "Common Narcissus",
+    "sci_name": "Narcissus tazetta",
+    "family_he": "נרקיסיים",
+    "bloom_months": [
+      2,
+      3,
+      5,
+      6,
+      7,
+      11
+    ]
+  },
+  {
+    "tiuli_id": 754,
+    "name_he": "שרביטן מצוי",
+    "name_en": "Leafless Ephedra",
+    "sci_name": "Ephedra foeminea",
+    "family_he": "שרביטניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 336,
+    "name_he": "סחלב הגליל",
+    "name_en": "Galilee Orchid",
+    "sci_name": "Orchis galilaea",
+    "family_he": "סחלביים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 50,
+    "name_he": "לוף ארץ-ישראלי",
+    "name_en": "Palestine Arum",
+    "sci_name": "Arum palaestinum",
+    "family_he": "לופיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 29,
+    "name_he": "שקד מצוי",
+    "name_en": "Common Almond",
+    "sci_name": "Amygdalus communis",
+    "family_he": "ורדיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7,
+      9
+    ]
+  },
+  {
+    "tiuli_id": 197,
+    "name_he": "סיפן התבואה",
+    "name_en": "Common Gladiolus",
+    "sci_name": "Gladiolus italicus",
+    "family_he": "אירוסיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 130,
+    "name_he": "סביון אביבי",
+    "name_en": "Spring Groundsel",
+    "sci_name": "Senecio vernalis",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 14,
+    "name_he": "נורית אסיה",
+    "name_en": "Turban Buttercup",
+    "sci_name": "Ranunculus asiaticus",
+    "family_he": "נוריתיים",
+    "bloom_months": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  {
+    "tiuli_id": 425,
+    "name_he": "אירוס ארם-נהריים",
+    "name_en": "Mesopotamian Iris",
+    "sci_name": "Iris mesopotamica",
+    "family_he": "אירוסיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 31,
+    "name_he": "רקפת מצויה",
+    "name_en": "Persian Cyclamen",
+    "sci_name": "Cyclamen persicum",
+    "family_he": "רקפתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 860,
+    "name_he": "פיגם מצוי",
+    "name_en": "African Rue",
+    "sci_name": "Ruta chalepensis",
+    "family_he": "פיגמיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 384,
+    "name_he": "עלקת מצרית",
+    "name_en": "Egyptian Broomrape",
+    "sci_name": "Orobanche aegyptiaca",
+    "family_he": "עלקתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 866,
+    "name_he": "נורית המים",
+    "name_en": "Common Water-crowfoot",
+    "sci_name": "Ranunculus aquatilis",
+    "family_he": "נוריתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 184,
+    "name_he": "ציפורני-חתול מצויות",
+    "name_en": "Field Marigold",
+    "sci_name": "Calendula arvensis",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 872,
+    "name_he": "צורית ספרדית",
+    "name_en": "Spanish Stonecrop",
+    "sci_name": "Sedum hispanicum",
+    "family_he": "טבוריתיים",
+    "bloom_months": [
+      2,
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 7,
+    "name_he": "חלמונית גדולה",
+    "name_en": "Large Sternbergia",
+    "sci_name": "Sternbergia clusiana",
+    "family_he": "נרקיסיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7,
+      10,
+      12
+    ]
+  },
+  {
+    "tiuli_id": 192,
+    "name_he": "סחלב אנטולי",
+    "name_en": "Anatolian Orchid",
+    "sci_name": "Orchis anatolica",
+    "family_he": "סחלביים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 9,
+    "name_he": "כליל החורש",
+    "name_en": "Juda's Tree",
+    "sci_name": "Cercis siliquastrum",
+    "family_he": "כליליים",
+    "bloom_months": [
+      2,
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 114,
+    "name_he": "הרדופנין הציצית",
+    "name_en": "Oriental Viper's-grass",
+    "sci_name": "Scorzonera papposa",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 36,
+    "name_he": "זית אירופי",
+    "name_en": "Common Olive",
+    "sci_name": "Olea europaea",
+    "family_he": "זיתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 73,
+    "name_he": "דרדר מצוי",
+    "name_en": "Common Centaury-thistle",
+    "sci_name": "Centaurea iberica",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 411,
+    "name_he": "שנק החורש",
+    "name_en": "Purple limodore",
+    "sci_name": "Limodorum abortivum",
+    "family_he": "סחלביים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 181,
+    "name_he": "שיטה כחלחלה",
+    "name_en": "White Sallow",
+    "sci_name": "Acacia saligna",
+    "family_he": "שיטיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 5,
+    "name_he": "חרוב מצוי",
+    "name_en": "Carob",
+    "sci_name": "Ceratonia siliqua",
+    "family_he": "כליליים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7,
+      8,
+      11
+    ]
+  },
+  {
+    "tiuli_id": 21,
+    "name_he": "דודא רפואי",
+    "name_en": "Mandrake",
+    "sci_name": "Mandragora autumnalis",
+    "family_he": "סולניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 413,
+    "name_he": "כותלית יהודה",
+    "name_en": "Wall Pellitory",
+    "sci_name": "Parietaria judaica",
+    "family_he": "סרפדיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 53,
+    "name_he": "אשל הפרקים",
+    "name_en": "Athel Tamarisk",
+    "sci_name": "Tamarix aphylla",
+    "family_he": "אשליים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 22,
+    "name_he": "דבורנית גדולה",
+    "name_en": "Drone Bee-Orchid",
+    "sci_name": "Ophrys holosericea",
+    "family_he": "סחלביים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 122,
+    "name_he": "צהרון מצוי",
+    "name_en": "Barbary Nut",
+    "sci_name": "Gynandriris sisyrinchium",
+    "family_he": "אירוסיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 59,
+    "name_he": "גזר קיפח",
+    "name_en": "Wild Carrot",
+    "sci_name": "Daucus carota",
+    "family_he": "סוככיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 121,
+    "name_he": "עירית גדולה",
+    "name_en": "Common Asphodel",
+    "sci_name": "Asphodelus aestivus",
+    "family_he": "שושניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 216,
+    "name_he": "כחלית ההרים",
+    "name_en": "Blue Desert Liliy",
+    "sci_name": "Ixiolirion tataricum",
+    "family_he": "נרקיסיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 75,
+    "name_he": "חוטמית זיפנית",
+    "name_en": "Bristly Hollyhock",
+    "sci_name": "Alcea setosa",
+    "family_he": "חלמיתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 594,
+    "name_he": "ינבוט השדה",
+    "name_en": "Dwarf Mesquite",
+    "sci_name": "Prosopis farcta",
+    "family_he": "שיטיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 120,
+    "name_he": "עיריוני צהוב",
+    "name_en": "Yellow Asphodel",
+    "sci_name": "Asphodeline lutea",
+    "family_he": "שושניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 335,
+    "name_he": "קרדה מכסיפה",
+    "name_en": "Silver Thistle",
+    "sci_name": "Carduus argentatus",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 199,
+    "name_he": "צנון מצוי",
+    "name_en": "Wild Radish",
+    "sci_name": "Raphanus raphanistrum",
+    "family_he": "מצליבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 164,
+    "name_he": "צתרה ורודה",
+    "name_en": "Savoury of Crete",
+    "sci_name": "Satureja thymbra",
+    "family_he": "שפתניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 345,
+    "name_he": "סחלב נקוד",
+    "name_en": "Punctate Orchid",
+    "sci_name": "Orchis punctulata",
+    "family_he": "סחלביים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 441,
+    "name_he": "שלמון יפואי",
+    "name_en": "Jaffa(SH) Scabious(JBG)",
+    "sci_name": "Cephalaria joppensis",
+    "family_he": "שלמוניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 574,
+    "name_he": "הדס מצוי",
+    "name_en": "Common Myrtle",
+    "sci_name": "Myrtus communis",
+    "family_he": "הדסיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 505,
+    "name_he": "רגלת הגינה",
+    "name_en": "Garden Purslane",
+    "sci_name": "Portulaca oleracea",
+    "family_he": "רגלתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 98,
+    "name_he": "בן-חרדל מצוי",
+    "name_en": "Garden Rocket",
+    "sci_name": "Eruca sativa",
+    "family_he": "מצליבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 119,
+    "name_he": "חורשף מצוייץ",
+    "name_en": "Beautiful Distaff-thistle",
+    "sci_name": "Atractylis comosa",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 147,
+    "name_he": "רוזמרין רפואי",
+    "name_en": "Rosemary",
+    "sci_name": "Rosmarinus officinalis",
+    "family_he": "שפתניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 363,
+    "name_he": "רכפה לבנה",
+    "name_en": "White Mignonette",
+    "sci_name": "Reseda alba",
+    "family_he": "רכפתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 256,
+    "name_he": "שמשון מצוי",
+    "name_en": "Anuwal Sun-rose",
+    "sci_name": "Helianthemum salicifolium",
+    "family_he": "לוטמיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 410,
+    "name_he": "דבורנית הדבורה",
+    "name_en": "Bee Orchid",
+    "sci_name": "Ophrys apifera",
+    "family_he": "סחלביים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 42,
+    "name_he": "קטלב מצוי",
+    "name_en": "Eastern Strawberry Tree",
+    "sci_name": "Arbutus andrachne",
+    "family_he": "אברשיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 118,
+    "name_he": "חבלבל כפני",
+    "name_en": "Falmate Bindweed",
+    "sci_name": "Convolvulus althaeoides",
+    "family_he": "חבלבליים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 414,
+    "name_he": "אספסת עדשתית",
+    "name_en": "Flat-Podded Medick",
+    "sci_name": "Medicago orbicularis",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 321,
+    "name_he": "ברזילון ענף",
+    "name_en": "Branching Ironwort",
+    "sci_name": "Sideritis pullulans",
+    "family_he": "שפתניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 71,
+    "name_he": "אקליפטוס המקור",
+    "name_en": "River Red-gum",
+    "sci_name": "Eucalyptus camalidulensis",
+    "family_he": "הדסיים",
+    "bloom_months": [
+      2,
+      3,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "tiuli_id": 78,
+    "name_he": "כרכום חורפי",
+    "name_en": "Winter Crocus",
+    "sci_name": "Crocus hyemalis",
+    "family_he": "אירוסיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7,
+      11
+    ]
+  },
+  {
+    "tiuli_id": 318,
+    "name_he": "ציפורנית נפוחה",
+    "name_en": "White Bladder Campion",
+    "sci_name": "Silene vulgaris",
+    "family_he": "ציפורניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 171,
+    "name_he": "זקן-תיש ארוך",
+    "name_en": "Long Goat's-beard",
+    "sci_name": "Tragopogon coelesyriacus",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 907,
+    "name_he": "ספלול קטן",
+    "name_en": "Small Birthwort",
+    "sci_name": "Aristolochia parvifolia",
+    "family_he": "ספלוליים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 655,
+    "name_he": "עדשת-מים גיבנת",
+    "name_en": "Fat Duckweed",
+    "sci_name": "Lemna gibba",
+    "family_he": "עדשת-המים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 163,
+    "name_he": "טופח ריסני",
+    "name_en": "Ciliate Vetching",
+    "sci_name": "Lathyrus blepharicarpus",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 140,
+    "name_he": "פעמונית קיפחת",
+    "name_en": "Rampion Bellflower",
+    "sci_name": "Campanula rapunculus",
+    "family_he": "פעמוניתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 169,
+    "name_he": "צבר מצוי",
+    "name_en": "Prickly Pear",
+    "sci_name": "Opuntia ficus-indica",
+    "family_he": "צבריים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 203,
+    "name_he": "שלהבית קצרת-שיניים",
+    "name_en": "Jerusalem Sage",
+    "sci_name": "Phlomis brachyodon",
+    "family_he": "שפתניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 516,
+    "name_he": "פרקינסוניה שיכנית",
+    "name_en": "Pickly Thorn",
+    "sci_name": "Parkinsonia aculeata",
+    "family_he": "כליליים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 709,
+    "name_he": "אברה ארוכת-עלים",
+    "name_en": "Long Brake",
+    "sci_name": "Pteris vittata",
+    "family_he": "אברתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 83,
+    "name_he": "סתוונית היורה",
+    "name_en": "Steven's Meadow-saffron",
+    "sci_name": "Colchicum stevenii",
+    "family_he": "שושניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 658,
+    "name_he": "גומא חום",
+    "name_en": "Brown Rue",
+    "sci_name": "Cyperus fuscus",
+    "family_he": "גומאיים (גמאיים)",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 19,
+    "name_he": "ער אציל",
+    "name_en": "True Laurel",
+    "sci_name": "Laurus nobilis",
+    "family_he": "עריים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 55,
+    "name_he": "חצב מצוי",
+    "name_en": "Sea Squill",
+    "sci_name": "Urginea maritima",
+    "family_he": "שושניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  {
+    "tiuli_id": 90,
+    "name_he": "עכנאי יהודה",
+    "name_en": "Judean Viper's-bugloss",
+    "sci_name": "Echium judaeum",
+    "family_he": "זיפניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 69,
+    "name_he": "חלבלוב מגובשש",
+    "name_en": "Jerusalem Spurge",
+    "sci_name": "Euphorbia hierosolymitana",
+    "family_he": "חלבלוביים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 3349,
+    "name_he": "ניסנית זיפנית",
+    "name_en": "Rough Hawk's-beard",
+    "sci_name": "Crepis aspera",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 145,
+    "name_he": "פשתה שעירה",
+    "name_en": "Hairy Pink Flax",
+    "sci_name": "Linum pubescens",
+    "family_he": "פשתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 831,
+    "name_he": "אחילוף צר-עלים",
+    "name_en": "Narrow Biarum",
+    "sci_name": "Biarum angustatum",
+    "family_he": "לופיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 166,
+    "name_he": "ציפורן נקוד",
+    "name_en": "Wild Pink",
+    "sci_name": "Dianthus strictus",
+    "family_he": "ציפורניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 394,
+    "name_he": "לוף מנומר",
+    "name_en": "Spotted Arum",
+    "sci_name": "Arum dioscoridis",
+    "family_he": "לופיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 11,
+    "name_he": "אלה אטלנטית",
+    "name_en": "Atlantic Pistachio",
+    "sci_name": "Pistacia atlantica",
+    "family_he": "אלתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 781,
+    "name_he": "סחלב השקיק",
+    "name_en": "Fan-Lipped Orchid",
+    "sci_name": "Orchis collina",
+    "family_he": "סחלביים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 138,
+    "name_he": "נירית הקמה",
+    "name_en": "Bishop's Weed",
+    "sci_name": "Ridolfia segetum",
+    "family_he": "סוככיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 478,
+    "name_he": "ירבוז מצוי",
+    "name_en": "Least Amaranth",
+    "sci_name": "Amaranthus viridis",
+    "family_he": "ירבוזיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 235,
+    "name_he": "רימון מצוי",
+    "name_en": "Pomegranate",
+    "sci_name": "Punica granatum",
+    "family_he": "רימוניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 139,
+    "name_he": "עולש מצוי",
+    "name_en": "Dwarf Chicory",
+    "sci_name": "Cichorium endivia",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 368,
+    "name_he": "מסרק שולמית",
+    "name_en": "Shepherd's Needle",
+    "sci_name": "Scandix pecten-veneris",
+    "family_he": "סוככיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 12,
+    "name_he": "אלת המסטיק",
+    "name_en": "Lentisk",
+    "sci_name": "Pistacia lentiscus",
+    "family_he": "אלתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 16,
+    "name_he": "לוטם שעיר",
+    "name_en": "Soft-Hairy Rockrose",
+    "sci_name": "Cistus incanus",
+    "family_he": "לוטמיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 99,
+    "name_he": "בן-סחלב צריפי",
+    "name_en": "Pyramidal Orchid",
+    "sci_name": "Anacamptis pyramidalis",
+    "family_he": "סחלביים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 112,
+    "name_he": "גפן היין",
+    "name_en": "Common Grape-Vine",
+    "sci_name": "Vitis vinifera",
+    "family_he": "גפניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 105,
+    "name_he": "דולב מזרחי",
+    "name_en": "Oriental Plane Tree",
+    "sci_name": "Platanus orientalis",
+    "family_he": "דולביים (דלביים)",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 296,
+    "name_he": "ניסנית דו-קרנית",
+    "name_en": "Holy's  Hawk's-beard",
+    "sci_name": "Crepis sancta",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 32,
+    "name_he": "מקור-חסידה גדול",
+    "name_en": "Great Stork's-bill",
+    "sci_name": "Erodium gruinum",
+    "family_he": "גרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 104,
+    "name_he": "דטורה נטוית-פרי",
+    "name_en": "Downwards Thornapple(SH)",
+    "sci_name": "Datura innoxia",
+    "family_he": "סולניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7,
+      11
+    ]
+  },
+  {
+    "tiuli_id": 111,
+    "name_he": "גדילן מצוי",
+    "name_en": "Holy Thistle",
+    "sci_name": "Silybum marianum",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 573,
+    "name_he": "דטורה זקופת-פרי",
+    "name_en": "Common Thornapple",
+    "sci_name": "Datura stramonium",
+    "family_he": "סולניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 62,
+    "name_he": "סרפד צורב",
+    "name_en": "Small Nettle",
+    "sci_name": "Urtica urens",
+    "family_he": "סרפדיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 128,
+    "name_he": "לשון-פר סמורה",
+    "name_en": "Prickly Alkanet",
+    "sci_name": "Anchusa strigosa",
+    "family_he": "זיפניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 63,
+    "name_he": "קיקיון מצוי",
+    "name_en": "castor-Oil Plant",
+    "sci_name": "Ricinus communis",
+    "family_he": "חלבלוביים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 52,
+    "name_he": "כלך מצוי",
+    "name_en": "Common Giant Fenne",
+    "sci_name": "Ferula communis",
+    "family_he": "סוככיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 88,
+    "name_he": "שום גבוה",
+    "name_en": "Wild Leek",
+    "sci_name": "Allium ampeloprasum",
+    "family_he": "שושניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 534,
+    "name_he": "סרפד הכדורים",
+    "name_en": "Roman Nettle",
+    "sci_name": "Urtica pilulifera",
+    "family_he": "סרפדיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 49,
+    "name_he": "חרצית עטורה",
+    "name_en": "Crown Daisy",
+    "sci_name": "Chrysanthemum coronarium",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 72,
+    "name_he": "הרדוף הנחלים",
+    "name_en": "Oleander",
+    "sci_name": "Nerium oleander",
+    "family_he": "הרדופיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 212,
+    "name_he": "צנון פגיוני",
+    "name_en": "Dagger Radish",
+    "sci_name": "Raphanus rostratus",
+    "family_he": "מצליבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 289,
+    "name_he": "סחלב פרפרני",
+    "name_en": "Pink Butterfly Orchid",
+    "sci_name": "Orchis papilionacea",
+    "family_he": "סחלביים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 828,
+    "name_he": "סחלב קדוש",
+    "name_en": "Palestine Orchid",
+    "sci_name": "Orchis sancta",
+    "family_he": "סחלביים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 18,
+    "name_he": "עכובית הגלגל",
+    "name_en": "Tumble Thistle",
+    "sci_name": "Gundelia tournefortii",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 17,
+    "name_he": "לוטם מרווני",
+    "name_en": "Sage-Leaved Rockrose",
+    "sci_name": "Cistus salviifolius",
+    "family_he": "לוטמיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 124,
+    "name_he": "קחוון מצוי",
+    "name_en": "Common Chamomile",
+    "sci_name": "Anthemis pseudocotula",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 750,
+    "name_he": "כרפס הביצות",
+    "name_en": "Fool's Watercress",
+    "sci_name": "Apium nodiflorum",
+    "family_he": "סוככיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 126,
+    "name_he": "קיפודן מצוי",
+    "name_en": "Common Globe-thistle",
+    "sci_name": "Echinops adenocaulos",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 462,
+    "name_he": "בבונג זהוב",
+    "name_en": "Golden Chamomile",
+    "sci_name": "Matricaria aurea",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 154,
+    "name_he": "שלהבית דביקה",
+    "name_en": "Shrubby Jerusalem Sage",
+    "sci_name": "Phlomis viscosa",
+    "family_he": "שפתניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 862,
+    "name_he": "סגולית מחומשת",
+    "name_en": "Galilee(SH) Venus' Looking Glass",
+    "sci_name": "Legousia pentagonia",
+    "family_he": "פעמוניתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 526,
+    "name_he": "אמיתה גדולה",
+    "name_en": "Bishop's Weed",
+    "sci_name": "Ammi majus",
+    "family_he": "סוככיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 755,
+    "name_he": "אליסון מצוי",
+    "name_en": "Common Madwort",
+    "sci_name": "Alyssum simplex",
+    "family_he": "מצליבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 67,
+    "name_he": "קיסוסית קוצנית",
+    "name_en": "Rough Bindweed",
+    "sci_name": "Smilax aspera",
+    "family_he": "שושניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 101,
+    "name_he": "כוכב ריחני",
+    "name_en": "Fragrant Oxeye",
+    "sci_name": "Asteriscus graveolens",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 152,
+    "name_he": "שמשון הדור",
+    "name_en": "Pink Sun-rose",
+    "sci_name": "Helianthemum vesicarium",
+    "family_he": "לוטמיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 417,
+    "name_he": "חוחן הקנרס",
+    "name_en": "Artichoke Cotton-thistle",
+    "sci_name": "Onopordum cynarocephalum",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 467,
+    "name_he": "אזוב מצוי",
+    "name_en": "Wild Marjoram",
+    "sci_name": "Origanum syriacum",
+    "family_he": "שפתניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 3336,
+    "name_he": "חטוטרן מצוי",
+    "name_en": "Gold-of-Pleasure",
+    "sci_name": "Ochthodium aegyptiacum",
+    "family_he": "מצליבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 395,
+    "name_he": "עכנאי נאה",
+    "name_en": "Blue Viper's-bugloss",
+    "sci_name": "Echium plantagineum",
+    "family_he": "זיפניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 779,
+    "name_he": "חלמית מצויה",
+    "name_en": "Mallow",
+    "sci_name": "Malva nicaeensis",
+    "family_he": "חלמיתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 47,
+    "name_he": "תמר מצוי",
+    "name_en": "Date Palm",
+    "sci_name": "Phoenix dactylifera",
+    "family_he": "דקליים",
+    "bloom_months": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      9,
+      11
+    ]
+  },
+  {
+    "tiuli_id": 80,
+    "name_he": "עוזרר קוצני",
+    "name_en": "Spiny Hawthorn",
+    "sci_name": "Crataegus aronia",
+    "family_he": "ורדיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 89,
+    "name_he": "חוח עקוד",
+    "name_en": "Spotted Golden-thistle",
+    "sci_name": "Scolymus maculatus",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 76,
+    "name_he": "מעוג כרתי",
+    "name_en": "Cretan Mallow",
+    "sci_name": "Lavatera cretica",
+    "family_he": "חלמיתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 186,
+    "name_he": "לבנה רפואי",
+    "name_en": "Officinal Storax",
+    "sci_name": "Styrax officinalis",
+    "family_he": "לבניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 703,
+    "name_he": "ורד הכלב",
+    "name_en": "Dog Rose",
+    "sci_name": "Rosa canina",
+    "family_he": "ורדיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 10,
+    "name_he": "אלה ארץ-ישראלית",
+    "name_en": "Terebinth Tree",
+    "sci_name": "Pistacia palaestina",
+    "family_he": "אלתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 209,
+    "name_he": "חלמית גדולה",
+    "name_en": "Wood Mallow",
+    "sci_name": "Malva sylvestris",
+    "family_he": "חלמיתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 38,
+    "name_he": "צלף קוצני",
+    "name_en": "Common Caper",
+    "sci_name": "Capparis spinosa",
+    "family_he": "צלפיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  {
+    "tiuli_id": 115,
+    "name_he": "חמציץ נטוי",
+    "name_en": "Nodding Wood-sorrel",
+    "sci_name": "Oxalis pes-caprae",
+    "family_he": "חמציציים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 269,
+    "name_he": "געדה מצויה",
+    "name_en": "Cat-thyme Germander",
+    "sci_name": "Teucrium capitatum",
+    "family_he": "שפתניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 330,
+    "name_he": "דבורנית הקטיפה",
+    "name_en": "Velvet Bee orchid",
+    "sci_name": "Ophrys transhyrcana",
+    "family_he": "סחלביים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 404,
+    "name_he": "יערה איטלקית",
+    "name_en": "Italian Honeysuckle",
+    "sci_name": "Lonicera etrusca",
+    "family_he": "יערתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 806,
+    "name_he": "כוכבית מצויה",
+    "name_en": "Common Chickweed",
+    "sci_name": "Stellaria media",
+    "family_he": "ציפורניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 127,
+    "name_he": "קוציץ סורי",
+    "name_en": "Syrian Bear's-breech",
+    "sci_name": "Acanthus syriacus",
+    "family_he": "קוציציים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 161,
+    "name_he": "טיון דביק",
+    "name_en": "Clammy Inula",
+    "sci_name": "Dittrichia viscosa",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 226,
+    "name_he": "שרעול שעיר",
+    "name_en": "Bitumen Trefoil",
+    "sci_name": "Psoralea bituminosa",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 206,
+    "name_he": "קצח השדה",
+    "name_en": "Field Fennel-Flower",
+    "sci_name": "Nigella arvensis",
+    "family_he": "נוריתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 650,
+    "name_he": "ויתניה משכרת",
+    "name_en": "Common Winter-cherry",
+    "sci_name": "Withania somnifera",
+    "family_he": "סולניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 191,
+    "name_he": "סחלבן החורש",
+    "name_en": "Long-Leaf Helleborine",
+    "sci_name": "Cephalanthera longifolia",
+    "family_he": "סחלביים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 416,
+    "name_he": "דרדר גדול-פרחים",
+    "name_en": "Blush  Centaury-thistle",
+    "sci_name": "Centaurea crocodylium",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 97,
+    "name_he": "ברקן סורי",
+    "name_en": "Syrian Thistle",
+    "sci_name": "Notobasis syriaca",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 116,
+    "name_he": "חרדל השדה",
+    "name_en": "Charlock",
+    "sci_name": "Sinapis arvensis",
+    "family_he": "מצליבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 378,
+    "name_he": "מסרק מזרחי",
+    "name_en": "Venus' Comb",
+    "sci_name": "Scandix verna",
+    "family_he": "סוככיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 409,
+    "name_he": "דבורנית נאה",
+    "name_en": "Bornmueller's Bee-orchid",
+    "sci_name": "Ophrys bornmuelleri",
+    "family_he": "סחלביים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 449,
+    "name_he": "תלתן דו-גוני",
+    "name_en": "Bi-coloured Clover",
+    "sci_name": "Trifolium dichroanthum",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 852,
+    "name_he": "מרווה כחולה",
+    "name_en": "Blue Sage",
+    "sci_name": "Salvia indica",
+    "family_he": "שפתניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 144,
+    "name_he": "פטל קדוש",
+    "name_en": "Holy Bramble",
+    "sci_name": "Rubus sanguineus",
+    "family_he": "ורדיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 310,
+    "name_he": "כדן נאה",
+    "name_en": "Common Grape Hyacinth",
+    "sci_name": "Muscari pulchellum",
+    "family_he": "שושניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 387,
+    "name_he": "חסה כחולת-פרחים",
+    "name_en": "Tuberous Lettuce",
+    "sci_name": "Steptorhamphus tuberosus",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 178,
+    "name_he": "דרדית מצויה",
+    "name_en": "Crupina",
+    "sci_name": "Crupina crupinastrum",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 189,
+    "name_he": "בוצין מפורץ",
+    "name_en": "Scallop-leaved Mullein",
+    "sci_name": "Verbascum sinuatum",
+    "family_he": "לועניתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 535,
+    "name_he": "שברק משובל",
+    "name_en": "Foxtail Rest-harrow",
+    "sci_name": "Ononis alopecuroides",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 620,
+    "name_he": "אסתר מרצעני",
+    "name_en": "Common Starwort",
+    "sci_name": "Aster subulatus",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 33,
+    "name_he": "מרגנית השדה",
+    "name_en": "Scarlet Pimpernel",
+    "sci_name": "Anagallis arvensis",
+    "family_he": "רקפתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 200,
+    "name_he": "לשון-פר מצויה",
+    "name_en": "Common Alkanet",
+    "sci_name": "Anchusa undulata",
+    "family_he": "זיפניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 58,
+    "name_he": "זלזלת הקנוקנות",
+    "name_en": "Virgin's Bower",
+    "sci_name": "Clematis cirrhosa",
+    "family_he": "נוריתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 264,
+    "name_he": "אטד אירופי",
+    "name_en": "European Boxthorn",
+    "sci_name": "Lycium europaeum",
+    "family_he": "סולניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 323,
+    "name_he": "סלסילה מצויה",
+    "name_en": "Cow parsnip(JBG)",
+    "sci_name": "Ainsworthia trachycarpa",
+    "family_he": "סוככיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 379,
+    "name_he": "סינפיטון ארץ-ישראלי",
+    "name_en": "Palestine Comfrey",
+    "sci_name": "Symphytum brachycalyx",
+    "family_he": "זיפניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 678,
+    "name_he": "נפית כפופה",
+    "name_en": "Syrian Cantip",
+    "sci_name": "Nepeta curviflora",
+    "family_he": "שפתניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 51,
+    "name_he": "שיטה מלבינה",
+    "name_en": "White Acacia",
+    "sci_name": "Faidherbia albida",
+    "family_he": "שיטיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 134,
+    "name_he": "מוצית קוצנית",
+    "name_en": "Spiny(K) Starwort",
+    "sci_name": "Asteriscus spinosus",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 352,
+    "name_he": "ציפורנית מקופחת",
+    "name_en": "Apetalous Campion",
+    "sci_name": "Silene apetala",
+    "family_he": "ציפורניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 354,
+    "name_he": "שערור שעיר",
+    "name_en": "Hairy-seeded Chervil",
+    "sci_name": "Chaetosciadium trichospermum",
+    "family_he": "סוככיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 403,
+    "name_he": "עלקת חרוקה",
+    "name_en": "Scalloped Broomrape",
+    "sci_name": "Orobanche crenata",
+    "family_he": "עלקתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 608,
+    "name_he": "לנטנה ססגונית",
+    "name_en": "Shrub Verbena",
+    "sci_name": "Lantana camara",
+    "family_he": "ורבניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 282,
+    "name_he": "חרדל לבן",
+    "name_en": "White Mustard",
+    "sci_name": "Sinapis alba",
+    "family_he": "מצליבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 106,
+    "name_he": "דרכמונית מצרית",
+    "name_en": "Egyptian Hartwort",
+    "sci_name": "Tordylium aegyptiacum",
+    "family_he": "סוככיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 141,
+    "name_he": "פגוניה רכה",
+    "name_en": "Common Fagonia",
+    "sci_name": "Fagonia mollis",
+    "family_he": "זוגניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 188,
+    "name_he": "עכנאי מגובב",
+    "name_en": "Tall Viper's-bugloss",
+    "sci_name": "Echium glomeratum",
+    "family_he": "זיפניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 359,
+    "name_he": "נזמית לבנה",
+    "name_en": "Musk deadnettle",
+    "sci_name": "Lamium moschatum",
+    "family_he": "שפתניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 408,
+    "name_he": "דבורנית צהובה",
+    "name_en": "Yellow Bee orchid",
+    "sci_name": "Ophrys lutea",
+    "family_he": "סחלביים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 497,
+    "name_he": "כתרון זעיר-פרח",
+    "name_en": "Yellow Crown-vetch",
+    "sci_name": "Coronilla rostrata",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 556,
+    "name_he": "עוקץ-עקרב ריחני",
+    "name_en": "Fragrant Heliotrope",
+    "sci_name": "Heliotropium suaveolens",
+    "family_he": "זיפניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 849,
+    "name_he": "כלמינתה אפורה",
+    "name_en": "Grey Calamint",
+    "sci_name": "Calamintha incana",
+    "family_he": "שפתניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 107,
+    "name_he": "אלקנה סמורה",
+    "name_en": "Spiny Alkanet",
+    "sci_name": "Alkanna strigosa",
+    "family_he": "זיפניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 133,
+    "name_he": "מציץ סורי",
+    "name_en": "Syrian Golden-drop",
+    "sci_name": "Onosma orientalis",
+    "family_he": "זיפניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 176,
+    "name_he": "דרדר כחול",
+    "name_en": "Syrian Cornflower-thistle",
+    "sci_name": "Centaurea cyanoides",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 375,
+    "name_he": "לוטוס יהודה",
+    "name_en": "Judean Bird's-foot Trefoil",
+    "sci_name": "Lotus collinus",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 551,
+    "name_he": "אגמון האגם",
+    "name_en": "Lake Bulrush",
+    "sci_name": "Schoenoplectus lacustris",
+    "family_he": "גומאיים (גמאיים)",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 575,
+    "name_he": "זוטה לבנה",
+    "name_en": "Thyme-leaved Savory",
+    "sci_name": "Micromeria fruticosa",
+    "family_he": "שפתניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 592,
+    "name_he": "טופח מצוי",
+    "name_en": "Yellow Vetchling",
+    "sci_name": "Lathyrus aphaca",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 81,
+    "name_he": "בן-חצב יקינתוני",
+    "name_en": "Hyacinth Squill",
+    "sci_name": "Scilla hyacinthoides",
+    "family_he": "שושניים",
+    "bloom_months": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 129,
+    "name_he": "לוע-ארי גדול",
+    "name_en": "Common Snapdragon",
+    "sci_name": "Antirrhinum majus",
+    "family_he": "לועניתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 202,
+    "name_he": "מרווה דגולה",
+    "name_en": "Common Sage",
+    "sci_name": "Salvia viridis",
+    "family_he": "שפתניים",
+    "bloom_months": [
+      2,
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 241,
+    "name_he": "חבצלת קטנת-פרחים",
+    "name_en": "Small-Flowered Pancratium",
+    "sci_name": "Vagaria parviflora",
+    "family_he": "נרקיסיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 900,
+    "name_he": "רומולאה זעירה",
+    "name_en": "Columna Romulea",
+    "sci_name": "Romulea columnae",
+    "family_he": "אירוסיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 3,
+    "name_he": "אלון מצוי",
+    "name_en": "Kermes Oak",
+    "sci_name": "Quercus calliprinos",
+    "family_he": "אלוניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 27,
+    "name_he": "מרווה ריחנית",
+    "name_en": "Dominican Sage",
+    "sci_name": "Salvia dominica",
+    "family_he": "שפתניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 155,
+    "name_he": "שיח-אברהם מצוי",
+    "name_en": "Lilac Chaste Tree",
+    "sci_name": "Vitex agnus-castus",
+    "family_he": "ורבניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 168,
+    "name_he": "ירוקת-חמור מצויה",
+    "name_en": "Squirting Cucumber",
+    "sci_name": "Ecballium elaterium",
+    "family_he": "דלועיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 426,
+    "name_he": "קיטה רותמית",
+    "name_en": "Rush Hawkweed",
+    "sci_name": "Tolpis virgata",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 492,
+    "name_he": "עכנאי שרוע",
+    "name_en": "Hispid Viper's-bugloss",
+    "sci_name": "Echium angustifolium",
+    "family_he": "זיפניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 597,
+    "name_he": "כף-צפרדע אזמלנית",
+    "name_en": "Narrow-leaved Water-plantain",
+    "sci_name": "Alisma lanceolatum",
+    "family_he": "כף-הצפרדע",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 739,
+    "name_he": "כתמה עבת-שורשים",
+    "name_en": "Bulbous Dandelion",
+    "sci_name": "Leontodon tuberosa",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 837,
+    "name_he": "סיפן סגול",
+    "name_en": "Aleppo Gladiolus",
+    "sci_name": "Gladiolus atroviolaceus",
+    "family_he": "אירוסיים",
+    "bloom_months": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 338,
+    "name_he": "תלתן תריסני",
+    "name_en": "Helmet Clover",
+    "sci_name": "Trifolium clypeatum",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 482,
+    "name_he": "פשתה צרת-עלים",
+    "name_en": "Pale-flowered Flax",
+    "sci_name": "Linum bienne",
+    "family_he": "פשתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 519,
+    "name_he": "פיגמית מצויה",
+    "name_en": "Buxbaum's Rue",
+    "sci_name": "Haplophyllum buxbaumii",
+    "family_he": "פיגמיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 578,
+    "name_he": "חסת המצפן",
+    "name_en": "Prickly Lettuce",
+    "sci_name": "Lactuca serriola",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 798,
+    "name_he": "קדד גדול-פרי",
+    "name_en": "Large-Fruited Milk-Vetch",
+    "sci_name": "Astragalus macrocarpus",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 44,
+    "name_he": "נזמית לופתת",
+    "name_en": "Henbit deadnettle",
+    "sci_name": "Lamium amplexicaule",
+    "family_he": "שפתניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 57,
+    "name_he": "חבלבל השדה",
+    "name_en": "Corn Bind",
+    "sci_name": "Convolvulus arvensis",
+    "family_he": "חבלבליים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 74,
+    "name_he": "זקן-סב מצוי",
+    "name_en": "Goat's Beard",
+    "sci_name": "Geropogon hybridus",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 344,
+    "name_he": "סחלב שלוש השיניים",
+    "name_en": "Toothed Orchid",
+    "sci_name": "Orchis tridentata",
+    "family_he": "סחלביים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 502,
+    "name_he": "פרע מסולסל",
+    "name_en": "Tumble St. John's-wort",
+    "sci_name": "Hypericum triquetrifolium",
+    "family_he": "פרעיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 23,
+    "name_he": "דבורנית דינסמור",
+    "name_en": "Carmel Bee-Orchid",
+    "sci_name": "Ophrys umbilicata",
+    "family_he": "סחלביים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 94,
+    "name_he": "אחירותם החורש",
+    "name_en": "Spanish Broom",
+    "sci_name": "Spartium junceum",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 159,
+    "name_he": "טבורית נטויה",
+    "name_en": "Common Pennywort",
+    "sci_name": "Umbilicus intermedius",
+    "family_he": "טבוריתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 343,
+    "name_he": "לוטמית ערבית",
+    "name_en": "Arabian Cistus",
+    "sci_name": "Fumana arabica",
+    "family_he": "לוטמיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 729,
+    "name_he": "כדן קטן-פרחים",
+    "name_en": "Baby's Breath",
+    "sci_name": "Muscari parviflorum",
+    "family_he": "שושניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 804,
+    "name_he": "גרניון הפקעות",
+    "name_en": "Bulbous Crane's-bill",
+    "sci_name": "Geranium tuberosum",
+    "family_he": "גרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 170,
+    "name_he": "צמר מפוצל",
+    "name_en": "Desert-spike",
+    "sci_name": "Eremostachys laciniata",
+    "family_he": "שפתניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 287,
+    "name_he": "רקפת יוונית",
+    "name_en": "Round-leaved Cyclamen",
+    "sci_name": "Cyclamen coum",
+    "family_he": "רקפתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 609,
+    "name_he": "לענה חד-זרעית",
+    "name_en": "Sand Wormwood",
+    "sci_name": "Artemisia monosperma",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 288,
+    "name_he": "גביעונית הלבנון",
+    "name_en": "Persian Fritillary",
+    "sci_name": "Fritillaria persica",
+    "family_he": "שושניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 364,
+    "name_he": "עשנן מטפס",
+    "name_en": "Ramping Fumitory",
+    "sci_name": "Fumaria capreolata",
+    "family_he": "עשנניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 381,
+    "name_he": "תורמוס צר-עלים",
+    "name_en": "Narrow-leaved Lupine",
+    "sci_name": "Lupinus angustifolius",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 220,
+    "name_he": "קורנית מקורקפת",
+    "name_en": "Israeli Thyme",
+    "sci_name": "Coridothymus capitatus",
+    "family_he": "שפתניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 229,
+    "name_he": "ציפורנית מצרית",
+    "name_en": "Egyptian Campion",
+    "sci_name": "Silene aegyptiaca",
+    "family_he": "ציפורניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 337,
+    "name_he": "אספסת מצויה",
+    "name_en": "Bur Clover",
+    "sci_name": "Medicago polymorpha",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 480,
+    "name_he": "אשבל ארץ-ישראלי",
+    "name_en": "Palestine Woundwort",
+    "sci_name": "Stachys palaestina",
+    "family_he": "שפתניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 46,
+    "name_he": "שומר פשוט",
+    "name_en": "Common Fennel",
+    "sci_name": "Foeniculum vulgare",
+    "family_he": "סוככיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 332,
+    "name_he": "סתוונית ירושלים",
+    "name_en": "Jerusalem Autumn-crocus",
+    "sci_name": "Colchicum hierosolymitanum",
+    "family_he": "שושניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 450,
+    "name_he": "געדה מפושקת",
+    "name_en": "Purple Germander",
+    "sci_name": "Teucrium divaricatum",
+    "family_he": "שפתניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 490,
+    "name_he": "קורטם דק",
+    "name_en": "Thin Safflower",
+    "sci_name": "Carthamus tenuis",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 499,
+    "name_he": "בקיה צרפתית",
+    "name_en": "Purple Broad Bean",
+    "sci_name": "Vicia narbonensis",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 685,
+    "name_he": "קוטב מצוי",
+    "name_en": "Small Caltrops",
+    "sci_name": "Tribulus terrestris",
+    "family_he": "זוגניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 3333,
+    "name_he": "זמזומית סגולה",
+    "name_en": "Purple Roman-squill",
+    "sci_name": "Bellevalia trifoliata",
+    "family_he": "שושניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 228,
+    "name_he": "צחנן מבאיש",
+    "name_en": "Mediterranean Stinkbush",
+    "sci_name": "Anagyris foetida",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 570,
+    "name_he": "גרגר הנחלים",
+    "name_en": "True Water-cress",
+    "sci_name": "Nasturtium officinale",
+    "family_he": "מצליבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 571,
+    "name_he": "גרניון הארגמן",
+    "name_en": "Little Robin",
+    "sci_name": "Geranium purpureum",
+    "family_he": "גרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 595,
+    "name_he": "ירבוז מופשל",
+    "name_en": "Amoranth Foxtail",
+    "sci_name": "Amaranthus retroflexus",
+    "family_he": "ירבוזיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 795,
+    "name_he": "חלבלוב מצוי",
+    "name_en": "Petty Spurge",
+    "sci_name": "Euphorbia peplus",
+    "family_he": "חלבלוביים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 855,
+    "name_he": "בת-חלמית שרועה",
+    "name_en": "Field Mallow",
+    "sci_name": "Malvella sherardiana",
+    "family_he": "חלמיתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 3352,
+    "name_he": "דבקה זיפנית",
+    "name_en": "Goose-Grass",
+    "sci_name": "Galium aparine",
+    "family_he": "פואתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 43,
+    "name_he": "נענה משובלת",
+    "name_en": "Horse Mint",
+    "sci_name": "Mentha longifolia",
+    "family_he": "שפתניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 151,
+    "name_he": "שברק מצוי",
+    "name_en": "Shrubby Rest-harrow",
+    "sci_name": "Ononis natrix",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 157,
+    "name_he": "סולנום זיתני",
+    "name_en": "Silverleaf Nightshade",
+    "sci_name": "Solanum elaeagnifolium",
+    "family_he": "סולניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 205,
+    "name_he": "קידה שעירה",
+    "name_en": "Spiny Broom",
+    "sci_name": "Calycotome villosa",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  {
+    "tiuli_id": 218,
+    "name_he": "חבלבל השיח",
+    "name_en": "Splendid Bindweed",
+    "sci_name": "Convolvulus dorycnium",
+    "family_he": "חבלבליים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 270,
+    "name_he": "זמזומית מצויה",
+    "name_en": "Common Roman-squill",
+    "sci_name": "Bellevalia flexuosa",
+    "family_he": "שושניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 390,
+    "name_he": "פעמונית זיפנית",
+    "name_en": "Strigose Bellflower",
+    "sci_name": "Campanula strigosa",
+    "family_he": "פעמוניתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 398,
+    "name_he": "נוציץ מנוצה",
+    "name_en": "Plumed Scabious",
+    "sci_name": "Pterocephalus plumosus",
+    "family_he": "שלמוניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 443,
+    "name_he": "תלתן צמיר",
+    "name_en": "Wooly Clover",
+    "sci_name": "Trifolium eriosphoaerum",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 563,
+    "name_he": "אספרג ארץ-ישראלי",
+    "name_en": "Palestine Asparagus",
+    "sci_name": "Asparagus palaestinus",
+    "family_he": "שושניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 737,
+    "name_he": "מרמר מצוי",
+    "name_en": "White Horehound",
+    "sci_name": "Marrubium vulgare",
+    "family_he": "שפתניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 854,
+    "name_he": "רכפה צהובה",
+    "name_en": "Yellow Mignonette",
+    "sci_name": "Reseda lutea",
+    "family_he": "רכפתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 868,
+    "name_he": "דבורנית כחלחלה",
+    "name_en": "Iris Coloured Bee orchid",
+    "sci_name": "Ophrys iricolor",
+    "family_he": "סחלביים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 156,
+    "name_he": "שפתן מצוי",
+    "name_en": "Snake Tongue Orchid",
+    "sci_name": "Serapias vomeracea",
+    "family_he": "סחלביים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 313,
+    "name_he": "אוג הבורסקאים",
+    "name_en": "Tanner Sumach",
+    "sci_name": "Rhus coriaria",
+    "family_he": "אלתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 353,
+    "name_he": "בן-פרג סגול",
+    "name_en": "Purple Horned-Poppy",
+    "sci_name": "Roemeria hybrida",
+    "family_he": "פרגיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 567,
+    "name_he": "בקיה דקת-עלים",
+    "name_en": "Bramble Vetch",
+    "sci_name": "Vicia tenuifolia",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 712,
+    "name_he": "אילנתה בלוטית",
+    "name_en": "Tree of Heaven",
+    "sci_name": "Ailanthus altissima",
+    "family_he": "סימרוביים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 131,
+    "name_he": "לוענית גדולה",
+    "name_en": "Red-stemmed Figwort",
+    "sci_name": "Scrophularia rubicaulis",
+    "family_he": "לועניתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 201,
+    "name_he": "בר-זית בינוני",
+    "name_en": "Broad-Leaved Phillyrea",
+    "sci_name": "Phillyrea latifolia",
+    "family_he": "זיתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 267,
+    "name_he": "דבורנית שחומה",
+    "name_en": "Tawny Bee-orchid",
+    "sci_name": "Ophrys fleischmannii",
+    "family_he": "סחלביים",
+    "bloom_months": [
+      2,
+      3,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  {
+    "tiuli_id": 319,
+    "name_he": "פעמונית ירושלים",
+    "name_en": "Jerusalem Bellflower",
+    "sci_name": "Campanula hierosolymitana",
+    "family_he": "פעמוניתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 357,
+    "name_he": "גרגרנית ירושלים",
+    "name_en": "Jerusalem Fenugreek",
+    "sci_name": "Trigonella hierosolymitana",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 468,
+    "name_he": "איסטיס מצוי",
+    "name_en": "Aleppo Woad",
+    "sci_name": "Isatis lusitanica",
+    "family_he": "מצליבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 635,
+    "name_he": "לשישית הצבעים",
+    "name_en": "Dyer's-litmus Plant",
+    "sci_name": "Chrozophora tinctoria",
+    "family_he": "חלבלוביים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 158,
+    "name_he": "טבק השיח",
+    "name_en": "Tobacco Tree",
+    "sci_name": "Nicotiana glauca",
+    "family_he": "סולניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 198,
+    "name_he": "קצח ריסני",
+    "name_en": "Ciliate Love-In-A-Mist",
+    "sci_name": "Nigella ciliaris",
+    "family_he": "נוריתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 233,
+    "name_he": "לפתית מצויה",
+    "name_en": "Hoary Mustard",
+    "sci_name": "Hirschfeldia incana",
+    "family_he": "מצליבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 259,
+    "name_he": "כתלה חריפה",
+    "name_en": "Goldy-Locks",
+    "sci_name": "Chiliadenus iphionoides",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 271,
+    "name_he": "נץ-חלב אזמלני",
+    "name_en": "Lance-Leaved Star-of-Bethlehem",
+    "sci_name": "Ornithogalum lanceolatum",
+    "family_he": "שושניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 362,
+    "name_he": "מרווה מצויה",
+    "name_en": "Vervain Sage",
+    "sci_name": "Salvia verbenaca",
+    "family_he": "שפתניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 372,
+    "name_he": "בקית הכלאיים",
+    "name_en": "Hairy Yellow Vetch",
+    "sci_name": "Vicia hybrida",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 402,
+    "name_he": "פשתה מצויה",
+    "name_en": "Common Flax",
+    "sci_name": "Linum nodiflorum",
+    "family_he": "פשתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 501,
+    "name_he": "דבשה מחורצת",
+    "name_en": "Grooved Melilot",
+    "sci_name": "Melilotus sulcatus",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 565,
+    "name_he": "חלבלוב זוחל",
+    "name_en": "Nodding Spurge",
+    "sci_name": "Euphorbia serpens",
+    "family_he": "חלבלוביים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 604,
+    "name_he": "ליפיה זוחלת",
+    "name_en": "Creeping Vervain",
+    "sci_name": "Phyla nodiflora",
+    "family_he": "ורבניים",
+    "bloom_months": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      9
+    ]
+  },
+  {
+    "tiuli_id": 690,
+    "name_he": "גומא הפקעים",
+    "name_en": "Coco Nut-grass",
+    "sci_name": "Cyperus rotundus",
+    "family_he": "גומאיים (גמאיים)",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 748,
+    "name_he": "מרקולית מצויה",
+    "name_en": "Annual Mercury",
+    "sci_name": "Mercurialis annua",
+    "family_he": "חלבלוביים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 771,
+    "name_he": "עשנן יהודה",
+    "name_en": "Judean Fumitory",
+    "sci_name": "Fumaria judaica",
+    "family_he": "עשנניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 37,
+    "name_he": "סירה קוצנית",
+    "name_en": "Prickly Burnet",
+    "sci_name": "Sarcopoterium spinosum",
+    "family_he": "ורדיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 117,
+    "name_he": "חרחבינה מכחילה",
+    "name_en": "Field Eryngo",
+    "sci_name": "Eryngium creticum",
+    "family_he": "סוככיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 305,
+    "name_he": "לופית מצויה",
+    "name_en": "Aharon's Rod",
+    "sci_name": "Arisarum vulgare",
+    "family_he": "לופיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 324,
+    "name_he": "תלתן הפוך",
+    "name_en": "Reversed Trefoil",
+    "sci_name": "Trifolium resupinatum",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 542,
+    "name_he": "דו-שן שעיר",
+    "name_en": "Spanish Needle",
+    "sci_name": "Bidens pilosa",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 552,
+    "name_he": "קייצת מסולסלת",
+    "name_en": "Horseweed",
+    "sci_name": "Conyza bonariensis",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 593,
+    "name_he": "ילקוט הרועים",
+    "name_en": "Shepherd's Purse",
+    "sci_name": "Capsella bursapastoris",
+    "family_he": "מצליבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 653,
+    "name_he": "סוף מצוי",
+    "name_en": "Narrow-leaved Reedmace",
+    "sci_name": "Typha domingensis",
+    "family_he": "סופיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 150,
+    "name_he": "שרביטן ריסני",
+    "name_en": "Cilliate Ephedra",
+    "sci_name": "Ephedra aphylla",
+    "family_he": "שרביטניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 174,
+    "name_he": "שיכרון זהוב",
+    "name_en": "Golden Henbane",
+    "sci_name": "Hyoscyamus aureus",
+    "family_he": "סולניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 194,
+    "name_he": "מצילות מצויצות",
+    "name_en": "Purple Grape Hyacinth",
+    "sci_name": "Leopoldia comosa",
+    "family_he": "שושניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 217,
+    "name_he": "הגה מצויה",
+    "name_en": "Camel Thorn",
+    "sci_name": "Alhagi grae",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 238,
+    "name_he": "אגס סורי",
+    "name_en": "Syrian Pear",
+    "sci_name": "Pyrus syriaca",
+    "family_he": "ורדיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 385,
+    "name_he": "דלעת-נחש סורית",
+    "name_en": "Syrian Bryony",
+    "sci_name": "Bryonia syriaca",
+    "family_he": "דלועיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 617,
+    "name_he": "אל-ציצית לבנה",
+    "name_en": "White Eclipta",
+    "sci_name": "Eclipta prostrata",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 148,
+    "name_he": "סמר חד",
+    "name_en": "Mat Rush",
+    "sci_name": "Juncus acutus",
+    "family_he": "סמריים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 315,
+    "name_he": "מצלתיים מצויות",
+    "name_en": "Buckler Mustard",
+    "sci_name": "Biscutella didyma",
+    "family_he": "מצליבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 320,
+    "name_he": "אשבל מעורק",
+    "name_en": "Nerved-Calyx Stachys",
+    "sci_name": "Stachys neurocalycina",
+    "family_he": "שפתניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 367,
+    "name_he": "אזנב מצוי",
+    "name_en": "Prickly-cupped Goat's Beard",
+    "sci_name": "Urospermum picroides",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 566,
+    "name_he": "בקבוקון מקומט",
+    "name_en": "Bastard Cabbage",
+    "sci_name": "Rapistrum rugosum",
+    "family_he": "מצליבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 580,
+    "name_he": "זערורית קטנת-פרי",
+    "name_en": "Small-fruited Stonecrop",
+    "sci_name": "Telmissa microcarpa",
+    "family_he": "טבוריתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 810,
+    "name_he": "כרבולת מצויה",
+    "name_en": "Crested Sainfoin",
+    "sci_name": "Onobrychis squarrosa",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 3355,
+    "name_he": "כוכבן מצוי",
+    "name_en": "Star Hawkbit",
+    "sci_name": "Rhagadiolus stellatus",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 183,
+    "name_he": "אלמוות הכסף",
+    "name_en": "Silvery Whitlow-wort",
+    "sci_name": "Paronychia argentea",
+    "family_he": "ציפורניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 280,
+    "name_he": "ציפורנית מגוונת",
+    "name_en": "Cloven-petalled Campion",
+    "sci_name": "Silene colorata",
+    "family_he": "ציפורניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 285,
+    "name_he": "חיננית הבתה",
+    "name_en": "Southern Daisy",
+    "sci_name": "Bellis sylvestris",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 434,
+    "name_he": "דורבנית סגולה ת.מ.מדברי",
+    "name_en": "",
+    "sci_name": "Delphinium bovei",
+    "family_he": "נוריתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 436,
+    "name_he": "געדה כרתית",
+    "name_en": "Cretan Germander",
+    "sci_name": "Teucrium creticum",
+    "family_he": "שפתניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 473,
+    "name_he": "שלח ספרדי",
+    "name_en": "Spanish Pink-mustard",
+    "sci_name": "Erucaria hispanica",
+    "family_he": "מצליבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 598,
+    "name_he": "כף-אווז האשפות",
+    "name_en": "Nettle-leaved Goosefoot",
+    "sci_name": "Chenopodium murale",
+    "family_he": "סלקיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 623,
+    "name_he": "לשון-שור מגובבת",
+    "name_en": "Massed Alkanet",
+    "sci_name": "Hormuzakia aggregata",
+    "family_he": "זיפניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 679,
+    "name_he": "נר-לילה ורוד",
+    "name_en": "Pink Evening-primrose",
+    "sci_name": "Oenothera rosea",
+    "family_he": "נר-הלילה",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 682,
+    "name_he": "סולנום שחור",
+    "name_en": "Black Nightshade",
+    "sci_name": "Solanum nigrum",
+    "family_he": "סולניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 738,
+    "name_he": "נרקיס סתווי",
+    "name_en": "Lesser Flowering Narcissus",
+    "sci_name": "Narcissus serotinus",
+    "family_he": "נרקיסיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 767,
+    "name_he": "לשון-פר מצרית",
+    "name_en": "Egyptian Alkanet",
+    "sci_name": "Anchusa aegyptiaca",
+    "family_he": "זיפניים",
+    "bloom_months": [
+      1,
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 800,
+    "name_he": "רומולאה סגלולית",
+    "name_en": "Crocus-Leaved Romulea",
+    "sci_name": "Romulea bulbocodium",
+    "family_he": "אירוסיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 823,
+    "name_he": "ורוניקה מבריקה",
+    "name_en": "Twin Speedwell",
+    "sci_name": "Veronica polita",
+    "family_he": "לועניתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 878,
+    "name_he": "ניאוטינאה תמימה",
+    "name_en": "Dense-spiked Orchid",
+    "sci_name": "Neotinea maculata",
+    "family_he": "סחלביים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 919,
+    "name_he": "ציפורנית כרסנית",
+    "name_en": "Bladder Campion",
+    "sci_name": "Silene behen",
+    "family_he": "ציפורניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 45,
+    "name_he": "בר-גביע חלק",
+    "name_en": "Smooth Molucca Balm",
+    "sci_name": "Moluccella laevis",
+    "family_he": "שפתניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 108,
+    "name_he": "קיסוס החורש",
+    "name_en": "Common Ivy",
+    "sci_name": "Hedera helix",
+    "family_he": "קיסוסיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 143,
+    "name_he": "פרסיון גדול",
+    "name_en": "Great Hedge-nettle",
+    "sci_name": "Prasium majus",
+    "family_he": "שפתניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 333,
+    "name_he": "תלתן נאה",
+    "name_en": "Eastern Star-clover",
+    "sci_name": "Trifolium dasyurum",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 356,
+    "name_he": "תלתן חקלאי",
+    "name_en": "Hop Clover",
+    "sci_name": "Trifolium campestre",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 401,
+    "name_he": "לוטמית דביקה",
+    "name_en": "Clammy Cistus",
+    "sci_name": "Fumana thymifolia",
+    "family_he": "לוטמיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 446,
+    "name_he": "תלתן לביד",
+    "name_en": "Wooly Clover",
+    "sci_name": "Trifolium tomentosum",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 554,
+    "name_he": "מלחית אשלגנית",
+    "name_en": "Prickly Saltwort",
+    "sci_name": "Salsola kali",
+    "family_he": "סלקיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 666,
+    "name_he": "סוף צר-עלים",
+    "name_en": "Narrow-leaved Cat-tail",
+    "sci_name": "Typha angustifolia",
+    "family_he": "סופיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 694,
+    "name_he": "ירבוז מבריק",
+    "name_en": "Wild Amaranth",
+    "sci_name": "Amaranthus blitum",
+    "family_he": "ירבוזיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 805,
+    "name_he": "ציפורנית צרפתית",
+    "name_en": "Costal Catchfly",
+    "sci_name": "Silene gallica",
+    "family_he": "ציפורניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 182,
+    "name_he": "חוטמית עין-הפרה",
+    "name_en": "Stemless Hollyhock",
+    "sci_name": "Alcea acaulis",
+    "family_he": "חלמיתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 227,
+    "name_he": "תפוז סיני",
+    "name_en": "",
+    "sci_name": "Citrus sinensis",
+    "family_he": "פיגמיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 346,
+    "name_he": "לשון-כלב כרתית",
+    "name_en": "Blue Hound's Tongue",
+    "sci_name": "Cynoglossum creticum",
+    "family_he": "זיפניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 547,
+    "name_he": "בן-סירה מיובל",
+    "name_en": "Salad Burnet",
+    "sci_name": "Sanguisorba minor",
+    "family_he": "ורדיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 673,
+    "name_he": "שום האבקנים",
+    "name_en": "Long-stamen Garlic",
+    "sci_name": "Allium stamineum",
+    "family_he": "שושניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 691,
+    "name_he": "ירבוז ירוק-שיבולת",
+    "name_en": "Red Amaranth",
+    "sci_name": "Amaranthus cruentus",
+    "family_he": "ירבוזיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 3346,
+    "name_he": "תגית ארץ-ישראלית",
+    "name_en": "Palestine Scabious",
+    "sci_name": "Scabiosa palaestina",
+    "family_he": "שלמוניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 66,
+    "name_he": "שערות-שולמית מצויות",
+    "name_en": "Southern Maidenhair-fern",
+    "sci_name": "Adiantum capillus-veneris",
+    "family_he": "שרכרכיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 70,
+    "name_he": "אספרג החורש",
+    "name_en": "Prickly Asparagus",
+    "sci_name": "Asparagus aphyllus",
+    "family_he": "שושניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 180,
+    "name_he": "עירית נבובה",
+    "name_en": "Onion-leaved Asphodel",
+    "sci_name": "Asphodelus fistulosus",
+    "family_he": "שושניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 219,
+    "name_he": "סולנום שעיר",
+    "name_en": "Woolly Nightshade",
+    "sci_name": "Solanum villosum",
+    "family_he": "סולניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 258,
+    "name_he": "מלחית אשונה",
+    "name_en": "Narrow-leaved Saltwort",
+    "sci_name": "Salsola vermiculata",
+    "family_he": "סלקיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 475,
+    "name_he": "בקיה מצויה",
+    "name_en": "Rambling Vetch",
+    "sci_name": "Vicia peregrina",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 488,
+    "name_he": "שברק קוצני",
+    "name_en": "Tall Spiny Rest-harrow",
+    "sci_name": "Ononis spinosa",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 639,
+    "name_he": "עפעפית שרועה",
+    "name_en": "Rachining Toadflax",
+    "sci_name": "Kickxia elatine",
+    "family_he": "לועניתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 643,
+    "name_he": "מרור הגינות",
+    "name_en": "Common Sow-thistle",
+    "sci_name": "Sonchus oleraceus",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 698,
+    "name_he": "עופרית אירופית",
+    "name_en": "European Leadwort",
+    "sci_name": "Plumbago europaea",
+    "family_he": "עופריתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 763,
+    "name_he": "מקור-חסידה מצוי",
+    "name_en": "Musk Stork's-bill",
+    "sci_name": "Erodium moschatum",
+    "family_he": "גרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 783,
+    "name_he": "עשנן קטן",
+    "name_en": "Small-flowered Fumitory",
+    "sci_name": "Fumaria parviflora",
+    "family_he": "עשנניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 255,
+    "name_he": "תגית ארגמנית",
+    "name_en": "Purple Scabious",
+    "sci_name": "Scabiosa porphyroneura",
+    "family_he": "שלמוניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 371,
+    "name_he": "בקיה תרבותית",
+    "name_en": "Common Vetch",
+    "sci_name": "Vicia sativa",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 391,
+    "name_he": "קדד פינברון",
+    "name_en": "Aleppo Milk-Vetch",
+    "sci_name": "Astragalus aleppicus",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 440,
+    "name_he": "שושנתית משורטטת",
+    "name_en": "Rosset Stonecrop",
+    "sci_name": "Rosularia lineata",
+    "family_he": "טבוריתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 476,
+    "name_he": "שברק דביק",
+    "name_en": "Downy Rest-harrow",
+    "sci_name": "Ononis pubescens",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 539,
+    "name_he": "צורית גבוהה",
+    "name_en": "Tall Stonecrop",
+    "sci_name": "Sedum sediforme",
+    "family_he": "טבוריתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 721,
+    "name_he": "גלונית מצויה",
+    "name_en": "Common Balm",
+    "sci_name": "Ballota undulata",
+    "family_he": "שפתניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 858,
+    "name_he": "נוצנית כדורית",
+    "name_en": "Globe cumin",
+    "sci_name": "Lagoecia cuminoides",
+    "family_he": "סוככיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 882,
+    "name_he": "שום עגול",
+    "name_en": "Sand Leek",
+    "sci_name": "Allium scorodoprasum",
+    "family_he": "שושניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 3357,
+    "name_he": "שלחופן קרומי",
+    "name_en": "Four-leaved Kidney-vetch",
+    "sci_name": "Tripodion tetraphylla",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 26,
+    "name_he": "מרווה משולשת",
+    "name_en": "Three-Lobed Sage",
+    "sci_name": "Salvia fruticosa",
+    "family_he": "שפתניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 132,
+    "name_he": "מעוג אפיל",
+    "name_en": "Queen Mallow",
+    "sci_name": "Lavatera trimestris",
+    "family_he": "חלמיתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 136,
+    "name_he": "נץ-חלב צרפתי",
+    "name_en": "Narbonne Star-of-Bethlehem",
+    "sci_name": "Ornithogalum narbonense",
+    "family_he": "שושניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 328,
+    "name_he": "ציפורנית ארץ-ישראלית",
+    "name_en": "Palestine Campion",
+    "sci_name": "Silene palaestina",
+    "family_he": "ציפורניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 491,
+    "name_he": "עפעפית מצרית",
+    "name_en": "Egyptian Toadflax",
+    "sci_name": "Kickxia aegyptiaca",
+    "family_he": "לועניתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 590,
+    "name_he": "אפרורית מצויה",
+    "name_en": "Grey-weed",
+    "sci_name": "Glinus lotoides",
+    "family_he": "אפרוריתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 654,
+    "name_he": "לכיד הנחלים",
+    "name_en": "Broad Cocklebur",
+    "sci_name": "Xanthium strumarium",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 710,
+    "name_he": "אחישבת ענף",
+    "name_en": "Sulphurwort",
+    "sci_name": "Peucedanum junceum",
+    "family_he": "סוככיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 747,
+    "name_he": "דנדנה רפואית",
+    "name_en": "Scaly Spleenwort",
+    "sci_name": "Ceterach officinarum",
+    "family_he": "אספלניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 808,
+    "name_he": "מקור-חסידה מפוצל",
+    "name_en": "Cut-Leaved Stork's-bill",
+    "sci_name": "Erodium laciniatum",
+    "family_he": "גרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 893,
+    "name_he": "ספלול ססגוני",
+    "name_en": "Party-Coloured Birthwort",
+    "sci_name": "Aristolochia paecilantha",
+    "family_he": "ספלוליים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 3339,
+    "name_he": "לוענית מצויה",
+    "name_en": "Yellow-scaled Figwort",
+    "sci_name": "Scrophularia xanthoglossa",
+    "family_he": "לועניתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 3343,
+    "name_he": "בוצין סיני",
+    "name_en": "Sinai Mullein",
+    "sci_name": "Verbascum sinaiticum",
+    "family_he": "לועניתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 248,
+    "name_he": "סתוונית בכירה",
+    "name_en": "Early Autumn-crocus",
+    "sci_name": "Colchicum decaisnei",
+    "family_he": "שושניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 355,
+    "name_he": "ארבע-כנפות מצויות",
+    "name_en": "Purple Winged Pea",
+    "sci_name": "Tetragonolobus purpureus",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 429,
+    "name_he": "לחך מצוי",
+    "name_en": "Common Plantain",
+    "sci_name": "Plantago lagopus",
+    "family_he": "לחכיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 472,
+    "name_he": "עוקץ-עקרב עגול-עלים",
+    "name_en": "Round-leaved Heliotrope",
+    "sci_name": "Heliotropium rotundifolium",
+    "family_he": "זיפניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 602,
+    "name_he": "חומעה מסולסלת",
+    "name_en": "Curled Dock",
+    "sci_name": "Rumex crispus",
+    "family_he": "ארכוביתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 657,
+    "name_he": "פלפלון בכות",
+    "name_en": "California Pepper Tree",
+    "sci_name": "Schinus molle",
+    "family_he": "אלתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 664,
+    "name_he": "תולענית דוקרנית",
+    "name_en": "Bristly Ox-tongue",
+    "sci_name": "Helmintotheca echioides",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 714,
+    "name_he": "אצבוע אירופי",
+    "name_en": "European Caralluma",
+    "sci_name": "Caralluma europaea",
+    "family_he": "אסקלפיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 757,
+    "name_he": "ניסנית ירושלמית",
+    "name_en": "Jerusalem Hawk's-beard",
+    "sci_name": "Crepis hierosolymitana",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 782,
+    "name_he": "חבלבל סיצילי",
+    "name_en": "Sicily(HL) Bindweed",
+    "sci_name": "Convolvulus siculus",
+    "family_he": "חבלבליים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 3353,
+    "name_he": "כליינית מצויה",
+    "name_en": "Disk Trefoil",
+    "sci_name": "Hymenocarpos circinnatus",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 162,
+    "name_he": "תלתן הארגמן",
+    "name_en": "Purple Clover",
+    "sci_name": "Trifolium purpureum",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 272,
+    "name_he": "אמיך קוצני",
+    "name_en": "Spiny Dock",
+    "sci_name": "Emex spinosa",
+    "family_he": "ארכוביתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 515,
+    "name_he": "פשתה אשונה",
+    "name_en": "Rigid Flax",
+    "sci_name": "Linum strictum",
+    "family_he": "פשתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 557,
+    "name_he": "עוקץ-עקרב שרוע",
+    "name_en": "Trailing Heliotrope",
+    "sci_name": "Heliotropium supinum",
+    "family_he": "זיפניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 630,
+    "name_he": "ורבנה רפואית",
+    "name_en": "Common Vervain",
+    "sci_name": "Verbena officinalis",
+    "family_he": "ורבניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 662,
+    "name_he": "פיסטיה צפה",
+    "name_en": "",
+    "sci_name": "Pistia stratiotes",
+    "family_he": "לופיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 727,
+    "name_he": "ציפורן משתלשל",
+    "name_en": "Pendulous Pink",
+    "sci_name": "Dianthus pendulus",
+    "family_he": "ציפורניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 794,
+    "name_he": "זנב-עקרב שיכני",
+    "name_en": "Prickly Scorpiontail",
+    "sci_name": "Scorpiurus muricatus",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 816,
+    "name_he": "רב-פרי בשרני",
+    "name_en": "Arabic All-seed",
+    "sci_name": "Polycarpon succulentum",
+    "family_he": "ציפורניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 125,
+    "name_he": "קיפודן בלאנש",
+    "name_en": "Blanche Globe-thistle",
+    "sci_name": "Echinops polyceras",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 214,
+    "name_he": "שום שעיר",
+    "name_en": "Hirsute Garlic",
+    "sci_name": "Allium trifoliatum",
+    "family_he": "שושניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 249,
+    "name_he": "בן-חצב סתווני",
+    "name_en": "Autumn Squill",
+    "sci_name": "Scilla autumnalis",
+    "family_he": "שושניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 314,
+    "name_he": "חלבלוב מרושת",
+    "name_en": "Mesh-fruit Sprunge",
+    "sci_name": "Euphorbia oxyodonta",
+    "family_he": "חלבלוביים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 388,
+    "name_he": "כרבולתן השדות",
+    "name_en": "Field Bongardia",
+    "sci_name": "Bongardia chrysogonum",
+    "family_he": "ערטניתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 546,
+    "name_he": "בן-קוצן מאפיר",
+    "name_en": "Yellow Plume Thistle",
+    "sci_name": "Picnomon acarna",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 582,
+    "name_he": "חגווית שעירה",
+    "name_en": "Bristly Crosswort",
+    "sci_name": "Valantia hispida",
+    "family_he": "פואתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 615,
+    "name_he": "נענת הכדורים",
+    "name_en": "Pennyroyal",
+    "sci_name": "Mentha pulegium",
+    "family_he": "שפתניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 704,
+    "name_he": "קנרס סורי",
+    "name_en": "Wild Artichoke",
+    "sci_name": "Cynara syriaca",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 731,
+    "name_he": "שבטבט גדול",
+    "name_en": "Great Horsetail",
+    "sci_name": "Equisetum telmateia",
+    "family_he": "שבטבטיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 234,
+    "name_he": "שבטן לבן",
+    "name_en": "Poet's Cassia",
+    "sci_name": "Osyris alba",
+    "family_he": "סנטליים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 284,
+    "name_he": "זהבית השלוחות",
+    "name_en": "Stolonous Gold-crocus",
+    "sci_name": "Gagea commutata",
+    "family_he": "שושניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 392,
+    "name_he": "תלתן כוכבני",
+    "name_en": "Star Clover",
+    "sci_name": "Trifolium stellatum",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 616,
+    "name_he": "אגמון ימי",
+    "name_en": "Sea Club-rush",
+    "sci_name": "Bolboschoenus glaucus",
+    "family_he": "גומאיים (גמאיים)",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 700,
+    "name_he": "ביצן מכסיף",
+    "name_en": "Sessile flowered globe Amaranth(JBG)",
+    "sci_name": "alternanthera sessilis",
+    "family_he": "ירבוזיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 749,
+    "name_he": "שרכרך הסלעים",
+    "name_en": "Wooly Fern",
+    "sci_name": "Cheilanthes vellea",
+    "family_he": "שרכרכיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 857,
+    "name_he": "שום מזרחי",
+    "name_en": "Oriental Garlic",
+    "sci_name": "Allium israeliticum",
+    "family_he": "שושניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 179,
+    "name_he": "דמומית קטנת-פרי",
+    "name_en": "Small Pheasant's-eye",
+    "sci_name": "Adonis microcarpa",
+    "family_he": "נוריתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 210,
+    "name_he": "חבלבל המשי",
+    "name_en": "Palestine Bindweed(JBG)",
+    "sci_name": "Convolvulus stachydifolius",
+    "family_he": "חבלבליים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 349,
+    "name_he": "בר-עכנאי שיחני",
+    "name_en": "Bushy Bugloss",
+    "sci_name": "Echiochilon fruticosum",
+    "family_he": "זיפניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 399,
+    "name_he": "צמרנית הסלעים",
+    "name_en": "African Fleabane",
+    "sci_name": "Phagnalon rupestre",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 400,
+    "name_he": "זוטה מעורקת",
+    "name_en": "Veined Savory",
+    "sci_name": "Micromeria nervosa",
+    "family_he": "שפתניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 586,
+    "name_he": "חלבלוב הכדורים",
+    "name_en": "Garden Spurge",
+    "sci_name": "Euphorbia hirta",
+    "family_he": "חלבלוביים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 605,
+    "name_he": "לכיד איטלקי",
+    "name_en": "Italian Cocklebur",
+    "sci_name": "Xanthium italicum",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 607,
+    "name_he": "לפופית החיצים",
+    "name_en": "Arrow-leaf Morning Glory",
+    "sci_name": "Ipomoea sagittata",
+    "family_he": "חבלבליים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 632,
+    "name_he": "כף-אווז לבנה",
+    "name_en": "White Goosefoot",
+    "sci_name": "Chenopodium album",
+    "family_he": "סלקיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 633,
+    "name_he": "קייצת קנדית",
+    "name_en": "Canadian Fleabane",
+    "sci_name": "Conyza canadensis",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 634,
+    "name_he": "כף-אוז ריחנית",
+    "name_en": "Mexican Tea",
+    "sci_name": "Chenopodium ambrosioides",
+    "family_he": "סלקיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 649,
+    "name_he": "שנית גדולה",
+    "name_en": "Purple Loosestrife",
+    "sci_name": "Lythrum salicaria",
+    "family_he": "כופריים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 728,
+    "name_he": "פשטה שרועה",
+    "name_en": "Water Hyssop",
+    "sci_name": "Bacopa monnieri",
+    "family_he": "לועניתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 730,
+    "name_he": "ציפורן ענף",
+    "name_en": "Branched Pink",
+    "sci_name": "Dianthus polycladus",
+    "family_he": "ציפורניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 822,
+    "name_he": "זהבית דמשקאית",
+    "name_en": "Damascus Gold-crocus",
+    "sci_name": "Gagea chlorantha",
+    "family_he": "שושניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 829,
+    "name_he": "אוזן-גדי צהובה",
+    "name_en": "Yellow Cupid",
+    "sci_name": "Catananche lutea",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 903,
+    "name_he": "סיגל צנוע",
+    "name_en": "Modest Violet",
+    "sci_name": "Viola modesta",
+    "family_he": "סיגליים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 913,
+    "name_he": "חסרף מזרחי",
+    "name_en": "Oriental Anarrhinum(SH)",
+    "sci_name": "Anarrhinum forskahlii",
+    "family_he": "לועניתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 917,
+    "name_he": "נץ-חלב דק-עלים",
+    "name_en": "Fine-Leaved Star-of-Bethlehem",
+    "sci_name": "Ornithogalum trichophyllum",
+    "family_he": "שושניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 204,
+    "name_he": "חבלבל שעיר",
+    "name_en": "Shaggy Bindweed",
+    "sci_name": "Convolvulus betonicifolius",
+    "family_he": "חבלבליים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 316,
+    "name_he": "כדן סגול",
+    "name_en": "Dark Grape Hyacinth",
+    "sci_name": "Muscari commutatum",
+    "family_he": "שושניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 555,
+    "name_he": "עוקץ-עקרב אירופי",
+    "name_en": "European Turnsole",
+    "sci_name": "Heliotropium europaeum",
+    "family_he": "זיפניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 628,
+    "name_he": "דמסון כוכבני",
+    "name_en": "Water Star",
+    "sci_name": "Damasonium burgaei",
+    "family_he": "כף-הצפרדע",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 692,
+    "name_he": "חלבלוב קעור",
+    "name_en": "Paint Leaf",
+    "sci_name": "Euphorbia heterophylla",
+    "family_he": "חלבלוביים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 693,
+    "name_he": "ירבוז פלמר",
+    "name_en": "Careless Weed",
+    "sci_name": "Amaranthus palmeri",
+    "family_he": "ירבוזיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 733,
+    "name_he": "ספלילה זעירה",
+    "name_en": "Lawn Pennywort",
+    "sci_name": "Hydrocotyle sibthorpioides",
+    "family_he": "סוככיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 796,
+    "name_he": "חלבלוב השמש",
+    "name_en": "Sun Spurge",
+    "sci_name": "Euphorbia helioscopia",
+    "family_he": "חלבלוביים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 799,
+    "name_he": "קדד ארץ-ישראלי",
+    "name_en": "Palestine Milk-Vetch",
+    "sci_name": "Astragalus palaestinus",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 803,
+    "name_he": "צללית הכלאיים",
+    "name_en": "Fine-leaved Sandwort",
+    "sci_name": "Minuartia hybrida",
+    "family_he": "ציפורניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 812,
+    "name_he": "לוף ירוק",
+    "name_en": "Green Arum",
+    "sci_name": "Arum hygrophilum",
+    "family_he": "לופיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 814,
+    "name_he": "גרניון עגול",
+    "name_en": "Round-leaved Crane's-bill",
+    "sci_name": "Geranium rotundifolium",
+    "family_he": "גרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 856,
+    "name_he": "מגלית גדולת-פרחים",
+    "name_en": "Erect Hypecoum",
+    "sci_name": "Hypecoum dimidiatum",
+    "family_he": "עשנניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 96,
+    "name_he": "ערברבה שעירה",
+    "name_en": "Great Willow-herb",
+    "sci_name": "Epilobium hirsutum",
+    "family_he": "נר-הלילה",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 230,
+    "name_he": "אפון נמוך",
+    "name_en": "Syrian Wild Pea",
+    "sci_name": "Pisum syriacum",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 250,
+    "name_he": "ארכובית שבטבטית",
+    "name_en": "Horsetail Knotweed",
+    "sci_name": "Polygonum equisetiforme",
+    "family_he": "ארכוביתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 418,
+    "name_he": "בר-גביע קוצני",
+    "name_en": "Prickly Molucca Balm",
+    "sci_name": "Moluccella spinosa",
+    "family_he": "שפתניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 437,
+    "name_he": "ציפורנית מפושקת",
+    "name_en": "Long-petaled(K) Campion(JBG)",
+    "sci_name": "Silene longipetala",
+    "family_he": "ציפורניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 498,
+    "name_he": "כרבה ספרדית",
+    "name_en": "Spanish Seakale",
+    "sci_name": "Crambe hispanica",
+    "family_he": "מצליבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 560,
+    "name_he": "אבובית מקורקפת",
+    "name_en": "Field Basil",
+    "sci_name": "Ziziphora capitata",
+    "family_he": "שפתניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 596,
+    "name_he": "ירבוז שרוע",
+    "name_en": "Prostrate Pigweed",
+    "sci_name": "Amaranthus blitoides",
+    "family_he": "ירבוזיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 642,
+    "name_he": "חלבלוב צמיר",
+    "name_en": "Wooly Spurge",
+    "sci_name": "Euphorbia petiolata",
+    "family_he": "חלבלוביים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 645,
+    "name_he": "גלונית הסלעים",
+    "name_en": "Rocky Ballota(SH)",
+    "sci_name": "Ballota saxatilis",
+    "family_he": "שפתניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 651,
+    "name_he": "כף-אווז הגינות",
+    "name_en": "Grey Goosefoot",
+    "sci_name": "Chenopodium opulifolium",
+    "family_he": "סלקיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 661,
+    "name_he": "שלשי רגלני",
+    "name_en": "Horse Purslane",
+    "sci_name": "Trianthema portulacastrum",
+    "family_he": "חיעדיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 684,
+    "name_he": "קדד ביירותי",
+    "name_en": "Beirut Milk-Vetch",
+    "sci_name": "Astragalus berytheus",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 722,
+    "name_he": "ארכובית הכתמים",
+    "name_en": "Pale Knotweed",
+    "sci_name": "Persicaria lapathifolia",
+    "family_he": "ארכוביתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 724,
+    "name_he": "דבקון הזית",
+    "name_en": "Oriental Mistletoe",
+    "sci_name": "Viscum cruciatum",
+    "family_he": "הרנוגיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 734,
+    "name_he": "קיצנית צפופת-עלים",
+    "name_en": "Spanish Carline-thistle",
+    "sci_name": "Carlina hispanica",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 768,
+    "name_he": "ורוניקה לבנה",
+    "name_en": "Cymbalaria Speedwell",
+    "sci_name": "Veronica cymbalaria",
+    "family_he": "לועניתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 3342,
+    "name_he": "שברק קצר-פרח",
+    "name_en": "Clammy Rest-harrow",
+    "sci_name": "Ononis viscosa",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 239,
+    "name_he": "עוקץ-עקרב שעיר",
+    "name_en": "Hairy Heliotrope",
+    "sci_name": "Heliotropium hirsutissimum",
+    "family_he": "זיפניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 419,
+    "name_he": "ורוניקת המים",
+    "name_en": "Blue-water Speedwell",
+    "sci_name": "Veronica anagallis-aquatica",
+    "family_he": "לועניתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 422,
+    "name_he": "חוטמית מסורטטת",
+    "name_en": "Desert Hollyhock",
+    "sci_name": "Alcea striata",
+    "family_he": "חלמיתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 474,
+    "name_he": "טופח ירושלים",
+    "name_en": "Jerusalem Vetchling",
+    "sci_name": "Lathyrus hierosolymitanus",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 524,
+    "name_he": "אספסת זעירה",
+    "name_en": "Black Medick",
+    "sci_name": "Medicago lupulina",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 606,
+    "name_he": "לכיד קוצני",
+    "name_en": "Spiny Cocklebur",
+    "sci_name": "Xanthium spinosum",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 613,
+    "name_he": "מרוות יהודה",
+    "name_en": "Judean Sage",
+    "sci_name": "Salvia judaica",
+    "family_he": "שפתניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 680,
+    "name_he": "גבסנית ערבית",
+    "name_en": "Arabian Soapwort",
+    "sci_name": "Gypsophila capillaris",
+    "family_he": "ציפורניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 726,
+    "name_he": "נהרונית שקופה",
+    "name_en": "Translucent Pondweed",
+    "sci_name": "Potamogeton lucens",
+    "family_he": "נהרוניתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 746,
+    "name_he": "טמוס מזרחי",
+    "name_en": "Oriental Black-bryony",
+    "sci_name": "Tamus orientalis",
+    "family_he": "טמוסיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 772,
+    "name_he": "דורית השדה",
+    "name_en": "Corn spurrey",
+    "sci_name": "Spergula arvensis",
+    "family_he": "ציפורניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 807,
+    "name_he": "נונאה פלשתית",
+    "name_en": "Philistine Nonea",
+    "sci_name": "Nonea philistaea",
+    "family_he": "זיפניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 865,
+    "name_he": "לחך בלוטי",
+    "name_en": "Clammy Plantain",
+    "sci_name": "Plantago afra",
+    "family_he": "לחכיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 890,
+    "name_he": "נורית הלב",
+    "name_en": "Lesser Celandine",
+    "sci_name": "Ficaria verna",
+    "family_he": "נוריתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 3338,
+    "name_he": "טרשנית שרועה",
+    "name_en": "False Letuce",
+    "sci_name": "Theligonum cynocrambe",
+    "family_he": "פואתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 512,
+    "name_he": "ציפורנית דמשקאית",
+    "name_en": "Damascus Catchfly",
+    "sci_name": "Silene damascena",
+    "family_he": "ציפורניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 520,
+    "name_he": "עדשה מצויה",
+    "name_en": "Wild(SH) Lentil",
+    "sci_name": "Lens ervoides",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 588,
+    "name_he": "חמציץ קטן",
+    "name_en": "Yellow Wood-sorrel",
+    "sci_name": "Oxalis corniculata",
+    "family_he": "חמציציים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 621,
+    "name_he": "בן-טיון בשרני",
+    "name_en": "Golden Samphire",
+    "sci_name": "Limbarda crithmoides",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 644,
+    "name_he": "ירבוז יווני",
+    "name_en": "Pelitory Leaved Amaranth",
+    "sci_name": "Amaranthus graecizans",
+    "family_he": "ירבוזיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 656,
+    "name_he": "ערבז משובל",
+    "name_en": "Spiked Centaury",
+    "sci_name": "Centaurium spicatum",
+    "family_he": "ערבזיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 660,
+    "name_he": "מלוח רגלני",
+    "name_en": "Sea Purslane",
+    "sci_name": "Atriplex portulacoides",
+    "family_he": "סלקיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 663,
+    "name_he": "שרוכנית ארץ-ישראלית",
+    "name_en": "Palestine Strapwort",
+    "sci_name": "Corrigiola palaestina",
+    "family_he": "ציפורניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 681,
+    "name_he": "סוף רחב-עלים",
+    "name_en": "Great Cat's Tail",
+    "sci_name": "Typha latifolia",
+    "family_he": "סופיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 718,
+    "name_he": "לוע-ארי סיצילי",
+    "name_en": "Wall Snapdragon",
+    "sci_name": "Antirrhinum siculum",
+    "family_he": "לועניתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 753,
+    "name_he": "פרע קטן-עלים",
+    "name_en": "Pine St. John's-wort",
+    "sci_name": "Hypericum thymifolium",
+    "family_he": "פרעיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 758,
+    "name_he": "נץ-חלב איג",
+    "name_en": "Eig's Star-of-Bethlehem",
+    "sci_name": "Ornithogalum eigii",
+    "family_he": "שושניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 797,
+    "name_he": "אביבית בינונית",
+    "name_en": "Common Whitlow",
+    "sci_name": "Erophila praecox",
+    "family_he": "מצליבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 841,
+    "name_he": "אשבל ערבי",
+    "name_en": "Arabian Woundwort",
+    "sci_name": "Stachys arabica",
+    "family_he": "שפתניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 843,
+    "name_he": "תמריר מרוקני",
+    "name_en": "Poppy-Leaved Reichardia",
+    "sci_name": "Reichardia tingitana",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 914,
+    "name_he": "קרקפן נמוך",
+    "name_en": "Dwarf Saw-wort",
+    "sci_name": "Serratula pusilla",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 3356,
+    "name_he": "חבלבל עדין",
+    "name_en": "Grassy Bindweed",
+    "sci_name": "Convolvulus pentapetaloides",
+    "family_he": "חבלבליים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 432,
+    "name_he": "בוצין קיסריון",
+    "name_en": "Cesarean Mullein",
+    "sci_name": "Verbascum caesareum",
+    "family_he": "לועניתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 631,
+    "name_he": "כלך מרוקני",
+    "name_en": "Tangier Giant Fennel",
+    "sci_name": "Ferula tingitana",
+    "family_he": "סוככיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 636,
+    "name_he": "לשישית מקומטת",
+    "name_en": "Indian Turn-sole",
+    "sci_name": "Chrozophora plicata",
+    "family_he": "חלבלוביים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 674,
+    "name_he": "שלוחית קרחת",
+    "name_en": "Bastard Orpine",
+    "sci_name": "Andrachne telephioides",
+    "family_he": "פילנטיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 713,
+    "name_he": "ארנין ההרים",
+    "name_en": "Shrubby  Ptilostemon",
+    "sci_name": "Ptilostemon chamaepeuce",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 736,
+    "name_he": "מתנן מצוי",
+    "name_en": "Plax-Leaf Stellera",
+    "sci_name": "Thymelaea passerina",
+    "family_he": "מתנניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 793,
+    "name_he": "זהבית שרונית ת.מ. שרוני",
+    "name_en": "Stolonous Gold-crocus",
+    "sci_name": "Gagea dayana ssp.dayana",
+    "family_he": "שושניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 819,
+    "name_he": "נונאה קהה",
+    "name_en": "Blunt  Nonea",
+    "sci_name": "Nonea obtusifolia",
+    "family_he": "זיפניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 915,
+    "name_he": "געדה זעירת-פרחים",
+    "name_en": "Small-flowered Germander",
+    "sci_name": "Teucrium parviflorum",
+    "family_he": "שפתניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 297,
+    "name_he": "גרניון רך",
+    "name_en": "Dove's-foot  Crane's-bill",
+    "sci_name": "Geranium molle",
+    "family_he": "גרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 312,
+    "name_he": "רכפה גדולה",
+    "name_en": "Fox Mignonette",
+    "sci_name": "Reseda alopecuros",
+    "family_he": "רכפתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 438,
+    "name_he": "שנית מתפתלת",
+    "name_en": "Common(SH)Loosestrife (JBG)",
+    "sci_name": "Lythrum junceum",
+    "family_he": "כופריים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 448,
+    "name_he": "תלתן הכדורים",
+    "name_en": "Ball Cotton Clover",
+    "sci_name": "Trifolium pilulare",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 522,
+    "name_he": "נוציץ עטוף",
+    "name_en": "Plumed Scabious",
+    "sci_name": "Pterocephalus brevis",
+    "family_he": "שלמוניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 541,
+    "name_he": "צורית בלוטית",
+    "name_en": "Red Stonecrop",
+    "sci_name": "Sedum rubens",
+    "family_he": "טבוריתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 549,
+    "name_he": "אספסת תרבותית",
+    "name_en": "Alfalfa",
+    "sci_name": "Medicago sativa",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 603,
+    "name_he": "כשות השדה",
+    "name_en": "Field Dodder",
+    "sci_name": "Cuscuta campestris",
+    "family_he": "חבלבליים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 629,
+    "name_he": "חופניים מצויים",
+    "name_en": "Perfoliate Penny-cress",
+    "sci_name": "Thlaspi perfoliatum",
+    "family_he": "מצליבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 765,
+    "name_he": "ורוניקה קטנת-פרחים",
+    "name_en": "",
+    "sci_name": "Veronica panormitana",
+    "family_he": "לועניתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 786,
+    "name_he": "אספסת החוף",
+    "name_en": "Coastal Medick",
+    "sci_name": "Medicago littoralis",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 835,
+    "name_he": "זמזומית מפושקת",
+    "name_en": "Tumbling Roman-squill",
+    "sci_name": "Bellevalia longipes",
+    "family_he": "שושניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 844,
+    "name_he": "תלתן הקצף",
+    "name_en": "Bladder Trefoil",
+    "sci_name": "Trifolium spumosum",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 3341,
+    "name_he": "פרסה רבת-תרמילים",
+    "name_en": "Horse-shoe Vetch",
+    "sci_name": "Hippocrepis multisiliquosa",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 3350,
+    "name_he": "ניסנית ארץ-ישראלית",
+    "name_en": "Palestine Hawk's-beard",
+    "sci_name": "Crepis palaestina",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 3354,
+    "name_he": "חבלבל סורי",
+    "name_en": "Syrian Bindweed",
+    "sci_name": "Convolvulus coelesyriacus",
+    "family_he": "חבלבליים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 3358,
+    "name_he": "גזר זהוב",
+    "name_en": "Golden Carrot",
+    "sci_name": "Daucus aureus",
+    "family_he": "סוככיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 479,
+    "name_he": "חד-שפה מצוי",
+    "name_en": "Chian Bugle",
+    "sci_name": "Ajuga chamaepytis",
+    "family_he": "שפתניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 686,
+    "name_he": "קיצנית כרתית",
+    "name_en": "Involucrate Carline-thistle",
+    "sci_name": "Carlina curetum",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 697,
+    "name_he": "קוצן קיפח",
+    "name_en": "Tall Plumed Thistle",
+    "sci_name": "Cirsium phyllocephalum",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 725,
+    "name_he": "כף-צפרדע לחכית",
+    "name_en": "Great Water-plantain",
+    "sci_name": "Alisma plantago-aquatica",
+    "family_he": "כף-הצפרדע",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 735,
+    "name_he": "חמשן זוחל",
+    "name_en": "Creeping Cinquefoil",
+    "sci_name": "Potentilla reptans",
+    "family_he": "ורדיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 776,
+    "name_he": "תודרה מעובה",
+    "name_en": "",
+    "sci_name": "Sisymbrium erysimoides",
+    "family_he": "מצליבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 777,
+    "name_he": "תלתן בלוטי",
+    "name_en": "Glanded clover",
+    "sci_name": "Trifolium glanduliferum",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 791,
+    "name_he": "גרגרנית גלילנית",
+    "name_en": "Cylindrical Fenugreek",
+    "sci_name": "Trigonella cylindracea",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 792,
+    "name_he": "זוגן לבן",
+    "name_en": "White Bean-Caper",
+    "sci_name": "Zygophyllum album",
+    "family_he": "זוגניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 839,
+    "name_he": "מקור-חסידה חלמיתי",
+    "name_en": "Mallow Stork's-bill",
+    "sci_name": "Erodium malacoides",
+    "family_he": "גרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 3345,
+    "name_he": "כרבולת קטנה",
+    "name_en": "Cock's Head sainfoin",
+    "sci_name": "Onobrychis caputgalli",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 301,
+    "name_he": "טופח גדול",
+    "name_en": "Winged Vetchling",
+    "sci_name": "Lathyrus ochrus",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 559,
+    "name_he": "חלבלוב נטוי",
+    "name_en": "Eye Bane",
+    "sci_name": "Euphorbia nutans",
+    "family_he": "חלבלוביים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 638,
+    "name_he": "ניסנית שיכנית",
+    "name_en": "Prickly Hawk's-beard",
+    "sci_name": "Crepis aculeata",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 770,
+    "name_he": "אלמוות הקרקפת",
+    "name_en": "Headed Knot-grass",
+    "sci_name": "Paronychia capitata",
+    "family_he": "ציפורניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 778,
+    "name_he": "חומעת ראש-הסוס",
+    "name_en": "Horned Dock",
+    "sci_name": "Rumex bucephalophorus",
+    "family_he": "ארכוביתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 923,
+    "name_he": "פשתנית ארם-צובא",
+    "name_en": "Aleppo Toadflax",
+    "sci_name": "Linaria chalepensis",
+    "family_he": "לועניתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 926,
+    "name_he": "בר-דורבן אשון",
+    "name_en": "Rigid Larkspur",
+    "sci_name": "Consolida incana",
+    "family_he": "נוריתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 177,
+    "name_he": "חוגית תמימה",
+    "name_en": "Field Scabious",
+    "sci_name": "Knautia integrifolia",
+    "family_he": "שלמוניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 536,
+    "name_he": "ציפורן חד-שנתי",
+    "name_en": "Annual Pink",
+    "sci_name": "Dianthus tripunctatus",
+    "family_he": "ציפורניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 719,
+    "name_he": "שינן עבה-שורש",
+    "name_en": "Fall Dandelion",
+    "sci_name": "Taraxacum megalorrhizon",
+    "family_he": "מורכבים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 787,
+    "name_he": "אספסת איטלקית",
+    "name_en": "Italian Medick",
+    "sci_name": "Medicago italica",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 811,
+    "name_he": "כף-עוף פחוסה",
+    "name_en": "Hairy Bird's Foot",
+    "sci_name": "Ornithopus compressus",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 815,
+    "name_he": "מקור-חסידה תמים",
+    "name_en": "Stork's bill(JBG)",
+    "sci_name": "Erodium subintegrifolium",
+    "family_he": "גרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 821,
+    "name_he": "ששית מצויה",
+    "name_en": "Little Field Madder",
+    "sci_name": "Sherardia arvensis",
+    "family_he": "פואתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 3344,
+    "name_he": "כרבולת התרנגול",
+    "name_en": "Cock's Comb",
+    "sci_name": "Onobrychis cristagalli",
+    "family_he": "פרפרניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 818,
+    "name_he": "קרנונית לקויה",
+    "name_en": "Chickweed (JBG)",
+    "sci_name": "Cerastium dubium",
+    "family_he": "ציפורניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 861,
+    "name_he": "נץ-חלב חום",
+    "name_en": "Tawny Star-of-Bethlehem",
+    "sci_name": "Ornithogalum fuscescens",
+    "family_he": "שושניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 775,
+    "name_he": "שרוכנית החוף",
+    "name_en": "Sand Strapwort",
+    "sci_name": "Corrigiola litoralis",
+    "family_he": "ציפורניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 802,
+    "name_he": "גלעינית זעירת-פרחים",
+    "name_en": "Bluish(SH) Gromwell",
+    "sci_name": "Buglossoides tenuiflora",
+    "family_he": "זיפניים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 732,
+    "name_he": "מרסיליה זעירה",
+    "name_en": "Pepperwort",
+    "sci_name": "Marsilea minuta",
+    "family_he": "מרסיליים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "tiuli_id": 920,
+    "name_he": "דבקנית הפרקים",
+    "name_en": "Broad Crosswort",
+    "sci_name": "Cruciata articulata",
+    "family_he": "פואתיים",
+    "bloom_months": [
+      3,
+      5,
+      6,
+      7
+    ]
+  }
+]

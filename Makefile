@@ -9,23 +9,23 @@ COMPRESS           = for f in photos/*.jpeg photos/*.jpg; do [ -f "$$f" ] && sip
 
 ## Build flowers.json from seed list — fetches iNaturalist photos + Claude metadata
 fetch-flowers:
-	python3 fetch_flowers.py --seed flowers_seed.json --output $(OUTPUT) --photos-dir $(PHOTOS)
+	uv run python fetch_flowers.py --seed flowers_seed.json --output $(OUTPUT) --photos-dir $(PHOTOS)
 	$(COMPRESS)
-	python3 reset_progress.py --flowers $(OUTPUT)
+	uv run python reset_progress.py --flowers $(OUTPUT)
 
 ## Legacy: re-identify from walk photos + sync Firestore
 update-flowers:
-	python3 identify.py --photos $(PHOTOS) --output $(OUTPUT)
+	uv run python identify.py --photos $(PHOTOS) --output $(OUTPUT)
 	$(COMPRESS)
-	python3 reset_progress.py --flowers $(OUTPUT)
+	uv run python reset_progress.py --flowers $(OUTPUT)
 
 ## Only prune stale Firestore entries (after manually editing flowers.json)
 reset-progress:
-	python3 reset_progress.py --flowers $(OUTPUT)
+	uv run python reset_progress.py --flowers $(OUTPUT)
 
 ## Start local dev server
 serve:
-	python3 -m http.server 8000
+	uv run python -m http.server 8000
 
 help:
 	@echo "make fetch-flowers   — rebuild from seed list (new workflow)"

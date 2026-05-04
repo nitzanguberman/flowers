@@ -15,11 +15,32 @@ https://nitzanguberman.github.io/flowers/game/
 
 Never commit directly to `main`.
 
+## Setup (first time)
+
+```bash
+# Install uv if you don't have it
+curl -LsSf https://astral.sh/uv/install.sh | sh
+# or: brew install uv
+
+# Install Python dependencies into the project venv
+uv sync
+```
+
+## Python Tooling Rules
+
+This project uses **uv** for Python environment management.
+
+- **Never** run `pip install` or `python3 <script>` directly.
+- **Always** use `uv run python <script>` to run scripts (the Makefile already does this).
+- **Always** use `uv add <package>` to add new dependencies — this updates `pyproject.toml` and `uv.lock`.
+- **Always** use `uv sync` to install or refresh the environment.
+
 ## Local Development
 
 ```bash
 # From repo root:
-python3 -m http.server 8000
+uv run python -m http.server 8000
+# or simply: make serve
 # Open: http://localhost:8000/game/
 ```
 
