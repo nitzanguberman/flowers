@@ -301,6 +301,52 @@
   }
   #restart-btn:hover { background: #1b4332; }
 
+  /* ── Collection screen ── */
+  #collection-screen {
+    display: none;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 80px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    padding: 40px 32px;
+    text-align: center;
+  }
+  #collection-screen h1 { font-size: 2rem; color: #2d6a4f; margin-bottom: 12px; }
+  #collection-welcome { font-size: 1rem; color: #555; margin-bottom: 20px; }
+  #collection-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 14px; width: 100%; }
+  .collection-btn {
+    width: 100%;
+    padding: 14px 16px;
+    background: #f0f7ee;
+    border: 2px solid #c8e6c9;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-family: inherit;
+    color: #1b4332;
+    cursor: pointer;
+    text-align: center;
+    direction: rtl;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .collection-btn:hover { background: #d4edda; border-color: #2d6a4f; }
+  .collection-btn.last-used { border-color: #2d6a4f; background: #e8f5e0; font-weight: bold; }
+  #switch-user-from-collection {
+    width: 100%;
+    padding: 11px;
+    background: none;
+    border: 2px dashed #aaa;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    color: #777;
+    cursor: pointer;
+    margin-top: 4px;
+    transition: border-color 0.15s, color 0.15s;
+  }
+  #switch-user-from-collection:hover { border-color: #2d6a4f; color: #2d6a4f; }
+
   /* ── Loading / error ── */
   #loading { margin-top: 60px; font-size: 1.2rem; color: #2d6a4f; }
   #error {
@@ -396,6 +442,14 @@
   <button id="add-user-btn">+ משתמש חדש</button>
 </div>
 
+<!-- Collection picker -->
+<div id="collection-screen">
+  <h1>🌸 משחק פרחים</h1>
+  <p id="collection-welcome"></p>
+  <div id="collection-list"></div>
+  <button id="switch-user-from-collection">החלף משתמש</button>
+</div>
+
 <!-- Game -->
 <header id="header" style="display:none">
   <div class="header-right">
@@ -450,8 +504,19 @@ const db  = getFirestore(app);
 
 async function loadUserData(name) {
   const snap = await getDoc(doc(db, 'users', name));
-  return snap.exists() ? snap.data() : { sessionCount: 0, flowers: {} };
+  if (!snap.exists()) return { collections: {}, lastCollection: null };
+  const data = snap.data();
+  // Migrate old format: { sessionCount, flowers } → { collections: { flowers1: ... } }
+  if (data.flowers && !data.collections) {
+    return {
+      collections: { flowers1: { sessionCount: data.sessionCount || 0, flowers: data.flowers } },
+      lastCollection: 'flowers1'
+    };
+  }
+  if (!data.collections) data.collections = {};
+  return data;
 }
+
 async function saveUserData(name, userData) {
   await setDoc(doc(db, 'users', name), userData);
 }
@@ -461,18 +526,29 @@ const BOX_COLORS = ['#dc3545','#fd7e14','#ffc107','#20c997','#2d6a4f'];
 const BOX_LABELS = ['כל סשן','כל 2 סשנים','כל 4 סשנים','כל 8 סשנים','כל 16 סשנים'];
 const BOX_NAMES  = ['חדש','מתחיל','מכיר','טוב','שולט!'];
 
-let allFlowers    = [];
-let sessionQueue  = [];
-let currentIdx    = 0;
-let sessionScore  = 0;
-let currentUser   = null;
+let allCollections  = [];
+let currentCollection = null;
+let allFlowers      = [];
+let sessionQueue    = [];
+let currentIdx      = 0;
+let sessionScore    = 0;
+let currentUser     = null;
 let currentUserData = null;
 
-function getFlowerState(userData, file) {
-  if (!userData.flowers[file]) {
-    userData.flowers[file] = { box: 1, lastSession: -999, correct: 0, total: 0 };
+function getCollectionState(userData) {
+  const id = currentCollection.id;
+  if (!userData.collections[id]) {
+    userData.collections[id] = { sessionCount: 0, flowers: {} };
   }
-  return userData.flowers[file];
+  return userData.collections[id];
+}
+
+function getFlowerState(userData, file) {
+  const col = getCollectionState(userData);
+  if (!col.flowers[file]) {
+    col.flowers[file] = { box: 1, lastSession: -999, correct: 0, total: 0 };
+  }
+  return col.flowers[file];
 }
 
 function isDue(state, sessionCount) {
@@ -481,7 +557,7 @@ function isDue(state, sessionCount) {
 }
 
 function buildSessionQueue(userData) {
-  const sc = userData.sessionCount;
+  const sc = getCollectionState(userData).sessionCount;
   let due = allFlowers.filter(f => isDue(getFlowerState(userData, f.file), sc));
 
   if (due.length < 4) {
@@ -511,42 +587,63 @@ function getOptions(correct) {
   return shuffle([...pool.slice(0, 3), correct]);
 }
 
+function collectionsDataFrom(raw) {
+  if (raw.collections) return raw.collections;
+  if (raw.flowers) return { flowers1: { sessionCount: raw.sessionCount || 0, flowers: raw.flowers } };
+  return {};
+}
+
 function showReport(username, data) {
-  const flowers = data.flowers || {};
-  const sessions = data.sessionCount || 0;
-
   document.getElementById('report-username').textContent = username;
-  document.getElementById('report-meta').textContent =
-    `${sessions} סשנים · ${Object.keys(flowers).length} פרחים נראו`;
-
-  // Group flowers by box, using allFlowers for Hebrew names
-  const byBox = {1:[], 2:[], 3:[], 4:[], 5:[]};
-  allFlowers.forEach(f => {
-    const s = flowers[f.file];
-    if (!s) return;
-    byBox[s.box].push({ name: f.name_he, correct: s.correct, total: s.total, box: s.box });
-  });
-
   const sections = document.getElementById('report-sections');
   sections.innerHTML = '';
-  [5,4,3,2,1].forEach(box => {
-    const items = byBox[box];
-    if (!items.length) return;
-    const sec = document.createElement('div');
-    sec.className = 'report-section';
-    sec.innerHTML = `<h3><span class="box-dot" style="background:${BOX_COLORS[box-1]}"></span>${BOX_NAMES[box-1]} — קופסה ${box}</h3>`;
-    items.forEach(item => {
-      const pct = item.total ? Math.round((item.correct / item.total) * 100) : 0;
-      const row = document.createElement('div');
-      row.className = 'report-flower-row';
-      row.innerHTML = `
-        <span class="report-flower-name">${item.name}</span>
-        <span class="report-flower-acc">${item.correct}/${item.total} (${pct}%)</span>
-      `;
-      sec.appendChild(row);
+
+  if (currentCollection && allFlowers.length > 0) {
+    // In-game: detailed per-flower report for current collection
+    const colData = (data.collections || {})[currentCollection.id] || { sessionCount: 0, flowers: {} };
+    const flowers  = colData.flowers;
+    document.getElementById('report-meta').textContent =
+      `${colData.sessionCount || 0} סשנים · ${Object.keys(flowers).length} פרחים נראו · ${currentCollection.name}`;
+
+    const byBox = {1:[], 2:[], 3:[], 4:[], 5:[]};
+    allFlowers.forEach(f => {
+      const s = flowers[f.file];
+      if (!s) return;
+      byBox[s.box].push({ name: f.name_he, correct: s.correct, total: s.total });
     });
-    sections.appendChild(sec);
-  });
+    [5,4,3,2,1].forEach(box => {
+      const items = byBox[box];
+      if (!items.length) return;
+      const sec = document.createElement('div');
+      sec.className = 'report-section';
+      sec.innerHTML = `<h3><span class="box-dot" style="background:${BOX_COLORS[box-1]}"></span>${BOX_NAMES[box-1]} — קופסה ${box}</h3>`;
+      items.forEach(item => {
+        const pct = item.total ? Math.round((item.correct / item.total) * 100) : 0;
+        const row = document.createElement('div');
+        row.className = 'report-flower-row';
+        row.innerHTML = `<span class="report-flower-name">${item.name}</span>
+          <span class="report-flower-acc">${item.correct}/${item.total} (${pct}%)</span>`;
+        sec.appendChild(row);
+      });
+      sections.appendChild(sec);
+    });
+  } else {
+    // Login screen: summary per collection
+    const cols = collectionsDataFrom(data);
+    const total = Object.values(cols).reduce((s, c) => s + (c.sessionCount || 0), 0);
+    document.getElementById('report-meta').textContent = `${total} סשנים סה"כ`;
+    allCollections.forEach(col => {
+      const colData = cols[col.id];
+      if (!colData) return;
+      const flowers  = colData.flowers || {};
+      const mastered = Object.values(flowers).filter(f => f.box === 5).length;
+      const sec = document.createElement('div');
+      sec.className = 'report-section';
+      sec.innerHTML = `<h3>${col.name}</h3>
+        <div style="font-size:0.9rem;color:#555;padding:4px 0">${colData.sessionCount || 0} סשנים · ${mastered}/${Object.keys(flowers).length} שולט!</div>`;
+      sections.appendChild(sec);
+    });
+  }
 
   document.getElementById('report-overlay').classList.add('open');
 }
@@ -559,9 +656,21 @@ document.getElementById('report-overlay').addEventListener('click', e => {
     document.getElementById('report-overlay').classList.remove('open');
 });
 
+function resetToLogin() {
+  localStorage.removeItem(USER_KEY);
+  currentUser = null;
+  currentUserData = null;
+  currentCollection = null;
+  ['header', 'card', 'progress', 'summary', 'collection-screen'].forEach(id => {
+    document.getElementById(id).style.display = 'none';
+  });
+  document.getElementById('name-input').value = '';
+  document.getElementById('new-user-form').style.display = 'none';
+  document.getElementById('add-user-btn').style.display = 'block';
+}
+
 async function showLogin() {
-  const screen = document.getElementById('login-screen');
-  screen.style.display = 'block';
+  document.getElementById('login-screen').style.display = 'block';
 
   const list = document.getElementById('user-list');
   list.innerHTML = '<div style="color:#aaa;font-size:0.9rem;padding:8px 0">טוען משתמשים...</div>';
@@ -571,11 +680,11 @@ async function showLogin() {
   snap.docs
     .sort((a, b) => a.id.localeCompare(b.id))
     .forEach(d => {
-      const data = d.data();
-      const flowers = data.flowers || {};
-      const mastered = Object.values(flowers).filter(f => f.box === 5).length;
-      const total    = Object.values(flowers).length;
-      const sessions = data.sessionCount || 0;
+      const cols = collectionsDataFrom(d.data());
+      const totalSessions = Object.values(cols).reduce((s, c) => s + (c.sessionCount || 0), 0);
+      const allFlowersSeen = new Set(Object.values(cols).flatMap(c => Object.keys(c.flowers || {})));
+      const allMastered    = Object.values(cols).reduce((s, c) =>
+        s + Object.values(c.flowers || {}).filter(f => f.box === 5).length, 0);
 
       const row = document.createElement('div');
       row.style.cssText = 'display:flex;gap:8px;align-items:stretch;';
@@ -585,7 +694,7 @@ async function showLogin() {
       btn.style.cssText = 'flex:1;width:auto;';
       btn.innerHTML = `
         <span class="user-name">${d.id}</span>
-        <span class="user-stats">${sessions} סשנים · ${mastered}/${total} שולט!</span>
+        <span class="user-stats">${totalSessions} סשנים · ${allMastered}/${allFlowersSeen.size} שולט!</span>
       `;
       btn.addEventListener('click', () => doLogin(d.id).catch(console.error));
 
@@ -603,8 +712,7 @@ async function showLogin() {
 }
 
 document.getElementById('add-user-btn').addEventListener('click', () => {
-  const form = document.getElementById('new-user-form');
-  form.style.display = 'block';
+  document.getElementById('new-user-form').style.display = 'block';
   document.getElementById('add-user-btn').style.display = 'none';
   document.getElementById('name-input').focus();
 });
@@ -615,7 +723,8 @@ async function doLogin(name) {
   localStorage.setItem(USER_KEY, name);
   currentUser = name;
   document.getElementById('login-screen').style.display = 'none';
-  await startSession();
+  currentUserData = await loadUserData(currentUser);
+  showCollectionPicker();
 }
 
 document.getElementById('login-btn').addEventListener('click', () => {
@@ -627,33 +736,57 @@ document.getElementById('name-input').addEventListener('keydown', e => {
 document.getElementById('report-user').addEventListener('click', () => {
   showReport(currentUser, currentUserData);
 });
-
 document.getElementById('switch-user').addEventListener('click', () => {
-  localStorage.removeItem(USER_KEY);
-  document.getElementById('header').style.display = 'none';
-  document.getElementById('card').style.display = 'none';
-  document.getElementById('progress').style.display = 'none';
-  document.getElementById('summary').style.display = 'none';
-  document.getElementById('name-input').value = '';
-  document.getElementById('new-user-form').style.display = 'none';
-  document.getElementById('add-user-btn').style.display = 'block';
+  resetToLogin();
+  showLogin().catch(console.error);
+});
+document.getElementById('switch-user-from-collection').addEventListener('click', () => {
+  resetToLogin();
   showLogin().catch(console.error);
 });
 
+function showCollectionPicker() {
+  document.getElementById('collection-screen').style.display = 'block';
+  document.getElementById('collection-welcome').textContent = `שלום, ${currentUser}! בחר קולקציה:`;
+
+  const lastCol = currentUserData ? currentUserData.lastCollection : null;
+  const list = document.getElementById('collection-list');
+  list.innerHTML = '';
+  allCollections.forEach(col => {
+    const isLast = col.id === lastCol;
+    const btn = document.createElement('button');
+    btn.className = 'collection-btn' + (isLast ? ' last-used' : '');
+    btn.textContent = col.name + (isLast ? ' ★' : '');
+    btn.addEventListener('click', () => {
+      currentCollection = col;
+      document.getElementById('collection-screen').style.display = 'none';
+      startSession().catch(console.error);
+    });
+    list.appendChild(btn);
+  });
+}
+
 async function startSession() {
   document.getElementById('loading').style.display = 'block';
-  document.getElementById('loading').textContent = 'טוען נתוני משתמש... 🌸';
+  document.getElementById('loading').textContent = 'טוען... 🌸';
+
+  const resp = await fetch('../' + currentCollection.file);
+  if (!resp.ok) throw new Error('לא ניתן לטעון את הקולקציה');
+  allFlowers = await resp.json();
+  if (allFlowers.length < 4) throw new Error('צריך לפחות 4 פרחים כדי לשחק');
 
   currentUserData = await loadUserData(currentUser);
-  currentUserData.sessionCount++;
+  currentUserData.lastCollection = currentCollection.id;
+  const colState = getCollectionState(currentUserData);
+  colState.sessionCount++;
   await saveUserData(currentUser, currentUserData);
 
   sessionQueue = buildSessionQueue(currentUserData);
-  currentIdx = 0;
+  currentIdx   = 0;
   sessionScore = 0;
 
   document.getElementById('loading').style.display = 'none';
-  document.getElementById('username-label').textContent = currentUser;
+  document.getElementById('username-label').textContent = `${currentUser} · ${currentCollection.name}`;
   document.getElementById('score').textContent = '0';
   document.getElementById('header').style.display = 'flex';
   document.getElementById('progress').style.display = 'block';
@@ -712,7 +845,7 @@ function handleAnswer(btn, chosen, correct) {
   } else {
     state.box = 1;
   }
-  state.lastSession = currentUserData.sessionCount;
+  state.lastSession = getCollectionState(currentUserData).sessionCount;
 
   saveUserData(currentUser, currentUserData).catch(console.error);
 
@@ -752,7 +885,7 @@ function showSummary() {
     pct === 100 ? 'מושלם! אתה מומחה פרחים! 🌟' :
     pct >= 70  ? 'כל הכבוד! עשית עבודה נהדרת 🌻' :
     pct >= 40  ? 'לא רע! כדאי להתאמן עוד קצת 🌱' :
-                 'המשך להתאמן, אתה תשתפר! 💪';
+               'המשך להתאמן, אתה תשתפר! 💪';
 
   const boxCounts = [0, 0, 0, 0, 0];
   allFlowers.forEach(f => {
@@ -775,22 +908,23 @@ function showSummary() {
 }
 
 document.getElementById('restart-btn').addEventListener('click', () => {
-  startSession().catch(console.error);
+  document.getElementById('summary').style.display = 'none';
+  showCollectionPicker();
 });
 
 (async () => {
   try {
-    const resp = await fetch('../flowers.json');
-    if (!resp.ok) throw new Error('לא ניתן לטעון את flowers.json');
-    allFlowers = await resp.json();
-    if (allFlowers.length < 4) throw new Error('צריך לפחות 4 פרחים כדי לשחק');
+    const resp = await fetch('../collections.json');
+    if (!resp.ok) throw new Error('לא ניתן לטעון את רשימת הקולקציות');
+    allCollections = await resp.json();
 
     document.getElementById('loading').style.display = 'none';
 
     const saved = localStorage.getItem(USER_KEY);
     if (saved) {
       currentUser = saved;
-      await startSession();
+      currentUserData = await loadUserData(currentUser);
+      showCollectionPicker();
     } else {
       await showLogin();
     }
