@@ -10,10 +10,23 @@ https://nitzanguberman.github.io/flowers/game/
 
 | Branch | Purpose |
 |--------|---------|
-| `main` | Production — GitHub Pages serves from here. Merge from `develop` to deploy. |
-| `develop` | Active development. Work here, test locally, then PR → `main`. |
+| `main` | Production. GitHub Pages serves from here. Never edit, commit, or push here directly. |
+| `feature/*` | Normal work branches. Create one per task, then PR into `main`. |
+| `develop` | Legacy development branch. Prefer new `feature/*` branches unless the user explicitly asks for `develop`. |
 
-Never commit directly to `main`.
+Rules:
+- Before changing files, check the current branch with `git status --short --branch`.
+- If on `main`, create a feature branch first: `git switch -c feature/<short-task-name>`.
+- Do not commit directly to `main`.
+- Do not push directly to `main`.
+- Open a pull request from the feature branch into `main`; merge only after review/approval.
+- The repo uses tracked hooks in `.githooks` to block local commits and pushes to `main`.
+
+First-time local setup for hooks:
+
+```bash
+git config core.hooksPath .githooks
+```
 
 ## Setup (first time)
 
