@@ -347,6 +347,25 @@
   }
   #switch-user-from-collection:hover { border-color: #2d6a4f; color: #2d6a4f; }
 
+  /* ── Home button ── */
+  #home-btn {
+    display: none;
+    position: fixed;
+    top: 14px;
+    left: 16px;
+    background: #fff;
+    border: 2px solid #c8e6c9;
+    border-radius: 10px;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    font-family: inherit;
+    color: #2d6a4f;
+    cursor: pointer;
+    z-index: 50;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  #home-btn:hover { background: #e8f5e0; border-color: #2d6a4f; }
+
   /* ── Loading / error ── */
   #loading { margin-top: 60px; font-size: 1.2rem; color: #2d6a4f; }
   #error {
@@ -491,7 +510,7 @@
       <th>מתי חוזר</th>
     </tr>
   </table>
-  <button id="restart-btn">סשן נוסף</button>
+  <button id="restart-btn">משחק נוסף</button>
 </div>
 
 <script type="module">
@@ -523,7 +542,7 @@ async function saveUserData(name, userData) {
 
 const USER_KEY   = 'flowers_current_user';
 const BOX_COLORS = ['#dc3545','#fd7e14','#ffc107','#20c997','#2d6a4f'];
-const BOX_LABELS = ['כל סשן','כל 2 סשנים','כל 4 סשנים','כל 8 סשנים','כל 16 סשנים'];
+const BOX_LABELS = ['כל משחק','כל 2 משחקים','כל 4 משחקים','כל 8 משחקים','כל 16 משחקים'];
 const BOX_NAMES  = ['חדש','מתחיל','מכיר','טוב','שולט!'];
 
 let allCollections  = [];
@@ -603,7 +622,7 @@ function showReport(username, data) {
     const colData = (data.collections || {})[currentCollection.id] || { sessionCount: 0, flowers: {} };
     const flowers  = colData.flowers;
     document.getElementById('report-meta').textContent =
-      `${colData.sessionCount || 0} סשנים · ${Object.keys(flowers).length} פרחים נראו · ${currentCollection.name}`;
+      `${colData.sessionCount || 0} משחקים · ${Object.keys(flowers).length} פרחים נראו · ${currentCollection.name}`;
 
     const byBox = {1:[], 2:[], 3:[], 4:[], 5:[]};
     allFlowers.forEach(f => {
@@ -631,7 +650,7 @@ function showReport(username, data) {
     // Login screen: summary per collection
     const cols = collectionsDataFrom(data);
     const total = Object.values(cols).reduce((s, c) => s + (c.sessionCount || 0), 0);
-    document.getElementById('report-meta').textContent = `${total} סשנים סה"כ`;
+    document.getElementById('report-meta').textContent = `${total} משחקים סה"כ`;
     allCollections.forEach(col => {
       const colData = cols[col.id];
       if (!colData) return;
@@ -640,7 +659,7 @@ function showReport(username, data) {
       const sec = document.createElement('div');
       sec.className = 'report-section';
       sec.innerHTML = `<h3>${col.name}</h3>
-        <div style="font-size:0.9rem;color:#555;padding:4px 0">${colData.sessionCount || 0} סשנים · ${mastered}/${Object.keys(flowers).length} שולט!</div>`;
+        <div style="font-size:0.9rem;color:#555;padding:4px 0">${colData.sessionCount || 0} משחקים · ${mastered}/${Object.keys(flowers).length} שולט!</div>`;
       sections.appendChild(sec);
     });
   }
@@ -694,7 +713,7 @@ async function showLogin() {
       btn.style.cssText = 'flex:1;width:auto;';
       btn.innerHTML = `
         <span class="user-name">${d.id}</span>
-        <span class="user-stats">${totalSessions} סשנים · ${allMastered}/${allFlowersSeen.size} שולט!</span>
+        <span class="user-stats">${totalSessions} משחקים · ${allMastered}/${allFlowersSeen.size} שולט!</span>
       `;
       btn.addEventListener('click', () => doLogin(d.id).catch(console.error));
 
