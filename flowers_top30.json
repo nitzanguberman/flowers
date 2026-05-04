@@ -1,0 +1,242 @@
+[
+  {
+    "file": "photos_tiuli/inat_anemone_coronaria.jpg",
+    "name_en": "Crown Anemone",
+    "name_he": "כלנית מצויה",
+    "sci_name": "Anemone coronaria",
+    "info": "הכלנית המצויה פורחת בעונת האביב, בעיקר בין פברואר למאי, ומעדיפה מקומות לחים ושטחי מרעה. עובדה מעניינת היא שהיא נפוצה במיוחד בארץ ישראל ונחשבת לסמל של הטבע הישראלי.",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/467013836/large.jpg"
+  },
+  {
+    "file": "photos_tiuli/inat_ranunculus_asiaticus.jpeg",
+    "name_en": "Turban Buttercup",
+    "name_he": "נורית אסיה",
+    "sci_name": "Ranunculus asiaticus",
+    "info": "הנורית אסיה גדלה בעיקר באיזורים חמים וממוזגים, כמו לחופי ים התיכון. היא פורחת בעונת האביב, וצבעי פרחיה המגוונים נעשים פופולריים מאוד בגינות ובאגרטל בשל יופיים הרב.",
+    "photo_url": "https://static.inaturalist.org/photos/484569239/large.jpg"
+  },
+  {
+    "file": "photos/inat_papaver_rhoeas.jpeg",
+    "name_en": "Common Poppy",
+    "name_he": "פרג אדום",
+    "sci_name": "Papaver rhoeas",
+    "info": "הפרג האדום נפוץ בשדות פתוחים ובאזורים צחיחים ברחבי ישראל. הוא פורח בעיקר בעונת האביב, והדבר המעניין לגביו הוא ששורשיו יכולים להחזיק מים, מה שמאפשר לו לגדול גם באדמה יבשה.",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/105264694/large.jpeg"
+  },
+  {
+    "file": "photos_tiuli/inat_cyclamen_persicum.jpeg",
+    "name_en": "Persian Cyclamen",
+    "name_he": "רקפת מצויה",
+    "sci_name": "Cyclamen persicum",
+    "info": "הרקפת המצויה נפוצה באזורים הרריים בסביבת הים התיכון ומשגשגת בעיקר באדמה לחה ובצל. פריחה מתקיימת בדרך כלל בין החודשים נובמבר למרץ, והיא ידועה בפרחיה הייחודיים והצבעוניים שמושכים מזיקים חשובים.",
+    "photo_url": "https://static.inaturalist.org/photos/136730137/large.jpg"
+  },
+  {
+    "file": "photos_tiuli/inat_lupinus_pilosus.jpeg",
+    "name_en": "Blue Lupine",
+    "name_he": "תורמוס ההרים",
+    "sci_name": "Lupinus pilosus",
+    "info": "התורמוס ההרים פורח בעיקר בחודשים מרץ-אפריל ומעדיף אזורים הרריים ושטחים פתוחים. מעניין שהוא ידוע ביכולתו לעזור בשיפור איכות הקרקע על ידי קיבוע חנקן מהאטמוספירה.",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/88698940/large.jpeg"
+  },
+  {
+    "file": "photos_tiuli/inat_tulipa_agenensis.jpg",
+    "name_en": "Sun's-eye Tulip",
+    "name_he": "צבעוני ההרים",
+    "sci_name": "Tulipa agenensis",
+    "info": "צבעוני ההרים גדל באדמות סלעיות ובמדרונות הרריים, בעיקר באזורים צחיחים של המזרח התיכון. הוא פורח בעונות האביב, ובין העובדות המעניינות עליו הוא שהצבעונים הללו נחשבים לסימן לתחילת פריחת האביב באזורם.",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/183237707/large.jpg"
+  },
+  {
+    "file": "photos_tiuli/inat_narcissus_tazetta.jpeg",
+    "name_en": "Common Narcissus",
+    "name_he": "נרקיס מצוי",
+    "sci_name": "Narcissus tazetta",
+    "info": "הנרקיס המצוי גדל בעיקר באזורים רטובים ובמדרונות הרים. הוא פורח בעיקר בחורף ובאביב, ועניין מעניין הוא שנרקיסים משמשים בסוגי תרופות מסורתיות.",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/222474286/large.jpeg"
+  },
+  {
+    "file": "photos_tiuli/inat_iris_palaestina.jpeg",
+    "name_en": "Palestine Iris",
+    "name_he": "אירוס ארץ-ישראלי",
+    "sci_name": "Iris palaestina",
+    "info": "אירוס ארץ-ישראלי (Iris palaestina) גדל במגוון אזורים בארץ ישראל, בעיקר באדמות לחות ובסמוך לנחלים. הוא פורח בשנים מאוחרות ובאביב, ומעניין לדעת כי הוא אחד הפרחים הנדירים ביותר בישראל.",
+    "photo_url": "https://static.inaturalist.org/photos/178621472/large.jpeg"
+  },
+  {
+    "file": "photos/inat_glebionis_coronaria.jpeg",
+    "name_en": "Crown Daisy",
+    "name_he": "חרצית עטורה",
+    "sci_name": "Glebionis coronaria",
+    "info": "החרצית עטורה נפוצה בעיקר באיזורים קרים ורטובים, כמו שדות וערוצים. היא פורחת בעונות האביב והקיץ, ובאופן מעניין, עלי הכותרת שלה נחשבים לא edibles ונותנים טעם מרענן לאוכל.",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/12761928/large.jpeg"
+  },
+  {
+    "file": "photos_tiuli/inat_asphodelus_aestivus.jpeg",
+    "name_en": "Common Asphodel",
+    "name_he": "עירית גדולה",
+    "sci_name": "Asphodelus aestivus",
+    "info": "העירית הגדולה פורחת בעיקר בקיץ, והיא נפוצה באזורים קלוויים עם קרקעות חמרה, דשא וסלעים. עובדה מעניינת היא שהעלים שלה יכולים לשמש כמזון בעבור בעלי חיים כמו צאן.",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/176762483/large.jpeg"
+  },
+  {
+    "file": "photos/inat_cistus_creticus.jpg",
+    "name_en": "Pink Rock Rose",
+    "name_he": "לוטם שעיר",
+    "sci_name": "Cistus creticus",
+    "info": "הלוטם השעיר גדל בעיקר באיזורים חמים ויבשים, כמו חופי המזרח התיכון. מעבר לכך, הפרחים שלו פורחים בעונת האביב, ויש לו סגולות ריפוי רבות, כולל שימוש בתה מחלקי הצמח.",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/337336536/large.jpeg"
+  },
+  {
+    "file": "photos_tiuli/inat_cistus_salviifolius.jpg",
+    "name_en": "Sage-Leaved Rockrose",
+    "name_he": "לוטם מרווני",
+    "sci_name": "Cistus salviifolius",
+    "info": "הלוטם המרווני מצוי בעיקר באזורים חמים ויבשים של ישראל, כמו חורשים ובתי גידול במדבר. הוא פורח בין האביב לקיץ ומפורסם בזכות פרחיו הגדולים והמרהיבים, אשר מושכים חרקים מאביקים.",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/575180165/large.jpg"
+  },
+  {
+    "file": "photos_tiuli/inat_origanum_syriacum.jpg",
+    "name_en": "Wild Marjoram",
+    "name_he": "אזוב מצוי",
+    "sci_name": "Origanum syriacum",
+    "info": "אזוב מצוי (Origanum syriacum) צומח באזורים יבשים ובולטים בארץ ישראל, בעיקר באזורים הררים. זמן הפריחה שלו הוא בין החודשים יולי לספטמבר, והוא ידוע בשימושו המסורתי בתיבול מאכלים ובמרפא.",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/211484931/large.jpeg"
+  },
+  {
+    "file": "photos/inat_calicotome_villosa.jpeg",
+    "name_en": "Spiny Broom",
+    "name_he": "קידה שעירה",
+    "sci_name": "Calicotome villosa",
+    "info": "קידה שעירה (Calicotome villosa) מאותגרת באזורים יבשים ושטופי שמש בישראל, במיוחד באזורים חקלאיים ובשולי יערות. היא פורחת בעיקר בחודשי האביב, ובעיקר מחודש מרץ עד מאי, ומספקת מקור מזון חשוב למגוון חרקים ועופות.",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/181446681/large.jpg"
+  },
+  {
+    "file": "photos_tiuli/inat_helichrysum_sanguineum.jpeg",
+    "name_en": "Red Everlasting",
+    "name_he": "דם-המכבים האדום",
+    "sci_name": "Helichrysum sanguineum",
+    "info": "הדם-המכבים האדום גדל בעיקר באיזורי הרים ושטחים פתוחים בדרום אירופה ובמזרח התיכון. הוא פורח בעונת הקיץ, ומעניין לציין שהפרחים שלו שומרים על צבעם גם לאחר קצירתם, מה שהופך אותם לפופולריים לקישוטים.",
+    "photo_url": "https://static.inaturalist.org/photos/77880607/large.jpg"
+  },
+  {
+    "file": "photos_tiuli/inat_gladiolus_italicus.jpeg",
+    "name_en": "Common Gladiolus",
+    "name_he": "סיפן התבואה",
+    "sci_name": "Gladiolus italicus",
+    "info": "סיפן התבואה (Gladiolus italicus) נפוץ באזורי לחות באירופה ובצפון אפריקה. הוא פורח במהלך הקיץ, ובאופן מעניין, פרחיו נפתחים רק בשעות היום ותוך מספר ימים הם מתייבשים.",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/264237522/large.jpeg"
+  },
+  {
+    "file": "photos/inat_oxalis_pescaprae.jpeg",
+    "name_en": "Bermuda Buttercup",
+    "name_he": "חמצוץ",
+    "sci_name": "Oxalis pescaprae",
+    "info": "החמצוץ (Oxalis pescaprae) נפוץ באדמות חוליות ובאזורים חמים כמו חופים ושטחים פתוחים. הוא פורח בעונת האביב וידוע ביכולת שלו לכסות שטחים רחבים במהירות.",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/160811425/large.jpeg"
+  },
+  {
+    "file": "photos_tiuli/inat_urginea_maritima.jpeg",
+    "name_en": "Sea Squill",
+    "name_he": "חצב מצוי",
+    "sci_name": "Urginea maritima",
+    "info": "חצב מצוי (Urginea maritima) צומח באזורים חופיים ובצוקים לאורך הים התיכון. הוא פורח בעיקר בקיץ וידוע בזכות עמידותו לחום וליובש, והוא מהווה מקור מזון לחרקים בזמן פריחתו.",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/154135797/large.jpeg"
+  },
+  {
+    "file": "photos/inat_salvia_hierosolymitana.jpeg",
+    "name_en": "Jerusalem Sage",
+    "name_he": "מרווה ירושלמית",
+    "sci_name": "Salvia hierosolymitana",
+    "info": "מרווה ירושלמית (Salvia hierosolymitana) נפוצה בעיקר באזורים הרריים ויבשים של הארץ. היא פורחת בקיץ, וידועה בזכות היותה צמח מעניין שגדל באדמות סלעיות ויוצר פריחה מרהיבה בצבעים סגולים.",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/595739986/large.jpg"
+  },
+  {
+    "file": "photos/inat_adonis_palaestina.jpeg",
+    "name_en": "Palestine Pheasant's Eye",
+    "name_he": "נורית ארגמן",
+    "sci_name": "Adonis palaestina",
+    "info": "נורית ארגמן, הידועה גם בשמות Palestine Pheasant's Eye, גדלה בעיקר באזורים הרריים ובשדות פתוחים בארץ ישראל. היא פורחת בעיקר בתחילת האביב, ומעניין שהיא נחשבת לסמל של יופי ופגיעות, בשל הייחודיות והצבעוניות שלה.",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/34591934/large.jpeg"
+  },
+  {
+    "file": "photos_tiuli/inat_calendula_arvensis.jpg",
+    "name_en": "Field Marigold",
+    "name_he": "ציפורני-חתול מצויות",
+    "sci_name": "Calendula arvensis",
+    "info": "המריגולד השדה (ציפורני-חתול מצויות) גדל בעיקר באזורים פתוחים ויבשים, כמו שדות ומדרונות. הוא פורח בעונות האביב והקיץ, ויש לו יכולת להתרבות בקלות ולהתפשט באזורים חדשים.",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/626346953/large.jpg"
+  },
+  {
+    "file": "photos/inat_crocus_cancellatus.jpeg",
+    "name_en": "Cancelled Crocus",
+    "name_he": "כרכום סתווי",
+    "sci_name": "Crocus cancellatus",
+    "info": "הכרכום סתווי גדל בטבע בעיקר באזורים הרריים באירופה ובאסיה, והוא פורח בעיקר בעונת הסתיו, בין ספטמבר לאוקטובר. מעניין že הוא מצריך קרקע גירנית כדי לפרוח, והוא ידוע בפרחיו הצהובים והכתומים המרהיבים.",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/163915390/large.jpg"
+  },
+  {
+    "file": "photos_tiuli/inat_colchicum_stevenii.jpg",
+    "name_en": "Steven's Meadow-saffron",
+    "name_he": "סתוונית היורה",
+    "sci_name": "Colchicum stevenii",
+    "info": "סתוונית היורה (Colchicum stevenii) פורחת בעיקר באוקטובר ונמצאת באזורים הרריים בישראל, בעיקר במערב ובמרכז הארץ. היא ידועה בפרחיה היפים שמופיעים לפני העלים, והם משמשים כמקלט לצוף עבור חרקים בזמן שאר העצים עדיין רירים.",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/453908570/large.jpeg"
+  },
+  {
+    "file": "photos_tiuli/inat_mandragora_autumnalis.jpeg",
+    "name_en": "Mandrake",
+    "name_he": "דודא רפואי",
+    "sci_name": "Mandragora autumnalis",
+    "info": "הדודא הרפואי (Mandragora autumnalis) צומח באזורים מישוריים ומעט הרריים בארץ ישראל, בעיקר באביב. הפריחה מתרחשת באביב, וגבעוליו מעוטרים עם פרחים בצבעים לבן או סגול, כאשר מעניין הוא ששרשיו משמשים בשימושים רפואיים מסורתיים.",
+    "photo_url": "https://static.inaturalist.org/photos/648681866/large.jpg"
+  },
+  {
+    "file": "photos_tiuli/inat_sternbergia_clusiana.jpg",
+    "name_en": "Large Sternbergia",
+    "name_he": "חלמונית גדולה",
+    "sci_name": "Sternbergia clusiana",
+    "info": "החלמונית הגדולה גדלה בעיקר באזורים יבשים וחמים, כמו בדרום ישראל. היא פורחת במהלך חודשי הסתיו ונחשבת לאחת הפריחות היפות המייצגות את התקופה הזו, כאשר בין היתר מדובר בפרח נדיר שמושך אליו הרבה דבורים.",
+    "photo_url": "https://static.inaturalist.org/photos/44737535/large.jpeg"
+  },
+  {
+    "file": "photos_tiuli/inat_echium_judaeum.jpeg",
+    "name_en": "Judean Viper's-bugloss",
+    "name_he": "עכנאי יהודה",
+    "sci_name": "Echium judaeum",
+    "info": "עכנאי יהודה (Echium judaeum) נפוץ בעיקר באזורי החוף של ישראל ובאזורים מדבריים. פריחתו מתרחשת בין חודשים מרץ ליוני, והוא ידוע בכך שהוא מושך דבורים ומסייע בהאבקה של צמחים אחרים.",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/613974370/large.jpg"
+  },
+  {
+    "file": "photos/inat_orchis_italica.jpeg",
+    "name_en": "Italian Orchid",
+    "name_he": "סחלב איטלקי",
+    "sci_name": "Orchis italica",
+    "info": "הסחלב האיטלקי מסוגל לגדול באזורים חמים עם קרקע חולית ומדשאות. עונת הפריחה שלו היא מאפריל עד יוני, והוא נפוץ בעיקר בדרום אירופה. פרט מעניין עליו הוא שהתפרחות שלו דומות בצורתן לאדם בעל גוף קטן.",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/638767544/large.jpg"
+  },
+  {
+    "file": "photos_tiuli/inat_hyoscyamus_aureus.jpeg",
+    "name_en": "Golden Henbane",
+    "name_he": "שיכרון זהוב",
+    "sci_name": "Hyoscyamus aureus",
+    "info": "שיכרון זהוב מצוי באזורים יבשתיים באירופה ובמערב אסיה, וצומח בעיקר באדמות לחות. הפריחה מתרחשת במהלך האביב והקיץ, והעובדה המעניינת היא שהצמח מכיל חומרים פעילים המשמשים ברפואה העממית, אך יש להיזהר ממנו כיוון שהוא רעלני.",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/459450869/large.jpg"
+  },
+  {
+    "file": "photos_tiuli/inat_phlomis_viscosa.jpg",
+    "name_en": "Shrubby Jerusalem Sage",
+    "name_he": "שלהבית דביקה",
+    "sci_name": "Phlomis viscosa",
+    "info": "שלהבית דביקה (Phlomis viscosa) נפוצה בישראל באזורים חמים ובצמחייה ים-תיכונית. היא פורחת בעיקר בעונת הקיץ ויש לה פרחים צהובים בולטים שמושכים מאביקים כמו דבורים. כמו כן, השיח ידוע בתכונותיו הרפואיות ומשמש לעיתים בתרופות מסורתיות.",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/386952089/large.jpeg"
+  },
+  {
+    "file": "photos_tiuli/inat_cercis_siliquastrum.jpg",
+    "name_en": "Juda's Tree",
+    "name_he": "כליל החורש",
+    "sci_name": "Cercis siliquastrum",
+    "info": "כליל החורש גדל בעיקר באזורים חמים וכבדים בישראל ובחוף המזרחי של הים התיכון. הוא פורח באביב, ובעל פרחים ורודים יפהפיים שמופיעים לפני העלים, דבר שמשווה לו מראה מרהיב בעונה זו.",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/188700208/large.jpg"
+  }
+]
