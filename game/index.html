@@ -125,7 +125,7 @@
     align-items: center;
     gap: 6px;
   }
-  #switch-user, #change-collection {
+  #change-collection {
     font-size: 0.75rem;
     color: #2d6a4f;
     cursor: pointer;
@@ -348,25 +348,7 @@
   #switch-user-from-collection:hover { border-color: #2d6a4f; color: #2d6a4f; }
 
   /* ── Home button ── */
-  #home-btn {
-    display: none;
-    position: fixed;
-    top: 14px;
-    left: 16px;
-    background: #fff;
-    border: 2px solid #c8e6c9;
-    border-radius: 10px;
-    padding: 6px 12px;
-    font-size: 0.85rem;
-    font-family: inherit;
-    color: #2d6a4f;
-    cursor: pointer;
-    z-index: 50;
-    transition: background 0.15s, border-color 0.15s;
-  }
-  #home-btn:hover { background: #e8f5e0; border-color: #2d6a4f; }
-
-  /* ── Loading / error ── */
+/* ── Loading / error ── */
   #loading { margin-top: 60px; font-size: 1.2rem; color: #2d6a4f; }
   #error {
     display: none;
@@ -477,7 +459,6 @@
       <span id="username-label"></span>
       <button id="report-user">📊</button>
       <button id="change-collection">שנה אוסף</button>
-      <button id="switch-user">שנה משתמש</button>
     </div>
   </div>
   <div id="score-box">ניקוד: <span id="score">0</span></div>
@@ -761,10 +742,6 @@ document.getElementById('change-collection').addEventListener('click', () => {
     document.getElementById(id).style.display = 'none';
   });
   showCollectionPicker();
-});
-document.getElementById('switch-user').addEventListener('click', () => {
-  resetToLogin();
-  showLogin().catch(console.error);
 });
 document.getElementById('switch-user-from-collection').addEventListener('click', () => {
   resetToLogin();
