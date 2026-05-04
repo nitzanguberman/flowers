@@ -1,0 +1,4 @@
+photos/*.jpg filter=lfs diff=lfs merge=lfs -text
+photos/*.jpeg filter=lfs diff=lfs merge=lfs -text
+photos_tiuli/*.jpg filter=lfs diff=lfs merge=lfs -text
+photos_tiuli/*.jpeg filter=lfs diff=lfs merge=lfs -text
