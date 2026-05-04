@@ -527,6 +527,7 @@ const USER_KEY   = 'flowers_current_user';
 const BOX_COLORS = ['#dc3545','#fd7e14','#ffc107','#20c997','#2d6a4f'];
 const BOX_LABELS = ['כל משחק','כל 2 משחקים','כל 4 משחקים','כל 8 משחקים','כל 16 משחקים'];
 const BOX_NAMES  = ['חדש','מתחיל','מכיר','טוב','שולט!'];
+const PHOTO_PLACEHOLDER = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450"%3E%3Crect width="800" height="450" fill="%23f0f7ee"/%3E%3Ctext x="400" y="230" text-anchor="middle" font-family="Arial,sans-serif" font-size="34" fill="%232d6a4f"%3EPhoto unavailable%3C/text%3E%3C/svg%3E';
 
 let allCollections  = [];
 let currentCollection = null;
@@ -587,6 +588,21 @@ function getOptions(correct) {
   const pool = allFlowers.filter(f => f !== correct);
   shuffle(pool);
   return shuffle([...pool.slice(0, 3), correct]);
+}
+
+function setQuestionPhoto(flower) {
+  const photo = document.getElementById('photo');
+  const localSrc = '../' + flower.file;
+  const fallbackSrc = flower.photo_url || PHOTO_PLACEHOLDER;
+
+  photo.onerror = () => {
+    photo.onerror = () => {
+      photo.onerror = null;
+      photo.src = PHOTO_PLACEHOLDER;
+    };
+    photo.src = fallbackSrc;
+  };
+  photo.src = localSrc;
 }
 
 function collectionsDataFrom(raw) {
@@ -812,7 +828,7 @@ function showQuestion() {
   const flower = sessionQueue[currentIdx];
   const state  = getFlowerState(currentUserData, flower.file);
 
-  document.getElementById('photo').src = '../' + flower.file;
+  setQuestionPhoto(flower);
   document.getElementById('progress').textContent =
     `שאלה ${currentIdx + 1} מתוך ${sessionQueue.length}`;
   document.getElementById('box-badge').textContent = `${BOX_NAMES[state.box - 1]} (רמה ${state.box}/5)`;
