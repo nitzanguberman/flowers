@@ -1,0 +1,6 @@
+#!/bin/sh
+# Preserve Git LFS hook behavior when core.hooksPath points at .githooks.
+
+if command -v git-lfs >/dev/null 2>&1; then
+  git lfs post-commit "$@"
+fi

@@ -1,5 +1,16 @@
 #!/bin/sh
-# Block commits that include flowers.json changes without running reset_progress.py first.
+# Project safety checks before creating a commit.
+
+BRANCH=$(git symbolic-ref --quiet --short HEAD 2>/dev/null || true)
+
+if [ "$BRANCH" = "main" ]; then
+  echo ""
+  echo "Blocked: do not commit directly to main."
+  echo "Create a feature branch first, then open a PR into main."
+  echo "Example: git switch -c feature/my-change"
+  echo ""
+  exit 1
+fi
 
 if git diff --cached --name-only | grep -q "^flowers\.json$"; then
   FLOWERS_MTIME=$(stat -f "%m" flowers.json 2>/dev/null || stat -c "%Y" flowers.json)
