@@ -125,7 +125,7 @@
     align-items: center;
     gap: 6px;
   }
-  #switch-user {
+  #switch-user, #change-collection {
     font-size: 0.75rem;
     color: #2d6a4f;
     cursor: pointer;
@@ -476,7 +476,8 @@
     <div id="user-tag">
       <span id="username-label"></span>
       <button id="report-user">📊</button>
-      <button id="switch-user">שנה</button>
+      <button id="change-collection">שנה אוסף</button>
+      <button id="switch-user">שנה משתמש</button>
     </div>
   </div>
   <div id="score-box">ניקוד: <span id="score">0</span></div>
@@ -754,6 +755,12 @@ document.getElementById('name-input').addEventListener('keydown', e => {
 });
 document.getElementById('report-user').addEventListener('click', () => {
   showReport(currentUser, currentUserData);
+});
+document.getElementById('change-collection').addEventListener('click', () => {
+  ['header', 'card', 'progress', 'summary'].forEach(id => {
+    document.getElementById(id).style.display = 'none';
+  });
+  showCollectionPicker();
 });
 document.getElementById('switch-user').addEventListener('click', () => {
   resetToLogin();
