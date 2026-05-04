@@ -15,7 +15,8 @@ import re
 import sys
 import time
 
-import anthropic
+from typing import Optional
+from openai import OpenAI
 import requests
 from dotenv import load_dotenv
 load_dotenv()
@@ -35,7 +36,7 @@ def to_large_url(url: str) -> str:
     return re.sub(r"/(square|small|medium|thumb)\.(jpe?g|png)", r"/large.\2", url)
 
 
-def fetch_photo_url_from_observations(sci_name: str) -> str | None:
+def fetch_photo_url_from_observations(sci_name: str) -> Optional[str]:
     """Best research-grade Israel observation photo (large size)."""
     try:
         r = requests.get(INAT_OBSERVATIONS, headers=HEADERS, timeout=15, params={
@@ -56,7 +57,7 @@ def fetch_photo_url_from_observations(sci_name: str) -> str | None:
     return None
 
 
-def fetch_photo_url_from_taxa(sci_name: str) -> str | None:
+def fetch_photo_url_from_taxa(sci_name: str) -> Optional[str]:
     """Fallback: iNaturalist taxon default photo."""
     try:
         r = requests.get(INAT_TAXA, headers=HEADERS, timeout=15, params={
@@ -65,7 +66,8 @@ def fetch_photo_url_from_taxa(sci_name: str) -> str | None:
         results = r.json().get("results", [])
         if results:
             dp = results[0].get("default_photo") or {}
-            return dp.get("large_url") or dp.get("medium_url")
+            url = dp.get("large_url") or dp.get("medium_url")
+            return to_large_url(url) if url else None
     except Exception as e:
         print(f"    [taxa API error] {e}", file=sys.stderr)
     return None
@@ -85,8 +87,8 @@ def download_photo(url: str, dest_path: str) -> bool:
         return False
 
 
-def generate_metadata(client: anthropic.Anthropic, sci_name: str, name_en: str, name_he: str | None) -> dict:
-    """Call Claude Haiku to generate name_he (if missing) and info (always)."""
+def generate_metadata(client: OpenAI, sci_name: str, name_en: str, name_he: Optional[str]) -> dict:
+    """Call GPT-4o-mini to generate name_he (if missing) and info (always)."""
     if name_he:
         prompt = (
             f"Flower: {name_en} ({sci_name})\n"
@@ -106,17 +108,17 @@ def generate_metadata(client: anthropic.Anthropic, sci_name: str, name_en: str, 
         )
 
     try:
-        response = client.messages.create(
-            model="claude-haiku-4-5-20251001",
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
             max_tokens=400,
             messages=[{"role": "user", "content": prompt}],
         )
-        text = response.content[0].text.strip()
+        text = response.choices[0].message.content.strip()
         text = re.sub(r"^```[a-z]*\n?", "", text)
         text = re.sub(r"\n?```$", "", text)
         return json.loads(text)
     except Exception as e:
-        print(f"    [Claude error] {e}", file=sys.stderr)
+        print(f"    [OpenAI error] {e}", file=sys.stderr)
         return {}
 
 
@@ -126,11 +128,11 @@ def main():
     parser.add_argument("--output",     default="flowers.json",      help="Output flowers.json")
     parser.add_argument("--photos-dir", default="photos",            help="Directory for downloaded photos")
     parser.add_argument("--limit",      type=int,                    help="Process only N species (testing)")
-    parser.add_argument("--api-key",    default=os.environ.get("ANTHROPIC_API_KEY"), help="Anthropic API key")
+    parser.add_argument("--api-key",    default=os.environ.get("OPENAI_API_KEY"), help="OpenAI API key")
     args = parser.parse_args()
 
     if not args.api_key:
-        print("Error: set ANTHROPIC_API_KEY or pass --api-key", file=sys.stderr)
+        print("Error: set OPENAI_API_KEY or pass --api-key", file=sys.stderr)
         sys.exit(1)
 
     with open(args.seed, encoding="utf-8") as f:
@@ -146,7 +148,7 @@ def main():
             for entry in json.load(f):
                 existing[entry.get("sci_name", "")] = entry
 
-    client = anthropic.Anthropic(api_key=args.api_key)
+    client = OpenAI(api_key=args.api_key)
     results = []
 
     for i, species in enumerate(seed, 1):
