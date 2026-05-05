@@ -1,0 +1,1063 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flower Image Change Review</title>
+<style>
+:root { color-scheme: light; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+body { margin: 0; background: #f6f7f8; color: #17202a; }
+header { position: sticky; top: 0; z-index: 2; background: rgba(255,255,255,.94); border-bottom: 1px solid #dfe4ea; padding: 14px 20px; backdrop-filter: blur(8px); }
+h1 { margin: 0 0 8px; font-size: 22px; }
+.controls { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+input, select { font: inherit; padding: 8px 10px; border: 1px solid #c8d0d8; border-radius: 6px; background: white; }
+main { padding: 20px; }
+.summary { margin: 0 0 16px; color: #405060; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(520px, 1fr)); gap: 16px; }
+.card { background: white; border: 1px solid #dfe4ea; border-radius: 8px; overflow: hidden; }
+.card-head { padding: 12px 14px; border-bottom: 1px solid #edf0f3; display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
+.title { font-weight: 700; }
+.meta { color: #66717d; font-size: 13px; white-space: nowrap; }
+.images { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: #dfe4ea; }
+.panel { background: #fbfcfd; min-width: 0; }
+.label { padding: 8px 10px; font-size: 12px; font-weight: 700; color: #405060; border-bottom: 1px solid #edf0f3; }
+.panel img { display: block; width: 100%; height: 240px; object-fit: contain; background: #f1f3f5; }
+.path { padding: 8px 10px; font-size: 11px; color: #596673; overflow-wrap: anywhere; border-top: 1px solid #edf0f3; }
+.info { padding: 10px 14px 14px; color: #405060; font-size: 13px; line-height: 1.4; }
+.badge { display: inline-block; padding: 2px 6px; border-radius: 999px; background: #eef4ff; color: #27548a; font-size: 12px; margin-inline-start: 6px; }
+@media (max-width: 700px) { main { padding: 10px; } .grid { grid-template-columns: 1fr; } .images { grid-template-columns: 1fr; } .panel img { height: 280px; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>Flower Image Change Review</h1>
+  <div class="controls">
+    <input id="q" type="search" placeholder="Search species or name" aria-label="Search species or name">
+    <select id="collection" aria-label="Collection"><option value="">All collections</option><option value="flowers_walks.json">flowers_walks.json</option><option value="flowers_top30.json">flowers_top30.json</option><option value="flowers2.json">flowers2.json</option></select>
+    <span id="count"></span>
+  </div>
+</header>
+<main>
+  <p class="summary">Side-by-side review of changed question images. The old quiz image is on the left, the replacement is in the middle, and the info image is on the right.</p>
+  <section class="grid">
+<article class="card" data-collection="flowers_walks.json" data-search="echium judaeum שרביטן משונן judean viper&#x27;s bugloss">
+  <div class="card-head">
+    <div><span class="title">Echium judaeum</span><span class="badge">#17</span><br>שרביטן משונן / Judean Viper&#x27;s Bugloss</div>
+    <div class="meta">flowers_walks.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos/IMG_8620.jpg" loading="lazy"><div class="path">photos/IMG_8620.jpg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos/inat_echium_judaeum_q_613974370.jpg" loading="lazy"><div class="path">photos/inat_echium_judaeum_q_613974370.jpg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/287344473/medium.jpeg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/287344473/medium.jpeg</div></div>
+  </div>
+  <div class="info">השרביטן המשונן נפוץ בעיקר באזור הרי יהודה והשומרון. הוא פורח בחודשי האביב, בדרך כלל בין מרץ למאי, עם פרחים סגולים בולטים.</div>
+</article>
+<article class="card" data-collection="flowers_walks.json" data-search="securigera varia ורבנה סגולה purple crown vetch">
+  <div class="card-head">
+    <div><span class="title">Securigera varia</span><span class="badge">#19</span><br>ורבנה סגולה / Purple Crown Vetch</div>
+    <div class="meta">flowers_walks.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos/IMG_8622.jpg" loading="lazy"><div class="path">photos/IMG_8622.jpg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos/inat_securigera_varia_q_48311321.jpg" loading="lazy"><div class="path">photos/inat_securigera_varia_q_48311321.jpg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/34301/medium.jpg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/34301/medium.jpg</div></div>
+  </div>
+  <div class="info">ורבנה סגולה היא צמח רב שנתי עם פרחים סגולים הפורחים באביב ובקיץ. היא גדלה באזורים פתוחים וקשה למצוא אותה בשדות ובמרעה.</div>
+</article>
+<article class="card" data-collection="flowers_walks.json" data-search="dittrichia viscosa שינן רפואי false yellowhead">
+  <div class="card-head">
+    <div><span class="title">Dittrichia viscosa</span><span class="badge">#20</span><br>שינן רפואי / False Yellowhead</div>
+    <div class="meta">flowers_walks.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos/IMG_8624.jpg" loading="lazy"><div class="path">photos/IMG_8624.jpg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos/inat_dittrichia_viscosa_q_167733412.jpg" loading="lazy"><div class="path">photos/inat_dittrichia_viscosa_q_167733412.jpg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/52679113/medium.jpg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/52679113/medium.jpg</div></div>
+  </div>
+  <div class="info">שינן רפואי נפוץ בעיקר בבתי גידול קרקעות כבדה ומצדי דרכים. הוא פורח בסתיו ומוכר בזכות פריחה צהובה בולטת.</div>
+</article>
+<article class="card" data-collection="flowers_walks.json" data-search="thymus capitatus קורנית מקורקפת common thyme">
+  <div class="card-head">
+    <div><span class="title">Thymus capitatus</span><span class="badge">#26</span><br>קורנית מקורקפת / Common Thyme</div>
+    <div class="meta">flowers_walks.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos/IMG_C79CF61D-11D9-4389-BCC8-4576B7226472.jpeg" loading="lazy"><div class="path">photos/IMG_C79CF61D-11D9-4389-BCC8-4576B7226472.jpeg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos/inat_thymus_capitatus_q_137878510.jpg" loading="lazy"><div class="path">photos/inat_thymus_capitatus_q_137878510.jpg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://static.inaturalist.org/photos/410371579/medium.jpeg" loading="lazy"><div class="path">https://static.inaturalist.org/photos/410371579/medium.jpeg</div></div>
+  </div>
+  <div class="info">הקורנית המקורקפת היא שיח נמוך הנפוץ באזורי החורש והבתה של הים התיכון. פורחת באביב ובקיץ בפרחים סגולים צפופים.</div>
+</article>
+<article class="card" data-collection="flowers_top30.json" data-search="origanum syriacum אזוב מצוי wild marjoram">
+  <div class="card-head">
+    <div><span class="title">Origanum syriacum</span><span class="badge">#12</span><br>אזוב מצוי / Wild Marjoram</div>
+    <div class="meta">flowers_top30.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_origanum_syriacum.jpg" loading="lazy"><div class="path">photos_tiuli/inat_origanum_syriacum.jpg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_origanum_syriacum_q_211485139.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_origanum_syriacum_q_211485139.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/211484931/large.jpeg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/211484931/large.jpeg</div></div>
+  </div>
+  <div class="info">אזוב מצוי (Origanum syriacum) צומח באזורים יבשים ובולטים בארץ ישראל, בעיקר באזורים הררים. זמן הפריחה שלו הוא בין החודשים יולי לספטמבר, והוא ידוע בשימושו המסורתי בתיבול מאכלים ובמרפא.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="ephedra foeminea שרביטן מצוי leafless ephedra">
+  <div class="card-head">
+    <div><span class="title">Ephedra foeminea</span><span class="badge">#7</span><br>שרביטן מצוי / Leafless Ephedra</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_ephedra_foeminea.jpg" loading="lazy"><div class="path">photos_tiuli/inat_ephedra_foeminea.jpg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_ephedra_foeminea_q_176950262.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_ephedra_foeminea_q_176950262.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/381053965/large.jpeg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/381053965/large.jpeg</div></div>
+  </div>
+  <div class="info">שרביטן מצוי גדל באזורים צחיחים ויבשים, בעיקר במדבריות של ישראל. עונת הפריחה שלו היא במהלך האביב, ובעל יכולת לשלוט בהוצאות המים שלו, מה שמאפשר לו לשרוד בתנאים קשים.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="iris mesopotamica אירוס ארם-נהריים mesopotamian iris">
+  <div class="card-head">
+    <div><span class="title">Iris mesopotamica</span><span class="badge">#14</span><br>אירוס ארם-נהריים / Mesopotamian Iris</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_iris_mesopotamica.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_iris_mesopotamica.jpeg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_iris_mesopotamica_q_188716239.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_iris_mesopotamica_q_188716239.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/120992180/large.jpg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/120992180/large.jpg</div></div>
+  </div>
+  <div class="info">אירוס ארם-נהריים (Iris mesopotamica) צומח באזורי מסופוטמיה, בעיקר ליד מים ועדי נהרות. הוא פורח בעונה האביבית, ונחשב לאירוס נדיר ומיוחד בשל צבעיו היפים והייחודיים.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="parietaria judaica כותלית יהודה wall pellitory">
+  <div class="card-head">
+    <div><span class="title">Parietaria judaica</span><span class="badge">#31</span><br>כותלית יהודה / Wall Pellitory</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_parietaria_judaica.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_parietaria_judaica.jpeg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_parietaria_judaica_q_16296299.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_parietaria_judaica_q_16296299.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/443913720/large.jpeg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/443913720/large.jpeg</div></div>
+  </div>
+  <div class="info">כותלית יהודה, הפורחת בעונת האביב והקיץ, מצויה לרוב באזורים עירוניים ובסביבות רטובות כמו חופי נהרות. פרט מעניין הוא שהעלים שלה משמשים לעיתים כתרופה מסורתית לטיפול במחלות עור.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="raphanus raphanistrum צנון מצוי wild radish">
+  <div class="card-head">
+    <div><span class="title">Raphanus raphanistrum</span><span class="badge">#42</span><br>צנון מצוי / Wild Radish</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_raphanus_raphanistrum.jpg" loading="lazy"><div class="path">photos_tiuli/inat_raphanus_raphanistrum.jpg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_raphanus_raphanistrum_q_189962313.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_raphanus_raphanistrum_q_189962313.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/129644938/large.jpeg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/129644938/large.jpeg</div></div>
+  </div>
+  <div class="info">הצנון המצוי (Raphanus raphanistrum) נפוץ באירופה ובאזורים שונים בארץ ישראל, בעיקר בשדות פתוחים ובאזורים חקלאיים. הוא פורח באביב, בין החודשים מרץ למאי, ועובדה מעניינת עליו היא שהעלים והזרעים שלו אכילים ומשמשים לעיתים בתבשילים שונים.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="satureja thymbra צתרה ורודה savoury of crete">
+  <div class="card-head">
+    <div><span class="title">Satureja thymbra</span><span class="badge">#43</span><br>צתרה ורודה / Savoury of Crete</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_satureja_thymbra.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_satureja_thymbra.jpeg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_satureja_thymbra_q_502867960.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_satureja_thymbra_q_502867960.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/15378528/large.jpg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/15378528/large.jpg</div></div>
+  </div>
+  <div class="info">הצתרה ורודה (Satureja thymbra) מצויה בעיקר באזורי ההרים והחופים של קריט, בעיקר באדמות סלעיות. היא פורחת בעיקר בקיץ, ומהווה מקור חשוב למאכל וריח נעים, וכן חלק מהקולינריה המקומית.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="myrtus communis הדס מצוי common myrtle">
+  <div class="card-head">
+    <div><span class="title">Myrtus communis</span><span class="badge">#46</span><br>הדס מצוי / Common Myrtle</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_myrtus_communis.jpg" loading="lazy"><div class="path">photos_tiuli/inat_myrtus_communis.jpg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_myrtus_communis_q_140221354.jpg" loading="lazy"><div class="path">photos_tiuli/inat_myrtus_communis_q_140221354.jpg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/97377151/large.jpeg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/97377151/large.jpeg</div></div>
+  </div>
+  <div class="info">הדס מצוי גדל בעיקר באזורים ים-תיכוניים ויכול להימצא באדמות סלעיות או לחות. תקופת הפריחה שלו היא באביב, והוא ידוע גם בשימושיו המסורתיים בחג הסוכות.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="portulaca oleracea רגלת הגינה garden purslane">
+  <div class="card-head">
+    <div><span class="title">Portulaca oleracea</span><span class="badge">#47</span><br>רגלת הגינה / Garden Purslane</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_portulaca_oleracea.jpg" loading="lazy"><div class="path">photos_tiuli/inat_portulaca_oleracea.jpg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_portulaca_oleracea_q_423510558.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_portulaca_oleracea_q_423510558.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/350307508/large.jpg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/350307508/large.jpg</div></div>
+  </div>
+  <div class="info">רגלת הגינה היא צמח חד-שנתי הנפוץ באדמות לחות ובגינות. היא פורחת בעיקר בקיץ, ויש לה עלים עסיסיים ופרחים צבעוניים המושכים חרקים. מעניין שהצמח נחשב למזון בריא ומכיל חומרים נוגדי חמצון.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="silene vulgaris ציפורנית נפוחה white bladder campion">
+  <div class="card-head">
+    <div><span class="title">Silene vulgaris</span><span class="badge">#59</span><br>ציפורנית נפוחה / White Bladder Campion</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_silene_vulgaris.jpg" loading="lazy"><div class="path">photos_tiuli/inat_silene_vulgaris.jpg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_silene_vulgaris_q_150439422.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_silene_vulgaris_q_150439422.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/591235970/large.jpg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/591235970/large.jpg</div></div>
+  </div>
+  <div class="info">הציפורנית הנפוחה פורחת בעיקר באביב ובקיץ וגדלה באזורי אדמה פתוחה ובקרקעות קלות. תכונה מעניינת שלה היא שהעליונים שלה יכולים להיות משמשים כמזון לאנשים ברבים מהאזורים שבהם היא צומחת.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="tragopogon coelesyriacus זקן-תיש ארוך long goat&#x27;s-beard">
+  <div class="card-head">
+    <div><span class="title">Tragopogon coelesyriacus</span><span class="badge">#60</span><br>זקן-תיש ארוך / Long Goat&#x27;s-beard</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_tragopogon_coelesyriacus.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_tragopogon_coelesyriacus.jpeg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_tragopogon_coelesyriacus_q_185650352.jpg" loading="lazy"><div class="path">photos_tiuli/inat_tragopogon_coelesyriacus_q_185650352.jpg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://static.inaturalist.org/photos/131237044/large.jpg" loading="lazy"><div class="path">https://static.inaturalist.org/photos/131237044/large.jpg</div></div>
+  </div>
+  <div class="info">זקן-תיש ארוך (Tragopogon coelesyriacus) גדל בעיקר באדמות חקלאיות ובאזורים פתוחים ברחבי הארץ. הוא פורח בעונת האביב, ומעניין לדעת שפרחיו נפתחים בבוקר וסוגרים בשעות אחר הצהריים.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="parkinsonia aculeata פרקינסוניה שיכנית pickly thorn">
+  <div class="card-head">
+    <div><span class="title">Parkinsonia aculeata</span><span class="badge">#66</span><br>פרקינסוניה שיכנית / Pickly Thorn</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_parkinsonia_aculeata.jpg" loading="lazy"><div class="path">photos_tiuli/inat_parkinsonia_aculeata.jpg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_parkinsonia_aculeata_q_528514637.jpg" loading="lazy"><div class="path">photos_tiuli/inat_parkinsonia_aculeata_q_528514637.jpg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/482446345/large.jpg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/482446345/large.jpg</div></div>
+  </div>
+  <div class="info">הפרקינסוניה שיכנית נפוצה בעיקר באפריקה ובאזורים טרופיים נוספים, והיא פורחת בעונת הקיץ. מעניין שהיא שייכת למשפחת השקדיים, ויש לה יכולת לשגשג באדמות צחיחות.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="cyperus fuscus גומא חום brown rue">
+  <div class="card-head">
+    <div><span class="title">Cyperus fuscus</span><span class="badge">#69</span><br>גומא חום / Brown Rue</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_cyperus_fuscus.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_cyperus_fuscus.jpeg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_cyperus_fuscus_q_318653665.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_cyperus_fuscus_q_318653665.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://static.inaturalist.org/photos/324558994/large.jpg" loading="lazy"><div class="path">https://static.inaturalist.org/photos/324558994/large.jpg</div></div>
+  </div>
+  <div class="info">הגומא החום גדל בעיקר בביצות, שולי נהרות ובאזורים לחים נוספים. הוא מפרה את עונת הפריחה שלו במהלך הקיץ, ובנוסף, הוא ידוע בתכונתו לשמש כמערכת סינון טבעית למקורות מים.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="amaranthus viridis ירבוז מצוי least amaranth">
+  <div class="card-head">
+    <div><span class="title">Amaranthus viridis</span><span class="badge">#82</span><br>ירבוז מצוי / Least Amaranth</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_amaranthus_viridis.jpg" loading="lazy"><div class="path">photos_tiuli/inat_amaranthus_viridis.jpg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_amaranthus_viridis_q_432065169.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_amaranthus_viridis_q_432065169.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/433797251/large.jpeg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/433797251/large.jpeg</div></div>
+  </div>
+  <div class="info">הירבוז המצוי (Amaranthus viridis) צומח באדמות לחות ובסביבת גידולים חקלאיים. עונת הפריחה שלו היא באביב ובקיץ, והעובדה המעניינת היא שהוא נחשב לצמח מאכל במקביל לשימושו ככל צמח בר.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="punica granatum רימון מצוי pomegranate">
+  <div class="card-head">
+    <div><span class="title">Punica granatum</span><span class="badge">#83</span><br>רימון מצוי / Pomegranate</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_punica_granatum.jpg" loading="lazy"><div class="path">photos_tiuli/inat_punica_granatum.jpg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_punica_granatum_q_75724489.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_punica_granatum_q_75724489.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/431856500/large.jpeg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/431856500/large.jpeg</div></div>
+  </div>
+  <div class="info">הרימון (Punica granatum) נפוץ באזורים חמים כמו המזרח התיכון ודרום אסיה. העונה לפריחת הרימון היא מאי עד יולי, והוא ידוע בפרי האדום והעסיסי שלו, שידוע כבעל יתרונות בריאותיים רבים.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="pistacia lentiscus אלת המסטיק lentisk">
+  <div class="card-head">
+    <div><span class="title">Pistacia lentiscus</span><span class="badge">#86</span><br>אלת המסטיק / Lentisk</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_pistacia_lentiscus.jpg" loading="lazy"><div class="path">photos_tiuli/inat_pistacia_lentiscus.jpg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_pistacia_lentiscus_q_122945122.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_pistacia_lentiscus_q_122945122.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://static.inaturalist.org/photos/404033379/large.jpeg" loading="lazy"><div class="path">https://static.inaturalist.org/photos/404033379/large.jpeg</div></div>
+  </div>
+  <div class="info">אלת המסטיק גדלה בעיקר באזורים ים-תיכוניים, לרוב באדמות שכנות לחופים או במדרונות הרים. הפריחה מתרחשת באביב, ומעניין שהמסטיק ששייך עץ זה שימש כתוספת במאכלים ובתרופות מסורתיות במשך מאות שנים.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="datura stramonium דטורה זקופת-פרי common thornapple">
+  <div class="card-head">
+    <div><span class="title">Datura stramonium</span><span class="badge">#95</span><br>דטורה זקופת-פרי / Common Thornapple</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_datura_stramonium.jpg" loading="lazy"><div class="path">photos_tiuli/inat_datura_stramonium.jpg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_datura_stramonium_q_618377.jpg" loading="lazy"><div class="path">photos_tiuli/inat_datura_stramonium_q_618377.jpg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/245461487/large.jpg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/245461487/large.jpg</div></div>
+  </div>
+  <div class="info">הדטורה זקופת-פרי נפוצה בכל רחבי ישראל, במיוחד באדמות לחות ובאזורים חמים. היא פורחת בעונות האביב והקיץ, והיא ידועה בזכות הפרחים הגדולים והבולטים שלה, שאותם ניתן לראות בלילה כשהם פורחים ומפליאים בריחם.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="ricinus communis קיקיון מצוי castor-oil plant">
+  <div class="card-head">
+    <div><span class="title">Ricinus communis</span><span class="badge">#98</span><br>קיקיון מצוי / castor-Oil Plant</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_ricinus_communis.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_ricinus_communis.jpeg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_ricinus_communis_q_24509324.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_ricinus_communis_q_24509324.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/370275219/large.jpg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/370275219/large.jpg</div></div>
+  </div>
+  <div class="info">הקיקיון המצוי נפוץ באפריקה ובחלקים טרופיים נוספים בעולם, והוא גדל בעיקר באדמות עשירות ודלילות במים. פריחתו מתרחשת בעונת הקיץ, והוא ידוע בסגולותיו כצמח רעיל, במיוחד בשמן המופק מזרעיו.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="smilax aspera קיסוסית קוצנית rough bindweed">
+  <div class="card-head">
+    <div><span class="title">Smilax aspera</span><span class="badge">#117</span><br>קיסוסית קוצנית / Rough Bindweed</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_smilax_aspera.jpg" loading="lazy"><div class="path">photos_tiuli/inat_smilax_aspera.jpg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_smilax_aspera_q_165665977.jpg" loading="lazy"><div class="path">photos_tiuli/inat_smilax_aspera_q_165665977.jpg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/165665959/large.jpg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/165665959/large.jpg</div></div>
+  </div>
+  <div class="info">הקיסוסית הקוצנית נמצאת בעיקר באזורים טרופיים וסובטרופיים, באדמות לחות ובצידי דרכים. היא פורחת בסביבות האביב והקיץ, ובין Fakten המיוחדים שלה היא היכולת שלה לטפס על עצים וצמחים אחרים בעזרת קוצים יחודיים שלה.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="origanum syriacum אזוב מצוי wild marjoram">
+  <div class="card-head">
+    <div><span class="title">Origanum syriacum</span><span class="badge">#121</span><br>אזוב מצוי / Wild Marjoram</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_origanum_syriacum.jpg" loading="lazy"><div class="path">photos_tiuli/inat_origanum_syriacum.jpg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_origanum_syriacum_q_211485139.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_origanum_syriacum_q_211485139.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/211484931/large.jpeg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/211484931/large.jpeg</div></div>
+  </div>
+  <div class="info">אזוב מצוי (Origanum syriacum) צומח באזורים יבשים ובולטים בארץ ישראל, בעיקר באזורים הררים. זמן הפריחה שלו הוא בין החודשים יולי לספטמבר, והוא ידוע בשימושו המסורתי בתיבול מאכלים ובמרפא.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="withania somnifera ויתניה משכרת common winter-cherry">
+  <div class="card-head">
+    <div><span class="title">Withania somnifera</span><span class="badge">#143</span><br>ויתניה משכרת / Common Winter-cherry</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_withania_somnifera.jpg" loading="lazy"><div class="path">photos_tiuli/inat_withania_somnifera.jpg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_withania_somnifera_q_42912282.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_withania_somnifera_q_42912282.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/522919214/large.jpg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/522919214/large.jpg</div></div>
+  </div>
+  <div class="info">ויתניה משכרת נפוצה באקלימים טרופיים ומדבריים, וצומחת בעיקר באפריל עד יולי. עובדה מעניינת היא שהיא ידועה כמסייעת בשיפור הבריאות ומערכת החיסון, ולכן משתמשים בה ברפואה המסורתית.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="aster subulatus אסתר מרצעני common starwort">
+  <div class="card-head">
+    <div><span class="title">Aster subulatus</span><span class="badge">#158</span><br>אסתר מרצעני / Common Starwort</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_aster_subulatus.jpg" loading="lazy"><div class="path">photos_tiuli/inat_aster_subulatus.jpg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_aster_subulatus_q_233576026.jpg" loading="lazy"><div class="path">photos_tiuli/inat_aster_subulatus_q_233576026.jpg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/188803381/large.jpeg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/188803381/large.jpeg</div></div>
+  </div>
+  <div class="info">האסתר מרצעני גדלה בעיקר באזורים לחים כמו מדשאות, שולי יערות ונחלים. היא פורחת בעונת האביב והקיץ, ומעניין לדעת שהיא מושכת מאביקים רבים כמו דבורים ופרפרים בזכות צבעי הפרחים הבהירים שלה.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="schoenoplectus lacustris אגמון האגם lake bulrush">
+  <div class="card-head">
+    <div><span class="title">Schoenoplectus lacustris</span><span class="badge">#185</span><br>אגמון האגם / Lake Bulrush</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_schoenoplectus_lacustris.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_schoenoplectus_lacustris.jpeg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_schoenoplectus_lacustris_q_262569133.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_schoenoplectus_lacustris_q_262569133.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/341177078/large.jpeg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/341177078/large.jpeg</div></div>
+  </div>
+  <div class="info">אגמון האגם (Schoenoplectus lacustris) מצוי בעיקר בחופי אגמים וביצות מתחת לפני המים. הוא פורח בין סוף האביב לתחילת הקיץ, ועניין מעניין הוא שזרעים שלו יכולים לשרוד במצב שינה במשך שנים רבות באדמה.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="lathyrus aphaca טופח מצוי yellow vetchling">
+  <div class="card-head">
+    <div><span class="title">Lathyrus aphaca</span><span class="badge">#187</span><br>טופח מצוי / Yellow Vetchling</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_lathyrus_aphaca.jpg" loading="lazy"><div class="path">photos_tiuli/inat_lathyrus_aphaca.jpg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_lathyrus_aphaca_q_208562598.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_lathyrus_aphaca_q_208562598.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/208562623/large.jpeg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/208562623/large.jpeg</div></div>
+  </div>
+  <div class="info">הטופח המצוי גדל באזורים פתוחים כגון שדות, חורשות ובתים קיץ. הוא פורח בין חודשים אפריל ליולי, וידוע בזכות קסם הפריחה שלו שמושך חרקים מאביקים.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="ecballium elaterium ירוקת-חמור מצויה squirting cucumber">
+  <div class="card-head">
+    <div><span class="title">Ecballium elaterium</span><span class="badge">#196</span><br>ירוקת-חמור מצויה / Squirting Cucumber</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_ecballium_elaterium.jpg" loading="lazy"><div class="path">photos_tiuli/inat_ecballium_elaterium.jpg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_ecballium_elaterium_q_204708982.jpg" loading="lazy"><div class="path">photos_tiuli/inat_ecballium_elaterium_q_204708982.jpg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/204708925/large.jpg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/204708925/large.jpg</div></div>
+  </div>
+  <div class="info">הירוקת-חמור מצויה נפוצה באזורי חופים ושטחים פתוחים במדינת ישראל. היא פורחת בעיקר בקיץ, ויש לה מכניזם ייחודי שבו בעת בגרות הזרעים, הם נלכדים בתוך הפרח והשיח משחרר אותם בלחץ משמעותי.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="lactuca serriola חסת המצפן prickly lettuce">
+  <div class="card-head">
+    <div><span class="title">Lactuca serriola</span><span class="badge">#204</span><br>חסת המצפן / Prickly Lettuce</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_lactuca_serriola.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_lactuca_serriola.jpeg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_lactuca_serriola_q_91403681.jpg" loading="lazy"><div class="path">photos_tiuli/inat_lactuca_serriola_q_91403681.jpg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/41168983/large.jpeg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/41168983/large.jpeg</div></div>
+  </div>
+  <div class="info">חסת המצפן (Lactuca serriola) נפוצה באזורים פתוחים כמו שדות ובצידי דרכים. היא פורחת בדרך כלל בקיץ והפרחים שלה יכולים למשוך מספר סוגים של חרקים. עובדה מעניינת היא שהצמח משמש גם בתרופות tradiשוי רחב.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="umbilicus intermedius טבורית נטויה common pennywort">
+  <div class="card-head">
+    <div><span class="title">Umbilicus intermedius</span><span class="badge">#213</span><br>טבורית נטויה / Common Pennywort</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_umbilicus_intermedius.jpg" loading="lazy"><div class="path">photos_tiuli/inat_umbilicus_intermedius.jpg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_umbilicus_intermedius_q_120618452.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_umbilicus_intermedius_q_120618452.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/480690836/large.jpg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/480690836/large.jpg</div></div>
+  </div>
+  <div class="info">הטבורית נטויה גדלה בעיקר באזורים לחים ובקירות סלעיים, ומלבלבת בעונת האביב. עובדה מעניינת על הצמח היא שהעלים שלו עשויים לשמש כקישוט במנות, בשל צורתם הייחודית.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="medicago polymorpha אספסת מצויה bur clover">
+  <div class="card-head">
+    <div><span class="title">Medicago polymorpha</span><span class="badge">#225</span><br>אספסת מצויה / Bur Clover</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_medicago_polymorpha.jpg" loading="lazy"><div class="path">photos_tiuli/inat_medicago_polymorpha.jpg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_medicago_polymorpha_q_34981915.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_medicago_polymorpha_q_34981915.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/604837845/large.jpg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/604837845/large.jpg</div></div>
+  </div>
+  <div class="info">אספסת מצויה, הנפוצה באזורים חמים ויבשים, פורחת בעיקר בין האביב לקיץ. מעניין שהיא ידועה ביכולת שלה לגדול באדמות עניות ובתנאים לא אופטימליים.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="amaranthus retroflexus ירבוז מופשל amoranth foxtail">
+  <div class="card-head">
+    <div><span class="title">Amaranthus retroflexus</span><span class="badge">#236</span><br>ירבוז מופשל / Amoranth Foxtail</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_amaranthus_retroflexus.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_amaranthus_retroflexus.jpeg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_amaranthus_retroflexus_q_305980112.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_amaranthus_retroflexus_q_305980112.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://static.inaturalist.org/photos/615045328/large.jpg" loading="lazy"><div class="path">https://static.inaturalist.org/photos/615045328/large.jpg</div></div>
+  </div>
+  <div class="info">הירבוז המופשל (Amaranthus retroflexus) נפוץ בשדות, גינות ובאזורים טרופיים. הוא פורח בסביבות הקיץ וידוע ביכולתו לעבור התאמה לסביבות שונות, מה שעושה אותו לעמיד בפני תנאים קשים.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="galium aparine דבקה זיפנית goose-grass">
+  <div class="card-head">
+    <div><span class="title">Galium aparine</span><span class="badge">#239</span><br>דבקה זיפנית / Goose-Grass</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_galium_aparine.jpg" loading="lazy"><div class="path">photos_tiuli/inat_galium_aparine.jpg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_galium_aparine_q_182214781.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_galium_aparine_q_182214781.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/634325931/large.jpg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/634325931/large.jpg</div></div>
+  </div>
+  <div class="info">דבקה זיפנית גדלה באדמות לחות ובקרקעות עשירות, ולעיתים אף באזורים עם צל. היא פורחת בין מרץ ליולי, והצמח ידוע בזכות היכולת שלו להידבק בעור ובבדים בעזרת קוטיקולה דבקית.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="mentha longifolia נענה משובלת horse mint">
+  <div class="card-head">
+    <div><span class="title">Mentha longifolia</span><span class="badge">#240</span><br>נענה משובלת / Horse Mint</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_mentha_longifolia.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_mentha_longifolia.jpeg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_mentha_longifolia_q_150152874.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_mentha_longifolia_q_150152874.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/36946679/large.jpeg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/36946679/large.jpeg</div></div>
+  </div>
+  <div class="info">נענה משובלת גדלה בעיקר בצדי נחלים ובנקודות לחות, ואופיינית לאזורי טמפ&#x27;. היא פורחת בקיץ, בעיקר ביולי ואוגוסט. עובדה מעניינת היא כי לצמח תרכובות טעם וריח חזקות המשתמשות ברפואה המסורתית.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="nicotiana glauca טבק השיח tobacco tree">
+  <div class="card-head">
+    <div><span class="title">Nicotiana glauca</span><span class="badge">#263</span><br>טבק השיח / Tobacco Tree</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_nicotiana_glauca.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_nicotiana_glauca.jpeg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_nicotiana_glauca_q_87821113.jpg" loading="lazy"><div class="path">photos_tiuli/inat_nicotiana_glauca_q_87821113.jpg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/59900345/large.jpeg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/59900345/large.jpeg</div></div>
+  </div>
+  <div class="info">טבק השיח (Nicotiana glauca) נפוץ באזורים טרופיים וסובטרופיים, והוא מצוי בעיקר באמריקה הדרומית ובאזורים שונים בישראל. הוא פורח בעונת הקיץ, ולעיתים רחוקות ניתן למצוא אותו פורח גם בחורף; אחד העובדות המעניינות עליו הוא שהעלים שלו מכילים אלקלואידים שיכולים לגרום לתופעות לוואי אם נצרכים בכמות מרובה.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="cyperus rotundus גומא הפקעים coco nut-grass">
+  <div class="card-head">
+    <div><span class="title">Cyperus rotundus</span><span class="badge">#274</span><br>גומא הפקעים / Coco Nut-grass</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_cyperus_rotundus.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_cyperus_rotundus.jpeg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_cyperus_rotundus_q_561131183.jpg" loading="lazy"><div class="path">photos_tiuli/inat_cyperus_rotundus_q_561131183.jpg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/69628647/large.jpg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/69628647/large.jpg</div></div>
+  </div>
+  <div class="info">גומא הפקעים גדל בעיקר באדמות לחות וחרבות, והוא נפוץ באפריקה, אסיה ואירופה. פריחת הגומא מתרחשת בדרך כלל בחודשי הקיץ, והוא ידוע בזכות יכולתו לגדול גם בתנאי קרקע קשים.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="mercurialis annua מרקולית מצויה annual mercury">
+  <div class="card-head">
+    <div><span class="title">Mercurialis annua</span><span class="badge">#275</span><br>מרקולית מצויה / Annual Mercury</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_mercurialis_annua.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_mercurialis_annua.jpeg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_mercurialis_annua_q_463819927.jpg" loading="lazy"><div class="path">photos_tiuli/inat_mercurialis_annua_q_463819927.jpg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/225689247/large.jpeg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/225689247/large.jpeg</div></div>
+  </div>
+  <div class="info">מרקולית מצויה נפוצה באזורים לחים ורטובים, כמו חופי נהרות ויישובים חקלאיים. היא פורחת באביב, וכ fact נוסף מעניין הוא שפרחיה יודעים למשוך חרקים שונים, אך הם אינם משתמשים בצוף.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="bidens pilosa דו-שן שעיר spanish needle">
+  <div class="card-head">
+    <div><span class="title">Bidens pilosa</span><span class="badge">#281</span><br>דו-שן שעיר / Spanish Needle</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_bidens_pilosa.jpg" loading="lazy"><div class="path">photos_tiuli/inat_bidens_pilosa.jpg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_bidens_pilosa_q_388160076.jpg" loading="lazy"><div class="path">photos_tiuli/inat_bidens_pilosa_q_388160076.jpg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/341467861/large.jpg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/341467861/large.jpg</div></div>
+  </div>
+  <div class="info">הדו-שן השעיר (Bidens pilosa) נפוץ באפריקה, אסיה ודרום אמריקה וגדל במגוון בתי גידול כגון אדמות לחות, שדות ובתי גידול עירוניים. הפריחה מתרחשת בעיקר בעונות החמות והקיץ, ומעניין לדעת שהצמח ידוע גם בשימושיו המסורתיים ברפואה העממית.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="conyza bonariensis קייצת מסולסלת horseweed">
+  <div class="card-head">
+    <div><span class="title">Conyza bonariensis</span><span class="badge">#282</span><br>קייצת מסולסלת / Horseweed</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_conyza_bonariensis.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_conyza_bonariensis.jpeg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_conyza_bonariensis_q_149765940.jpg" loading="lazy"><div class="path">photos_tiuli/inat_conyza_bonariensis_q_149765940.jpg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/62026862/large.jpeg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/62026862/large.jpeg</div></div>
+  </div>
+  <div class="info">הקייצת המסולסלת נפוצה באיזורים פתוחים כמו שדות ושוליים של דרכים. היא פורחת בעונת הקיץ, ולמרות שהיא נחשבת לעשב מזיק, פרחיה הקטנים והפזורים נראים כיפה מעוטרת בנעימות.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="ephedra aphylla שרביטן ריסני cilliate ephedra">
+  <div class="card-head">
+    <div><span class="title">Ephedra aphylla</span><span class="badge">#285</span><br>שרביטן ריסני / Cilliate Ephedra</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_ephedra_aphylla.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_ephedra_aphylla.jpeg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_ephedra_aphylla_q_375280830.jpg" loading="lazy"><div class="path">photos_tiuli/inat_ephedra_aphylla_q_375280830.jpg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/288086091/large.jpeg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/288086091/large.jpeg</div></div>
+  </div>
+  <div class="info">השרביטן ריסני נפוץ במדבריות ובאזורים יובשניים, והוא פורח בעונות החמות של השנה, מאפריל עד ספטמבר. פרט מעניין לגבי צמח זה הוא שהעלים שלו אינם מורגשים כמעט, והגבעולים הם אלו שנראים בולטים ואחראים לתהליך הפוטוסינתזה.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="alhagi grae הגה מצויה camel thorn">
+  <div class="card-head">
+    <div><span class="title">Alhagi grae</span><span class="badge">#288</span><br>הגה מצויה / Camel Thorn</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_alhagi_grae.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_alhagi_grae.jpeg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_alhagi_grae_q_143151778.jpg" loading="lazy"><div class="path">photos_tiuli/inat_alhagi_grae_q_143151778.jpg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/50704016/large.jpeg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/50704016/large.jpeg</div></div>
+  </div>
+  <div class="info">הגה מצויה (Alhagi grae) נפוצה בעיקר באזורים צחיחים ומדבריים בארץ ישראל. היא פורחת בעונות האביב והקיץ, ופיצ&#x27;ר מעניין שלה הוא השורשים העמוקים שלה המאפשרים לה לשרוד בתנאים קשים ולמצוא מים במעמקי האדמה.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="eclipta prostrata אל-ציצית לבנה white eclipta">
+  <div class="card-head">
+    <div><span class="title">Eclipta prostrata</span><span class="badge">#291</span><br>אל-ציצית לבנה / White Eclipta</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_eclipta_prostrata.jpg" loading="lazy"><div class="path">photos_tiuli/inat_eclipta_prostrata.jpg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_eclipta_prostrata_q_60225973.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_eclipta_prostrata_q_60225973.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/15614888/large.jpg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/15614888/large.jpg</div></div>
+  </div>
+  <div class="info">האל-ציצית הלבנה גדלה בעיקר באזורים לחים ובקרקעות בוציות. פריחתה מתרחשת בדרך כלל בעונת הקיץ, ומעניין לדעת שהיא משמשת ברפואה המסורתית לטיפול בבעיות עור.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="juncus acutus סמר חד mat rush">
+  <div class="card-head">
+    <div><span class="title">Juncus acutus</span><span class="badge">#292</span><br>סמר חד / Mat Rush</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_juncus_acutus.jpg" loading="lazy"><div class="path">photos_tiuli/inat_juncus_acutus.jpg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_juncus_acutus_q_163081991.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_juncus_acutus_q_163081991.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/189589781/large.jpg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/189589781/large.jpg</div></div>
+  </div>
+  <div class="info">סמר חד (Juncus acutus) גדל בעיקר באזורים לחים כמו חופי הים ואיזורי לגדות נהרות ומשקים. עונת הפריחה שלו היא בדרך כלל באביב, והוא ידוע ביכולת שלו לספוג מלחים מהסביבה.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="biscutella didyma מצלתיים מצויות buckler mustard">
+  <div class="card-head">
+    <div><span class="title">Biscutella didyma</span><span class="badge">#293</span><br>מצלתיים מצויות / Buckler Mustard</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_biscutella_didyma.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_biscutella_didyma.jpeg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_biscutella_didyma_q_109932921.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_biscutella_didyma_q_109932921.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/109932919/large.jpeg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/109932919/large.jpeg</div></div>
+  </div>
+  <div class="info">מצלתיים מצויות (Biscutella didyma) נפוצה בעיקר באזורים לחים עם קרקע פורייה, כמו שדות ושטחים פתוחים. היא פורחת באביב ומביאה צבעים יפים, ופועל יוצא מעניין הוא שהיא משמשת כמזון לדבורים ולחרקים אחרים.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="rhagadiolus stellatus כוכבן מצוי star hawkbit">
+  <div class="card-head">
+    <div><span class="title">Rhagadiolus stellatus</span><span class="badge">#299</span><br>כוכבן מצוי / Star Hawkbit</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_rhagadiolus_stellatus.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_rhagadiolus_stellatus.jpeg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_rhagadiolus_stellatus_q_620691438.jpg" loading="lazy"><div class="path">photos_tiuli/inat_rhagadiolus_stellatus_q_620691438.jpg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/186025783/large.jpeg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/186025783/large.jpeg</div></div>
+  </div>
+  <div class="info">הכוכבן המצוי גדל באדמות לחות ומרבדים ירוקים, בעיקר באירופה ובמערב אסיה. פריחתו מתרחשת בעיקר בעונת האביב, והוא ידוע בזכות פרחיו הקטנים והכוכביים בצבעים המגוונים שלו.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="silene behen ציפורנית כרסנית bladder campion">
+  <div class="card-head">
+    <div><span class="title">Silene behen</span><span class="badge">#314</span><br>ציפורנית כרסנית / Bladder Campion</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_silene_behen.jpg" loading="lazy"><div class="path">photos_tiuli/inat_silene_behen.jpg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_silene_behen_q_150439422.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_silene_behen_q_150439422.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/591235970/large.jpg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/591235970/large.jpg</div></div>
+  </div>
+  <div class="info">הציפורנית כרסנית (Silene behen) נפוצה באזורים עם קרקע לחה כמו שטחי מרעה, צידי דרכים ושטחי טבע. היא פורחת בעיקר בחודשים אפריל עד יוני, ועובדת השורש שלה מאפשרת לה לשרוד בתנאים קשים, דבר שמוביל לפופולריות שלה באזורים שונים.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="trifolium campestre תלתן חקלאי hop clover">
+  <div class="card-head">
+    <div><span class="title">Trifolium campestre</span><span class="badge">#319</span><br>תלתן חקלאי / Hop Clover</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_trifolium_campestre.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_trifolium_campestre.jpeg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_trifolium_campestre_q_487561398.jpg" loading="lazy"><div class="path">photos_tiuli/inat_trifolium_campestre_q_487561398.jpg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://static.inaturalist.org/photos/162247245/large.jpeg" loading="lazy"><div class="path">https://static.inaturalist.org/photos/162247245/large.jpeg</div></div>
+  </div>
+  <div class="info">התלתן החקלאי גדל בעיקר בשדות פתוחים ודשא, בעיקר באירופה ובמערב אסיה. הפריחה מתרחשת בעונות האביב והקיץ, ועובדה מעניינת היא שהתלתן הזה משמש כצמח מזון חשוב לבעלי חיים.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="salsola kali מלחית אשלגנית prickly saltwort">
+  <div class="card-head">
+    <div><span class="title">Salsola kali</span><span class="badge">#322</span><br>מלחית אשלגנית / Prickly Saltwort</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_salsola_kali.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_salsola_kali.jpeg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_salsola_kali_q_158470305.jpg" loading="lazy"><div class="path">photos_tiuli/inat_salsola_kali_q_158470305.jpg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/114629193/large.jpeg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/114629193/large.jpeg</div></div>
+  </div>
+  <div class="info">מלחית אשלגנית היא צמח הגדל בדרך כלל באזורי חוף, במיוחד באדמות מלוחות. היא פורחת בעונת הקיץ, וכInteresting fact: מספר מאכלי ים ויבוליי חקלאות משמשים כאוכל לבעלי חיים שמסתמכים על הצמח הזה.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="amaranthus blitum ירבוז מבריק wild amaranth">
+  <div class="card-head">
+    <div><span class="title">Amaranthus blitum</span><span class="badge">#324</span><br>ירבוז מבריק / Wild Amaranth</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_amaranthus_blitum.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_amaranthus_blitum.jpeg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_amaranthus_blitum_q_54946213.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_amaranthus_blitum_q_54946213.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://static.inaturalist.org/photos/592857805/large.jpg" loading="lazy"><div class="path">https://static.inaturalist.org/photos/592857805/large.jpg</div></div>
+  </div>
+  <div class="info">ירבוז מבריק גדל בעיקר באזורים חמים ולחים, בדרך כלל בשדות ובגנים. הוא פורח בין האביב לסתיו, ולעיתים משמש כצמח מאכל או לתיבול בזכות עליו הנעימים.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="citrus sinensis תפוז סיני ">
+  <div class="card-head">
+    <div><span class="title">Citrus sinensis</span><span class="badge">#327</span><br>תפוז סיני</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_citrus_sinensis.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_citrus_sinensis.jpeg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_citrus_sinensis_q_105995328.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_citrus_sinensis_q_105995328.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/257383094/large.jpeg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/257383094/large.jpeg</div></div>
+  </div>
+  <div class="info">התפוז הסיני, שנקרא גם תפוז מתוק, גדל בעיקר באקלים חם כמו אזורים טרופיים וסובטרופיים. הוא פורח בעיקר באביב ומסמח אותנו בפרי החמוץ-מתוק שלו, אשר מכיל ויטמין C בשפע.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="asphodelus fistulosus עירית נבובה onion-leaved asphodel">
+  <div class="card-head">
+    <div><span class="title">Asphodelus fistulosus</span><span class="badge">#335</span><br>עירית נבובה / Onion-leaved Asphodel</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_asphodelus_fistulosus.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_asphodelus_fistulosus.jpeg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_asphodelus_fistulosus_q_355710385.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_asphodelus_fistulosus_q_355710385.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/165934121/large.jpeg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/165934121/large.jpeg</div></div>
+  </div>
+  <div class="info">העירית הנבובה (Asphodelus fistulosus) מצויה באזורי חקלאות ודשא באפריקה ובדרום אירופה. היא פורחת בעיקר באביב, וחלוקת הפרחים שלה כוללת צבעים לבנים-ורודים, ואילו עוברת חום-צהוב יציב בעונות הקיץ.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="sonchus oleraceus מרור הגינות common sow-thistle">
+  <div class="card-head">
+    <div><span class="title">Sonchus oleraceus</span><span class="badge">#340</span><br>מרור הגינות / Common Sow-thistle</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_sonchus_oleraceus.jpg" loading="lazy"><div class="path">photos_tiuli/inat_sonchus_oleraceus.jpg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_sonchus_oleraceus_q_131297526.jpg" loading="lazy"><div class="path">photos_tiuli/inat_sonchus_oleraceus_q_131297526.jpg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/382098825/large.jpg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/382098825/large.jpg</div></div>
+  </div>
+  <div class="info">מרור הגינות גדל בדרך כלל באזורים יבשתיים כמו שדות, גינות ונמלות חלשות. פריחתו מתרחשת בעונות האביב והקיץ, והוא ידוע כבעל תכונות רפואיות מסורתיות.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="astragalus aleppicus קדד פינברון aleppo milk-vetch">
+  <div class="card-head">
+    <div><span class="title">Astragalus aleppicus</span><span class="badge">#346</span><br>קדד פינברון / Aleppo Milk-Vetch</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_astragalus_aleppicus.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_astragalus_aleppicus.jpeg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_astragalus_aleppicus_q_570455499.jpg" loading="lazy"><div class="path">photos_tiuli/inat_astragalus_aleppicus_q_570455499.jpg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/570455420/large.jpg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/570455420/large.jpg</div></div>
+  </div>
+  <div class="info">קדד פינברון הוא צמח רב שנתי שמפרה בצפון איפה שהקרקע היא יבשה ופוריה. עונת הפריחה שלו מתרחשת בחודשי האביב, והוא ידוע ברגישותו לרמות חומציות באדמה.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="glinus lotoides אפרורית מצויה grey-weed">
+  <div class="card-head">
+    <div><span class="title">Glinus lotoides</span><span class="badge">#358</span><br>אפרורית מצויה / Grey-weed</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_glinus_lotoides.jpg" loading="lazy"><div class="path">photos_tiuli/inat_glinus_lotoides.jpg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_glinus_lotoides_q_584342186.jpg" loading="lazy"><div class="path">photos_tiuli/inat_glinus_lotoides_q_584342186.jpg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/169195701/large.jpg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/169195701/large.jpg</div></div>
+  </div>
+  <div class="info">אפרורית מצויה (Glinus lotoides) צומחת בעיקר באפריקה ובאזורים טרופיים נוספים, והיא נפוצה בעיקר באדמות לחות. פריחתה מתרחשת בעונות החמות, ואחד העובדות המעניינות עליה הוא שהצמח משמש לעיתים קרובות ברפואה המסורתית באפריקה.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="peucedanum junceum אחישבת ענף sulphurwort">
+  <div class="card-head">
+    <div><span class="title">Peucedanum junceum</span><span class="badge">#360</span><br>אחישבת ענף / Sulphurwort</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_peucedanum_junceum.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_peucedanum_junceum.jpeg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_peucedanum_junceum_q_183840164.jpg" loading="lazy"><div class="path">photos_tiuli/inat_peucedanum_junceum_q_183840164.jpg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/183839924/large.jpg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/183839924/large.jpg</div></div>
+  </div>
+  <div class="info">הסולפורוורט (אחישבת ענף) גדל באגן הים התיכון, בעיקר באזורים לחים כמו חופי ים ונהרות. הוא פורח בעונת הקיץ, וכשצורת הפרח שלו, המזכירה ציל פרח, נראית מפתיעה וייחודית.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="scrophularia xanthoglossa לוענית מצויה yellow-scaled figwort">
+  <div class="card-head">
+    <div><span class="title">Scrophularia xanthoglossa</span><span class="badge">#364</span><br>לוענית מצויה / Yellow-scaled Figwort</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_scrophularia_xanthoglossa.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_scrophularia_xanthoglossa.jpeg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_scrophularia_xanthoglossa_q_619228175.jpg" loading="lazy"><div class="path">photos_tiuli/inat_scrophularia_xanthoglossa_q_619228175.jpg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/118377476/large.jpeg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/118377476/large.jpeg</div></div>
+  </div>
+  <div class="info">הלוענית המצויה (Scrophularia xanthoglossa) גדלה בעיקר באזורים לחים כמו אפיקי נחלים ושטחים פתוחים. היא פורחת בין הקיץ לאוגוסט, ולגבעוליה יש צבע צהוב בולט שמושך חרקים מאביקים.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="verbascum sinaiticum בוצין סיני sinai mullein">
+  <div class="card-head">
+    <div><span class="title">Verbascum sinaiticum</span><span class="badge">#365</span><br>בוצין סיני / Sinai Mullein</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_verbascum_sinaiticum.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_verbascum_sinaiticum.jpeg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_verbascum_sinaiticum_q_499295637.jpg" loading="lazy"><div class="path">photos_tiuli/inat_verbascum_sinaiticum_q_499295637.jpg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://static.inaturalist.org/photos/169742980/large.jpg" loading="lazy"><div class="path">https://static.inaturalist.org/photos/169742980/large.jpg</div></div>
+  </div>
+  <div class="info">הבוצין סיני (Verbascum sinaiticum) גדל בעיקר באיזורים הרריים ובמדבריות, ופורח בין חודשים אפריל ליולי. פרט מעניין עליו הוא שהשימושים הרפואיים שלו ידועים עוד מימי קדם.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="hymenocarpos circinnatus כליינית מצויה disk trefoil">
+  <div class="card-head">
+    <div><span class="title">Hymenocarpos circinnatus</span><span class="badge">#375</span><br>כליינית מצויה / Disk Trefoil</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_hymenocarpos_circinnatus.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_hymenocarpos_circinnatus.jpeg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_hymenocarpos_circinnatus_q_232759520.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_hymenocarpos_circinnatus_q_232759520.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/480774493/large.jpeg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/480774493/large.jpeg</div></div>
+  </div>
+  <div class="info">הכליינית המצויה גדלה בעיקר באדמות חוליות ובאזורים פתוחים. היא פורחת בחודשים אפריל עד יולי, ועוברת תהליך של קיפול עלים כשיש מחסור במים, דבר המאפשר לה לשרוד בתנאים קשים.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="heliotropium supinum עוקץ-עקרב שרוע trailing heliotrope">
+  <div class="card-head">
+    <div><span class="title">Heliotropium supinum</span><span class="badge">#379</span><br>עוקץ-עקרב שרוע / Trailing Heliotrope</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_heliotropium_supinum.jpg" loading="lazy"><div class="path">photos_tiuli/inat_heliotropium_supinum.jpg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_heliotropium_supinum_q_111619958.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_heliotropium_supinum_q_111619958.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/635192915/large.jpg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/635192915/large.jpg</div></div>
+  </div>
+  <div class="info">העוקץ-עקרב שרוע גדל באזורים נמוכים וביצתיים ופורח בעיקר בעונת הקיץ. פרט מעניין הוא שהצמח נמשך לאור השמש ומסובב את פרחיו בהתאם למקורות האור.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="verbena officinalis ורבנה רפואית common vervain">
+  <div class="card-head">
+    <div><span class="title">Verbena officinalis</span><span class="badge">#380</span><br>ורבנה רפואית / Common Vervain</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_verbena_officinalis.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_verbena_officinalis.jpeg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_verbena_officinalis_q_231185620.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_verbena_officinalis_q_231185620.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/50247162/large.jpeg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/50247162/large.jpeg</div></div>
+  </div>
+  <div class="info">הרבנה הרפואית גדלה בדרך כלל באזורים פתוחים, חקלאיים או בסביבות לחות. עונת הפריחה שלה היא בקיץ, והיא ידועה גם בשימושיה הרפואיים המסורתיים.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="pistia stratiotes פיסטיה צפה ">
+  <div class="card-head">
+    <div><span class="title">Pistia stratiotes</span><span class="badge">#381</span><br>פיסטיה צפה</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_pistia_stratiotes.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_pistia_stratiotes.jpeg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_pistia_stratiotes_q_105877369.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_pistia_stratiotes_q_105877369.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/39498249/large.jpeg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/39498249/large.jpeg</div></div>
+  </div>
+  <div class="info">הפיסטיה הצפה נפוצה במקווי מים מתוקים כמו אגמים ונהרות. היא פורחת בעונה החמה, בדרך כלל בקיץ, ומעניין שכשהיא מתפשטת, היא יכולה ליצור שטחים גדולים ולמנוע את חדירת אור השמש למים, מה שמעכב את צמיחת הצמחים בתחתית.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="scorpiurus muricatus זנב-עקרב שיכני prickly scorpiontail">
+  <div class="card-head">
+    <div><span class="title">Scorpiurus muricatus</span><span class="badge">#383</span><br>זנב-עקרב שיכני / Prickly Scorpiontail</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_scorpiurus_muricatus.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_scorpiurus_muricatus.jpeg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_scorpiurus_muricatus_q_576936376.jpg" loading="lazy"><div class="path">photos_tiuli/inat_scorpiurus_muricatus_q_576936376.jpg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/197449454/large.jpg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/197449454/large.jpg</div></div>
+  </div>
+  <div class="info">זןב-עקרב שיכני גדל בעיקר באזורים חמים ויבשים, כמו בצפון אפריקה ובמדינות המזרח התיכון. הוא פורח בעונת האביב, ובעל פרחים קטנים בצורת קרניים שמושכים חרקים לאופקה.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="echinops polyceras קיפודן בלאנש blanche globe-thistle">
+  <div class="card-head">
+    <div><span class="title">Echinops polyceras</span><span class="badge">#385</span><br>קיפודן בלאנש / Blanche Globe-thistle</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_echinops_polyceras.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_echinops_polyceras.jpeg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_echinops_polyceras_q_472845169.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_echinops_polyceras_q_472845169.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://static.inaturalist.org/photos/193196557/large.jpeg" loading="lazy"><div class="path">https://static.inaturalist.org/photos/193196557/large.jpeg</div></div>
+  </div>
+  <div class="info">הקיפודן בלאנש (Echinops polyceras) נפוץ באזורי צומח פתוחים כמו מדבריות ושטחים בעייתיים. הוא פורח בעונת הקיץ ומושך כמעט עשרות סוגים של דבורי דבש בשל הצוף המתוק שלו.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="osyris alba שבטן לבן poet&#x27;s cassia">
+  <div class="card-head">
+    <div><span class="title">Osyris alba</span><span class="badge">#395</span><br>שבטן לבן / Poet&#x27;s Cassia</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_osyris_alba.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_osyris_alba.jpeg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_osyris_alba_q_278119268.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_osyris_alba_q_278119268.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/487894536/large.jpeg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/487894536/large.jpeg</div></div>
+  </div>
+  <div class="info">שבטן לבן (Osyris alba) משגשגת בעיקר באזורים לחים כמו ביצות וגדות נהרות. היא פורחת בעונות המעבר, בעיקר באביב, ומעניין לדעת שהעלים שלה משמשים לעיתים בטיפול רפואי מסורתי.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="chenopodium album כף-אווז לבנה white goosefoot">
+  <div class="card-head">
+    <div><span class="title">Chenopodium album</span><span class="badge">#410</span><br>כף-אווז לבנה / White Goosefoot</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_chenopodium_album.jpg" loading="lazy"><div class="path">photos_tiuli/inat_chenopodium_album.jpg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_chenopodium_album_q_30305747.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_chenopodium_album_q_30305747.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/15683639/large.jpg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/15683639/large.jpg</div></div>
+  </div>
+  <div class="info">כף-אווז לבנה גדלה לרוב בשדות, גינות ובסמוך למקווי מים, והיא פורחת בין האביב לקיץ. עובדה מעניינת היא שהעלים שלה משמשים כמזון בתרבויות רבות, ובחלק מהמקרים אף נחשבים למזון בריאותי.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="conyza canadensis קייצת קנדית canadian fleabane">
+  <div class="card-head">
+    <div><span class="title">Conyza canadensis</span><span class="badge">#411</span><br>קייצת קנדית / Canadian Fleabane</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_conyza_canadensis.jpg" loading="lazy"><div class="path">photos_tiuli/inat_conyza_canadensis.jpg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_conyza_canadensis_q_154036394.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_conyza_canadensis_q_154036394.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/332615495/large.jpg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/332615495/large.jpg</div></div>
+  </div>
+  <div class="info">הקייצת הקנדית פורחת בעיקר בקיץ ובסתיו, והיא נפוצה באזורים פתוחים כמו שדות, דרכים וסבכים. אחד מהמאפיינים המיוחדים שלה הוא היכולת להתרבות במהירות רבה, מה שמאפשר לה להתפשט באזורים חדשים.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="amaranthus palmeri ירבוז פלמר careless weed">
+  <div class="card-head">
+    <div><span class="title">Amaranthus palmeri</span><span class="badge">#425</span><br>ירבוז פלמר / Careless Weed</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_amaranthus_palmeri.jpg" loading="lazy"><div class="path">photos_tiuli/inat_amaranthus_palmeri.jpg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_amaranthus_palmeri_q_314548991.jpg" loading="lazy"><div class="path">photos_tiuli/inat_amaranthus_palmeri_q_314548991.jpg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/463135976/large.jpg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/463135976/large.jpg</div></div>
+  </div>
+  <div class="info">ירבוז פלמר הוא צמח חד שנתי הגדל בעיקר באזורים חמים ויבשים, כמו שדות ומטעים. הוא פורח בעיקר בקיץ, וצמחים אלו ידועים ביכולתם לגדול במהירות ולהתייחס לשינויים בסביבה, מה שמקנה להם יתרון תחרותי בקרב עשבים אחרים.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="arum hygrophilum לוף ירוק green arum">
+  <div class="card-head">
+    <div><span class="title">Arum hygrophilum</span><span class="badge">#430</span><br>לוף ירוק / Green Arum</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_arum_hygrophilum.jpg" loading="lazy"><div class="path">photos_tiuli/inat_arum_hygrophilum.jpg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_arum_hygrophilum_q_527035922.jpg" loading="lazy"><div class="path">photos_tiuli/inat_arum_hygrophilum_q_527035922.jpg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/183547670/large.jpeg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/183547670/large.jpeg</div></div>
+  </div>
+  <div class="info">הלוף הירוק (Arum hygrophilum) פורח בעונת האביב במקווי מים ובאזורים לחים בישראל. תכונה מעניינת שלו היא שהוא משך קוטפי פרחים מסוימים בשל צורתו הייחודית והעלים הגדולים שלו.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="astragalus berytheus קדד ביירותי beirut milk-vetch">
+  <div class="card-head">
+    <div><span class="title">Astragalus berytheus</span><span class="badge">#444</span><br>קדד ביירותי / Beirut Milk-Vetch</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_astragalus_berytheus.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_astragalus_berytheus.jpeg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_astragalus_berytheus_q_354522585.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_astragalus_berytheus_q_354522585.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/354522581/large.jpeg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/354522581/large.jpeg</div></div>
+  </div>
+  <div class="info">קדד ביירותי צומח בעיקר במזרח הים התיכון, בעיקר בסביבות לחות ומדבריות קיץ. עונת הפריחה שלו היא באביב, והוא מפורסם בזכות השפעתו על האדמה כאדמה מזינה לצמחים אחרים.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="medicago lupulina אספסת זעירה black medick">
+  <div class="card-head">
+    <div><span class="title">Medicago lupulina</span><span class="badge">#454</span><br>אספסת זעירה / Black Medick</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_medicago_lupulina.jpg" loading="lazy"><div class="path">photos_tiuli/inat_medicago_lupulina.jpg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_medicago_lupulina_q_37684271.jpg" loading="lazy"><div class="path">photos_tiuli/inat_medicago_lupulina_q_37684271.jpg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/127449034/large.jpg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/127449034/large.jpg</div></div>
+  </div>
+  <div class="info">האספסת הזעירה גדלה באדמות לחות ושטחים פתוחים כמו מרעה ודשאות. היא פורחת בעיקר בקיץ, ומעניין לדעת שהיא מצליחה לשגשג גם בתנאים קשים, ומסייעת בשיפור איכות הקרקע.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="amaranthus graecizans ירבוז יווני pelitory leaved amaranth">
+  <div class="card-head">
+    <div><span class="title">Amaranthus graecizans</span><span class="badge">#469</span><br>ירבוז יווני / Pelitory Leaved Amaranth</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_amaranthus_graecizans.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_amaranthus_graecizans.jpeg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_amaranthus_graecizans_q_54946213.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_amaranthus_graecizans_q_54946213.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/545942525/large.jpg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/545942525/large.jpg</div></div>
+  </div>
+  <div class="info">הירבוז היווני מצוי בעיקר בשטחים פתוחים ובאזורים חקלאיים, והוא פורח בעונת הקיץ. עובדה מעניינת היא כי הצמח ידוע ביכולתו לגדול באדמות קשות ומסלעיות.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="corrigiola palaestina שרוכנית ארץ-ישראלית palestine strapwort">
+  <div class="card-head">
+    <div><span class="title">Corrigiola palaestina</span><span class="badge">#472</span><br>שרוכנית ארץ-ישראלית / Palestine Strapwort</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_corrigiola_palaestina.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_corrigiola_palaestina.jpeg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_corrigiola_palaestina_q_44437169.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_corrigiola_palaestina_q_44437169.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/44437445/large.jpeg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/44437445/large.jpeg</div></div>
+  </div>
+  <div class="info">שרוכנית ארץ-ישראלית נפוצה באזורים יובשניים וחרבים ברחבי הארץ, ופועלת בעיקר בעונות האביב והקיץ. מעניין לדעת שבעקבות תנאי הסביבה הקשים, היא משגשגת באדמות לא פוריות ומונעת תחרות עם צמחים אחרים.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="teucrium parviflorum געדה זעירת-פרחים small-flowered germander">
+  <div class="card-head">
+    <div><span class="title">Teucrium parviflorum</span><span class="badge">#489</span><br>געדה זעירת-פרחים / Small-flowered Germander</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_teucrium_parviflorum.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_teucrium_parviflorum.jpeg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_teucrium_parviflorum_q_256657959.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_teucrium_parviflorum_q_256657959.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/256657860/large.jpeg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/256657860/large.jpeg</div></div>
+  </div>
+  <div class="info">הגעדה זעירת-פרחים היא צמח בר שנמצא לרוב באזורים יבשים כמו חופי מזרח הים התיכון. היא פורחת בעונת הקיץ, ואחת העובדות המעניינות עליה היא שהיא משמשת מושך לאPollinators רבים בזכות צורת הפרחים הקטנים שלה.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="trifolium pilulare תלתן הכדורים ball cotton clover">
+  <div class="card-head">
+    <div><span class="title">Trifolium pilulare</span><span class="badge">#493</span><br>תלתן הכדורים / Ball Cotton Clover</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_trifolium_pilulare.jpg" loading="lazy"><div class="path">photos_tiuli/inat_trifolium_pilulare.jpg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_trifolium_pilulare_q_465748045.jpg" loading="lazy"><div class="path">photos_tiuli/inat_trifolium_pilulare_q_465748045.jpg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://static.inaturalist.org/photos/131239103/large.jpg" loading="lazy"><div class="path">https://static.inaturalist.org/photos/131239103/large.jpg</div></div>
+  </div>
+  <div class="info">תלתן הכדורים גדל בעיקר באדמות פוריות ויבשות, במיוחד באזורים עם אקלים ים-תיכוני. זהו צמח עונתי שמפרח בין אביב לקיץ, והוא ידוע בכדורים הפורחים שלו המורכבים מכמה פרחים קטנים.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="hippocrepis multisiliquosa פרסה רבת-תרמילים horse-shoe vetch">
+  <div class="card-head">
+    <div><span class="title">Hippocrepis multisiliquosa</span><span class="badge">#503</span><br>פרסה רבת-תרמילים / Horse-shoe Vetch</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_hippocrepis_multisiliquosa.jpg" loading="lazy"><div class="path">photos_tiuli/inat_hippocrepis_multisiliquosa.jpg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_hippocrepis_multisiliquosa_q_119385698.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_hippocrepis_multisiliquosa_q_119385698.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/119385617/large.jpeg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/119385617/large.jpeg</div></div>
+  </div>
+  <div class="info">הפרסה רבת-תרמילים היא צמח עונתי הגדל באזורים פתוחים כמו מדשאות ושטחים פתוחים. היא פורחת בין אפריל ליוני, ומעניינת במיוחד בזכות העובדה שהיא יכולה לגדול גם באדמות פחות פוריות.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="alisma plantago-aquatica כף-צפרדע לחכית great water-plantain">
+  <div class="card-head">
+    <div><span class="title">Alisma plantago-aquatica</span><span class="badge">#509</span><br>כף-צפרדע לחכית / Great Water-plantain</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_alisma_plantago_aquatica.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_alisma_plantago_aquatica.jpeg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_alisma_plantago_aquatica_q_253415590.jpg" loading="lazy"><div class="path">photos_tiuli/inat_alisma_plantago_aquatica_q_253415590.jpg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/93220611/large.jpeg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/93220611/large.jpeg</div></div>
+  </div>
+  <div class="info">הכף-צפרדע לחכית מצמח באזורים לחים כמו ביצות וגדות נחלים. הוא פורח בעונת הקיץ, ובעלי הצמח משמשים כמזון חשוב לציפורים ואחרים, מה שעושה אותו למוקד חשוב במערכת האקולוגית.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="crepis aculeata ניסנית שיכנית prickly hawk&#x27;s-beard">
+  <div class="card-head">
+    <div><span class="title">Crepis aculeata</span><span class="badge">#518</span><br>ניסנית שיכנית / Prickly Hawk&#x27;s-beard</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_crepis_aculeata.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_crepis_aculeata.jpeg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_crepis_aculeata_q_471849682.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_crepis_aculeata_q_471849682.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/139890168/large.jpeg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/139890168/large.jpeg</div></div>
+  </div>
+  <div class="info">הניסנית שיכנית צומחת בעיקר באדמות טרשיות ובאזורים יבשים בישראל. היא פורחת בעונת הקיץ, ומעניין לדעת שהיא משמשת כמשאב לאבקת חרקים כמו דבורי דבש.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="rumex bucephalophorus חומעת ראש-הסוס horned dock">
+  <div class="card-head">
+    <div><span class="title">Rumex bucephalophorus</span><span class="badge">#520</span><br>חומעת ראש-הסוס / Horned Dock</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_rumex_bucephalophorus.jpg" loading="lazy"><div class="path">photos_tiuli/inat_rumex_bucephalophorus.jpg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_rumex_bucephalophorus_q_358326856.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_rumex_bucephalophorus_q_358326856.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://static.inaturalist.org/photos/358326784/large.jpeg" loading="lazy"><div class="path">https://static.inaturalist.org/photos/358326784/large.jpeg</div></div>
+  </div>
+  <div class="info">חומעת ראש-הסוס גדלה בעיקר באזורים לחים כמו שדות, גדות נהרות ושטחי מרעה. הפריחה מתרחשת בחודשי הקיץ, ובין העובדות המעניינות על הצמח היא יכולתו להסתגל לתנאים קשים ולסבול מיובש.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="ornithopus compressus כף-עוף פחוסה hairy bird&#x27;s foot">
+  <div class="card-head">
+    <div><span class="title">Ornithopus compressus</span><span class="badge">#526</span><br>כף-עוף פחוסה / Hairy Bird&#x27;s Foot</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_ornithopus_compressus.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_ornithopus_compressus.jpeg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_ornithopus_compressus_q_232633916.jpg" loading="lazy"><div class="path">photos_tiuli/inat_ornithopus_compressus_q_232633916.jpg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/234448918/large.jpeg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/234448918/large.jpeg</div></div>
+  </div>
+  <div class="info">כף-עוף פחוסה גדלה בעיקר באדמות חקלאיות ובמרכזה של ישראל. היא פורחת בסוף האביב ועד בקיץ, וידועה בזכות היכולת שלה לגדול בתנאים קשים ולספק מזון למגוון חרקים.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="ornithogalum fuscescens נץ-חלב חום tawny star-of-bethlehem">
+  <div class="card-head">
+    <div><span class="title">Ornithogalum fuscescens</span><span class="badge">#530</span><br>נץ-חלב חום / Tawny Star-of-Bethlehem</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos_tiuli/inat_ornithogalum_fuscescens.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_ornithogalum_fuscescens.jpeg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos_tiuli/inat_ornithogalum_fuscescens_q_129278536.jpeg" loading="lazy"><div class="path">photos_tiuli/inat_ornithogalum_fuscescens_q_129278536.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/270735422/large.jpeg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/270735422/large.jpeg</div></div>
+  </div>
+  <div class="info">נץ-חלב חום צומח בעיקר באדמות גירניות ובמקומות שחשופים לשמש. הוא פורח באביב, ולפרחיו יש צבע חום קל, מה שמקל על זיהויו בטבע.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="senecio vulgaris סביון מצוי common groundsel">
+  <div class="card-head">
+    <div><span class="title">Senecio vulgaris</span><span class="badge">#549</span><br>סביון מצוי / Common Groundsel</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos/inat_senecio_vulgaris.jpg" loading="lazy"><div class="path">photos/inat_senecio_vulgaris.jpg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos/inat_senecio_vulgaris_q_7342927.jpg" loading="lazy"><div class="path">photos/inat_senecio_vulgaris_q_7342927.jpg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/516567771/large.jpg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/516567771/large.jpg</div></div>
+  </div>
+  <div class="info">הסביון המצוי groeit vaak על אדמה ברווזית ויכול להתפתח בכל מקום, כולל גינות, שדות ומסלולים. הוא פורח בעיקר באביב ובקיץ, ועניין מיוחד הוא שהוא נקרא גם &#x27;כאב הראש&#x27; בשל השפעתו על בריאות האדם.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="glaucium corniculatum ענבל קרנן red horned-poppy">
+  <div class="card-head">
+    <div><span class="title">Glaucium corniculatum</span><span class="badge">#557</span><br>ענבל קרנן / Red Horned-poppy</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos/inat_glaucium_corniculatum.jpg" loading="lazy"><div class="path">photos/inat_glaucium_corniculatum.jpg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos/inat_glaucium_corniculatum_q_231404752.jpeg" loading="lazy"><div class="path">photos/inat_glaucium_corniculatum_q_231404752.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/15104121/large.jpg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/15104121/large.jpg</div></div>
+  </div>
+  <div class="info">הענבל הקרנן גדל בעיקר באזורי חוף בארץ ישראל, ולעיתים גם באדמות חוליות. הוא פורח בקיץ עד הסתיו, ונתון מעניין עליו הוא ששורשיו חזקים ומסוגלים לשרוד בסביבות קשות עם מעט מים.</div>
+</article>
+<article class="card" data-collection="flowers2.json" data-search="anthemis palestina בּוּשֶׂם פלשתיני palestine chamomile">
+  <div class="card-head">
+    <div><span class="title">Anthemis palestina</span><span class="badge">#558</span><br>בּוּשֶׂם פלשתיני / Palestine Chamomile</div>
+    <div class="meta">flowers2.json</div>
+  </div>
+  <div class="images">
+    <div class="panel"><div class="label">Before Question</div><img src="photos/inat_anthemis_palestina.jpeg" loading="lazy"><div class="path">photos/inat_anthemis_palestina.jpeg</div></div>
+    <div class="panel"><div class="label">After Question</div><img src="photos/inat_anthemis_palestina_q_266905460.jpeg" loading="lazy"><div class="path">photos/inat_anthemis_palestina_q_266905460.jpeg</div></div>
+    <div class="panel"><div class="label">Info Image</div><img src="https://inaturalist-open-data.s3.amazonaws.com/photos/41464477/large.jpeg" loading="lazy"><div class="path">https://inaturalist-open-data.s3.amazonaws.com/photos/41464477/large.jpeg</div></div>
+  </div>
+  <div class="info">הבושם הפלשתיני (Anthemis palestina) צומח בעיקר באזורים עקרים ובשוליים של שטחים חקלאיים בארץ ישראל. הפריחה מתרחשת בעונת האביב, ובחודשי מרץ ואפריל מופיעים הפרחים הלבנים והצהובים שלו, המושכים דבורי דבש.</div>
+</article></section>
+</main>
+<script>
+const q = document.querySelector('#q');
+const collection = document.querySelector('#collection');
+const count = document.querySelector('#count');
+const cards = [...document.querySelectorAll('.card')];
+function applyFilters() {
+  const query = q.value.trim().toLowerCase();
+  const col = collection.value;
+  let visible = 0;
+  for (const card of cards) {
+    const okQuery = !query || card.dataset.search.includes(query);
+    const okCol = !col || card.dataset.collection === col;
+    const show = okQuery && okCol;
+    card.style.display = show ? '' : 'none';
+    if (show) visible++;
+  }
+  count.textContent = `${visible} of ${cards.length}`;
+}
+q.addEventListener('input', applyFilters);
+collection.addEventListener('change', applyFilters);
+applyFilters();
+</script>
+</body>
+</html>
