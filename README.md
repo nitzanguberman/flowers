@@ -1,6 +1,6 @@
 # Flowers Game
 
-Hebrew flower identification game with Leitner-box spaced repetition, multiple flower collections, and Firebase-backed cross-device progress.
+Hebrew flower identification game with Leitner-box spaced repetition, multiple flower collections, selectable game modes and session lengths, and Firebase-backed cross-device progress.
 
 Live game: https://nitzanguberman.github.io/flowers/game/
 
@@ -95,7 +95,6 @@ Before pushing to `main`:
 
 - Run a local static server from the repo root.
 - Open `/game/`.
-- Pick a user and collection.
+- Pick a user, collection, game mode, and number of questions.
 - Verify a question renders with a flower image and answer choices.
 - Check that the browser is not showing broken-image icons.
-
