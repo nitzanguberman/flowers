@@ -173,6 +173,21 @@
     width: 34px;
     padding: 5px;
   }
+  #change-collection {
+    width: 34px;
+    padding: 5px;
+  }
+  #change-collection svg {
+    width: 18px;
+    height: 18px;
+    display: block;
+    margin: auto;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
 
   /* ── Progress text ── */
   #progress {
@@ -318,6 +333,30 @@
   #card.answered .choice.hidden-after-answer {
     display: none;
   }
+  #card.image-choice-mode #photo {
+    display: none;
+  }
+  #card.image-choice-mode #choices {
+    grid-template-columns: 1fr 1fr;
+  }
+  #card.image-choice-mode .choice {
+    min-height: 0;
+    padding: 8px;
+  }
+  .choice-img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 8px;
+    background: #f0f7ee;
+  }
+  #card.answered.image-choice-mode .choice {
+    min-height: 0;
+  }
+  #card.answered.image-choice-mode .choice-img {
+    aspect-ratio: 16 / 9;
+  }
   #card.answered #info-box { margin: 0; }
   #card.answered #info-img { max-height: 150px; }
   #card.answered #info-text {
@@ -391,7 +430,7 @@
   #collection-screen {
     display: none;
     width: 100%;
-    max-width: 400px;
+    max-width: 960px;
     margin-top: 80px;
     background: #fff;
     border-radius: 20px;
@@ -401,8 +440,29 @@
   }
   #collection-screen h1 { font-size: 2rem; color: #2d6a4f; margin-bottom: 12px; }
   #collection-welcome { font-size: 1rem; color: #555; margin-bottom: 20px; }
-  #collection-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 14px; width: 100%; }
-  .collection-btn {
+  #picker-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.8fr;
+    gap: 18px;
+    width: 100%;
+    margin-bottom: 18px;
+  }
+  .picker-section {
+    width: 100%;
+    text-align: right;
+  }
+  .picker-section h2 {
+    font-size: 0.92rem;
+    color: #777;
+    margin-bottom: 8px;
+    font-weight: 700;
+  }
+  #collection-list,
+  #game-mode-list,
+  #question-count-list { display: flex; flex-direction: column; gap: 10px; width: 100%; }
+  .collection-btn,
+  .game-mode-btn,
+  .question-count-btn {
     width: 100%;
     padding: 14px 16px;
     background: #f0f7ee;
@@ -416,8 +476,54 @@
     direction: rtl;
     transition: background 0.15s, border-color 0.15s;
   }
-  .collection-btn:hover { background: #d4edda; border-color: #2d6a4f; }
-  .collection-btn.last-used { border-color: #2d6a4f; background: #e8f5e0; font-weight: bold; }
+  .game-mode-btn {
+    display: grid;
+    gap: 4px;
+    text-align: right;
+  }
+  .game-mode-title { font-weight: 900; }
+  .game-mode-desc { font-size: 0.84rem; color: #666; font-weight: 400; line-height: 1.35; }
+  .collection-btn:hover,
+  .game-mode-btn:hover,
+  .question-count-btn:hover { background: #d4edda; border-color: #2d6a4f; }
+  .collection-btn.selected,
+  .game-mode-btn.selected,
+  .question-count-btn.selected { border-color: #2d6a4f; background: #e8f5e0; font-weight: bold; }
+  #custom-question-count {
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px solid #c8e6c9;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    color: #1b4332;
+    text-align: center;
+    direction: ltr;
+    outline: none;
+    margin-top: 10px;
+  }
+  #custom-question-count:focus {
+    border-color: #2d6a4f;
+    background: #f0f7ee;
+  }
+  #start-game {
+    width: 100%;
+    padding: 12px;
+    background: #2d6a4f;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: inherit;
+    margin-bottom: 10px;
+  }
+  #start-game:disabled {
+    opacity: 0.55;
+    cursor: default;
+  }
+  #start-game:not(:disabled):hover { background: #1b4332; }
   #switch-user-from-collection {
     width: 100%;
     padding: 11px;
@@ -527,6 +633,7 @@
       font-size: 0.76rem;
     }
     #report-user { width: 30px; }
+    #change-collection { width: 30px; }
     #progress { font-size: 0.86rem; }
     #card { border-radius: 14px; }
     #photo {
@@ -569,6 +676,16 @@
     }
     #card.answered .choice .he { font-size: 0.95rem; }
     #card.answered .choice .en { display: none; }
+    #card.image-choice-mode #choices {
+      grid-template-columns: 1fr 1fr;
+    }
+    #card.answered.image-choice-mode .choice-img {
+      aspect-ratio: 4 / 3;
+    }
+    #picker-grid {
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
     #card.answered #info-img { display: none !important; }
     #next-btn {
       margin-bottom: 12px;
@@ -608,7 +725,22 @@
 <div id="collection-screen">
   <h1>🌸 משחק פרחים</h1>
   <p id="collection-welcome"></p>
-  <div id="collection-list"></div>
+  <div id="picker-grid">
+    <div class="picker-section">
+      <h2>אוסף</h2>
+      <div id="collection-list"></div>
+    </div>
+    <div class="picker-section">
+      <h2>מצב משחק</h2>
+      <div id="game-mode-list"></div>
+    </div>
+    <div class="picker-section">
+      <h2>מספר שאלות</h2>
+      <div id="question-count-list"></div>
+      <input id="custom-question-count" type="number" min="1" step="1" inputmode="numeric" placeholder="מספר אחר">
+    </div>
+  </div>
+  <button id="start-game">התחל משחק</button>
   <button id="switch-user-from-collection">החלף משתמש</button>
 </div>
 
@@ -621,7 +753,13 @@
     <div id="user-tag">
       <span id="username-label"></span>
       <button id="report-user" class="header-action" title="דוח התקדמות" aria-label="דוח התקדמות">📊</button>
-      <button id="change-collection" class="header-action">שנה אוסף</button>
+      <button id="change-collection" class="header-action" title="שנה משחק" aria-label="שנה משחק">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 11.5 12 4l9 7.5"></path>
+          <path d="M5 10.5V20h14v-9.5"></path>
+          <path d="M9.5 20v-6h5v6"></path>
+        </svg>
+      </button>
       <button id="switch-user" class="header-action">שנה משתמש</button>
     </div>
   </div>
@@ -633,7 +771,7 @@
 <div id="card" style="display:none">
   <img id="photo" src="" alt="פרח">
   <div id="question">
-    <span>איזה פרח זה?</span>
+    <span id="question-text">איזה פרח זה?</span>
     <span id="box-badge"></span>
   </div>
   <div id="answer-panel">
@@ -693,9 +831,35 @@ const BOX_COLORS = ['#dc3545','#fd7e14','#ffc107','#20c997','#2d6a4f'];
 const BOX_LABELS = ['כל משחק','כל 2 משחקים','כל 4 משחקים','כל 8 משחקים','כל 16 משחקים'];
 const BOX_NAMES  = ['חדש','מתחיל','מכיר','טוב','שולט!'];
 const PHOTO_PLACEHOLDER = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450"%3E%3Crect width="800" height="450" fill="%23f0f7ee"/%3E%3Ctext x="400" y="230" text-anchor="middle" font-family="Arial,sans-serif" font-size="34" fill="%232d6a4f"%3EPhoto unavailable%3C/text%3E%3C/svg%3E';
+const DEFAULT_GAME_MODE_ID = 'photo-to-name';
+const DEFAULT_QUESTION_COUNT = 10;
+const GAME_MODES = [
+  {
+    id: DEFAULT_GAME_MODE_ID,
+    name: 'תמונה ← שם',
+    description: 'מזהים את שם הפרח לפי התמונה',
+    question: () => 'איזה פרח זה?',
+    answerType: 'name'
+  },
+  {
+    id: 'name-to-photo',
+    name: 'שם ← תמונה',
+    description: 'בוחרים את התמונה שמתאימה לשם הפרח',
+    question: flower => `איזו תמונה מתאימה לפרח: ${answerKey(flower)}?`,
+    answerType: 'photo'
+  }
+];
+const QUESTION_COUNT_OPTIONS = [
+  { value: 5, label: '5 שאלות' },
+  { value: 10, label: '10 שאלות' },
+  { value: 20, label: '20 שאלות' },
+  { value: 'all', label: 'כל השאלות' }
+];
 
 let allCollections  = [];
 let currentCollection = null;
+let currentGameMode = null;
+let currentQuestionCount = DEFAULT_QUESTION_COUNT;
 let allFlowers      = [];
 let sessionQueue    = [];
 let currentIdx      = 0;
@@ -711,12 +875,46 @@ function getCollectionState(userData) {
   return userData.collections[id];
 }
 
-function getFlowerState(userData, file) {
+function getGameMode(id) {
+  return GAME_MODES.find(mode => mode.id === id) || GAME_MODES[0];
+}
+
+function getQuestionCount(value) {
+  if (value === 'all') return value;
+  const numericValue = Number(value);
+  if (Number.isInteger(numericValue) && numericValue > 0) return numericValue;
+  return DEFAULT_QUESTION_COUNT;
+}
+
+function modesDataFrom(colData) {
+  if (colData.modes) return colData.modes;
+  return {
+    [DEFAULT_GAME_MODE_ID]: {
+      sessionCount: colData.sessionCount || 0,
+      flowers: colData.flowers || {}
+    }
+  };
+}
+
+function getModeState(userData) {
   const col = getCollectionState(userData);
-  if (!col.flowers[file]) {
-    col.flowers[file] = { box: 1, lastSession: -999, correct: 0, total: 0 };
+  if (!col.modes) {
+    col.modes = modesDataFrom(col);
   }
-  return col.flowers[file];
+
+  const id = (currentGameMode || GAME_MODES[0]).id;
+  if (!col.modes[id]) {
+    col.modes[id] = { sessionCount: 0, flowers: {} };
+  }
+  return col.modes[id];
+}
+
+function getFlowerState(userData, file) {
+  const mode = getModeState(userData);
+  if (!mode.flowers[file]) {
+    mode.flowers[file] = { box: 1, lastSession: -999, correct: 0, total: 0 };
+  }
+  return mode.flowers[file];
 }
 
 function isDue(state, sessionCount) {
@@ -724,11 +922,15 @@ function isDue(state, sessionCount) {
   return (sessionCount - state.lastSession) >= interval;
 }
 
-function buildSessionQueue(userData) {
-  const sc = getCollectionState(userData).sessionCount;
+function buildSessionQueue(userData, questionCount) {
+  const sc = getModeState(userData).sessionCount;
   let due = allFlowers.filter(f => isDue(getFlowerState(userData, f.file), sc));
+  const target = questionCount === 'all'
+    ? allFlowers.length
+    : Math.max(1, Number(questionCount) || DEFAULT_QUESTION_COUNT);
+  const sessionSize = Math.min(allFlowers.length, target);
 
-  if (due.length < 4) {
+  if (due.length < sessionSize) {
     const notDue = allFlowers
       .filter(f => !due.includes(f))
       .sort((a, b) => {
@@ -736,9 +938,9 @@ function buildSessionQueue(userData) {
         const sb = getFlowerState(userData, b.file);
         return sa.box - sb.box || (sc - sb.lastSession) - (sc - sa.lastSession);
       });
-    due = due.concat(notDue.slice(0, 4 - due.length));
+    due = due.concat(notDue.slice(0, sessionSize - due.length));
   }
-  return shuffle([...due]);
+  return shuffle([...due]).slice(0, sessionSize);
 }
 
 function shuffle(arr) {
@@ -766,19 +968,25 @@ function getOptions(correct) {
   return shuffle([...Array.from(uniquePool.values()).slice(0, 3), correct]);
 }
 
-function setQuestionPhoto(flower) {
-  const photo = document.getElementById('photo');
-  const localSrc = '../' + flower.file;
+function flowerLocalSrc(flower) {
+  return '../' + flower.file;
+}
+
+function setImageWithFallback(img, flower) {
   const fallbackSrc = flower.photo_url || PHOTO_PLACEHOLDER;
 
-  photo.onerror = () => {
-    photo.onerror = () => {
-      photo.onerror = null;
-      photo.src = PHOTO_PLACEHOLDER;
+  img.onerror = () => {
+    img.onerror = () => {
+      img.onerror = null;
+      img.src = PHOTO_PLACEHOLDER;
     };
-    photo.src = fallbackSrc;
+    img.src = fallbackSrc;
   };
-  photo.src = localSrc;
+  img.src = flowerLocalSrc(flower);
+}
+
+function setQuestionPhoto(flower) {
+  setImageWithFallback(document.getElementById('photo'), flower);
 }
 
 function collectionsDataFrom(raw) {
@@ -793,16 +1001,17 @@ function showReport(username, data) {
   sections.innerHTML = '';
 
   if (currentCollection && allFlowers.length > 0) {
-    // In-game: detailed per-flower report for current collection
+    // In-game: detailed per-flower report for the current collection and mode.
     const colData = (data.collections || {})[currentCollection.id] || { sessionCount: 0, flowers: {} };
-    const flowers  = colData.flowers;
+    const modeData = modesDataFrom(colData)[(currentGameMode || GAME_MODES[0]).id] || { sessionCount: 0, flowers: {} };
+    const flowers  = modeData.flowers || {};
     document.getElementById('report-meta').textContent =
-      `${colData.sessionCount || 0} משחקים · ${Object.keys(flowers).length} פרחים נראו · ${currentCollection.name}`;
+      `${modeData.sessionCount || 0} משחקים · ${Object.keys(flowers).length} פרחים נראו · ${currentCollection.name} · ${(currentGameMode || GAME_MODES[0]).name}`;
 
     const byBox = {1:[], 2:[], 3:[], 4:[], 5:[]};
     allFlowers.forEach(f => {
       const s = flowers[f.file];
-      if (!s) return;
+      if (!s || !byBox[s.box]) return;
       byBox[s.box].push({ name: f.name_he, correct: s.correct, total: s.total });
     });
     [5,4,3,2,1].forEach(box => {
@@ -824,17 +1033,22 @@ function showReport(username, data) {
   } else {
     // Login screen: summary per collection
     const cols = collectionsDataFrom(data);
-    const total = Object.values(cols).reduce((s, c) => s + (c.sessionCount || 0), 0);
+    const total = Object.values(cols)
+      .flatMap(c => Object.values(modesDataFrom(c)))
+      .reduce((sum, mode) => sum + (mode.sessionCount || 0), 0);
     document.getElementById('report-meta').textContent = `${total} משחקים סה"כ`;
     allCollections.forEach(col => {
       const colData = cols[col.id];
       if (!colData) return;
-      const flowers  = colData.flowers || {};
-      const mastered = Object.values(flowers).filter(f => f.box === 5).length;
+      const modeEntries = Object.values(modesDataFrom(colData));
+      const flowersSeen = new Set(modeEntries.flatMap(mode => Object.keys(mode.flowers || {})));
+      const mastered = modeEntries.reduce((sum, mode) =>
+        sum + Object.values(mode.flowers || {}).filter(f => f.box === 5).length, 0);
+      const sessions = modeEntries.reduce((sum, mode) => sum + (mode.sessionCount || 0), 0);
       const sec = document.createElement('div');
       sec.className = 'report-section';
       sec.innerHTML = `<h3>${col.name}</h3>
-        <div style="font-size:0.9rem;color:#555;padding:4px 0">${colData.sessionCount || 0} משחקים · ${mastered}/${Object.keys(flowers).length} שולט!</div>`;
+        <div style="font-size:0.9rem;color:#555;padding:4px 0">${sessions} משחקים · ${mastered}/${flowersSeen.size} שולט!</div>`;
       sections.appendChild(sec);
     });
   }
@@ -855,6 +1069,8 @@ function resetToLogin() {
   currentUser = null;
   currentUserData = null;
   currentCollection = null;
+  currentGameMode = null;
+  currentQuestionCount = DEFAULT_QUESTION_COUNT;
   ['header', 'card', 'progress', 'summary', 'collection-screen'].forEach(id => {
     document.getElementById(id).style.display = 'none';
   });
@@ -875,10 +1091,11 @@ async function showLogin() {
     .sort((a, b) => a.id.localeCompare(b.id))
     .forEach(d => {
       const cols = collectionsDataFrom(d.data());
-      const totalSessions = Object.values(cols).reduce((s, c) => s + (c.sessionCount || 0), 0);
-      const allFlowersSeen = new Set(Object.values(cols).flatMap(c => Object.keys(c.flowers || {})));
-      const allMastered    = Object.values(cols).reduce((s, c) =>
-        s + Object.values(c.flowers || {}).filter(f => f.box === 5).length, 0);
+      const modeEntries = Object.values(cols).flatMap(c => Object.values(modesDataFrom(c)));
+      const totalSessions = modeEntries.reduce((s, mode) => s + (mode.sessionCount || 0), 0);
+      const allFlowersSeen = new Set(modeEntries.flatMap(mode => Object.keys(mode.flowers || {})));
+      const allMastered    = modeEntries.reduce((s, mode) =>
+        s + Object.values(mode.flowers || {}).filter(f => f.box === 5).length, 0);
 
       const row = document.createElement('div');
       row.style.cssText = 'display:flex;gap:8px;align-items:stretch;';
@@ -947,29 +1164,113 @@ document.getElementById('switch-user-from-collection').addEventListener('click',
 
 function showCollectionPicker() {
   document.getElementById('collection-screen').style.display = 'block';
-  document.getElementById('collection-welcome').textContent = `שלום, ${currentUser}! בחר אוסף:`;
+  document.getElementById('collection-welcome').style.color = '#555';
+  document.getElementById('collection-welcome').textContent = `שלום, ${currentUser}! בחר אוסף ומצב משחק:`;
 
   const lastCol = currentUserData ? currentUserData.lastCollection : null;
-  const list = document.getElementById('collection-list');
-  list.innerHTML = '';
+  const lastMode = currentUserData ? currentUserData.lastGameMode : null;
+  const lastQuestionCount = currentUserData ? currentUserData.lastQuestionCount : null;
+  currentCollection = allCollections.find(col => col.id === lastCol) || allCollections[0] || null;
+  currentGameMode = getGameMode(lastMode || DEFAULT_GAME_MODE_ID);
+  currentQuestionCount = getQuestionCount(lastQuestionCount || DEFAULT_QUESTION_COUNT);
+
+  const collectionList = document.getElementById('collection-list');
+  const modeList = document.getElementById('game-mode-list');
+  const questionCountList = document.getElementById('question-count-list');
+  const customQuestionCount = document.getElementById('custom-question-count');
+  const startBtn = document.getElementById('start-game');
+  const isPresetQuestionCount = QUESTION_COUNT_OPTIONS.some(option => option.value === currentQuestionCount);
+  customQuestionCount.value = !isPresetQuestionCount && currentQuestionCount !== 'all'
+    ? currentQuestionCount
+    : '';
+
+  function renderSelection() {
+    collectionList.querySelectorAll('.collection-btn').forEach(btn => {
+      btn.classList.toggle('selected', btn.dataset.collectionId === (currentCollection && currentCollection.id));
+    });
+    modeList.querySelectorAll('.game-mode-btn').forEach(btn => {
+      btn.classList.toggle('selected', btn.dataset.modeId === (currentGameMode && currentGameMode.id));
+    });
+    questionCountList.querySelectorAll('.question-count-btn').forEach(btn => {
+      btn.classList.toggle('selected', btn.dataset.questionCount === String(currentQuestionCount));
+    });
+    startBtn.disabled = !(currentCollection && currentGameMode && currentQuestionCount);
+  }
+
+  collectionList.innerHTML = '';
   allCollections.forEach(col => {
     const isLast = col.id === lastCol;
     const btn = document.createElement('button');
-    btn.className = 'collection-btn' + (isLast ? ' last-used' : '');
+    btn.className = 'collection-btn';
+    btn.dataset.collectionId = col.id;
     btn.textContent = col.name + (isLast ? ' ★' : '');
     btn.addEventListener('click', () => {
       currentCollection = col;
-      document.getElementById('collection-screen').style.display = 'none';
-      startSession().catch(err => {
-        document.getElementById('loading').style.display = 'none';
-        showCollectionPicker();
-        document.getElementById('collection-welcome').textContent = `שגיאה: ${err.message}`;
-        document.getElementById('collection-welcome').style.color = '#dc3545';
-      });
+      renderSelection();
     });
-    list.appendChild(btn);
+    collectionList.appendChild(btn);
   });
+
+  modeList.innerHTML = '';
+  GAME_MODES.forEach(mode => {
+    const isLast = mode.id === lastMode;
+    const btn = document.createElement('button');
+    btn.className = 'game-mode-btn';
+    btn.dataset.modeId = mode.id;
+    btn.innerHTML = `
+      <span class="game-mode-title">${mode.name}${isLast ? ' ★' : ''}</span>
+      <span class="game-mode-desc">${mode.description}</span>
+    `;
+    btn.addEventListener('click', () => {
+      currentGameMode = mode;
+      renderSelection();
+    });
+    modeList.appendChild(btn);
+  });
+
+  questionCountList.innerHTML = '';
+  QUESTION_COUNT_OPTIONS.forEach(option => {
+    const isLast = option.value === lastQuestionCount;
+    const btn = document.createElement('button');
+    btn.className = 'question-count-btn';
+    btn.dataset.questionCount = String(option.value);
+    btn.textContent = option.label + (isLast ? ' ★' : '');
+    btn.addEventListener('click', () => {
+      currentQuestionCount = option.value;
+      customQuestionCount.value = '';
+      renderSelection();
+    });
+    questionCountList.appendChild(btn);
+  });
+
+  customQuestionCount.oninput = () => {
+    if (!customQuestionCount.value) {
+      currentQuestionCount = null;
+      renderSelection();
+      return;
+    }
+    const count = Number(customQuestionCount.value);
+    if (Number.isInteger(count) && count > 0) {
+      currentQuestionCount = count;
+    } else {
+      currentQuestionCount = null;
+    }
+    renderSelection();
+  };
+
+  renderSelection();
 }
+
+document.getElementById('start-game').addEventListener('click', () => {
+  if (!currentCollection || !currentGameMode || !currentQuestionCount) return;
+  document.getElementById('collection-screen').style.display = 'none';
+  startSession().catch(err => {
+    document.getElementById('loading').style.display = 'none';
+    showCollectionPicker();
+    document.getElementById('collection-welcome').textContent = `שגיאה: ${err.message}`;
+    document.getElementById('collection-welcome').style.color = '#dc3545';
+  });
+});
 
 async function startSession() {
   document.getElementById('loading').style.display = 'block';
@@ -982,16 +1283,18 @@ async function startSession() {
 
   currentUserData = await loadUserData(currentUser);
   currentUserData.lastCollection = currentCollection.id;
-  const colState = getCollectionState(currentUserData);
-  colState.sessionCount++;
+  currentUserData.lastGameMode = currentGameMode.id;
+  currentUserData.lastQuestionCount = currentQuestionCount;
+  const modeState = getModeState(currentUserData);
+  modeState.sessionCount++;
   await saveUserData(currentUser, currentUserData);
 
-  sessionQueue = buildSessionQueue(currentUserData);
+  sessionQueue = buildSessionQueue(currentUserData, currentQuestionCount);
   currentIdx   = 0;
   sessionScore = 0;
 
   document.getElementById('loading').style.display = 'none';
-  document.getElementById('username-label').textContent = `${currentUser} · ${currentCollection.name}`;
+  document.getElementById('username-label').textContent = `${currentUser} · ${currentCollection.name} · ${currentGameMode.name}`;
   document.getElementById('score').textContent = '0';
   document.getElementById('header').style.display = 'flex';
   document.getElementById('progress').style.display = 'block';
@@ -1003,9 +1306,13 @@ async function startSession() {
 function showQuestion() {
   const flower = sessionQueue[currentIdx];
   const state  = getFlowerState(currentUserData, flower.file);
+  const mode = currentGameMode || GAME_MODES[0];
+  const isPhotoAnswerMode = mode.answerType === 'photo';
 
   document.getElementById('card').classList.remove('answered');
-  setQuestionPhoto(flower);
+  document.getElementById('card').classList.toggle('image-choice-mode', isPhotoAnswerMode);
+  if (!isPhotoAnswerMode) setQuestionPhoto(flower);
+  document.getElementById('question-text').textContent = mode.question(flower);
   document.getElementById('progress').textContent =
     `שאלה ${currentIdx + 1} מתוך ${sessionQueue.length}`;
   document.getElementById('box-badge').textContent = `${BOX_NAMES[state.box - 1]} (רמה ${state.box}/5)`;
@@ -1021,7 +1328,15 @@ function showQuestion() {
     btn.className = 'choice';
     btn.dataset.answerKey = answerKey(opt);
     btn.dataset.isCorrect = opt === flower ? 'true' : 'false';
-    btn.innerHTML = `<div class="he">${opt.name_he}</div><div class="en">${opt.name_en}</div>`;
+    if (isPhotoAnswerMode) {
+      const img = document.createElement('img');
+      img.className = 'choice-img';
+      img.alt = answerKey(opt);
+      setImageWithFallback(img, opt);
+      btn.appendChild(img);
+    } else {
+      btn.innerHTML = `<div class="he">${opt.name_he}</div><div class="en">${opt.name_en}</div>`;
+    }
     btn.addEventListener('click', () => handleAnswer(btn, opt, flower));
     choicesEl.appendChild(btn);
   });
@@ -1067,7 +1382,7 @@ function handleAnswer(btn, chosen, correct) {
   } else {
     state.box = 1;
   }
-  state.lastSession = getCollectionState(currentUserData).sessionCount;
+  state.lastSession = getModeState(currentUserData).sessionCount;
 
   saveUserData(currentUser, currentUserData).catch(console.error);
 
