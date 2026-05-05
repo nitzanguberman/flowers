@@ -438,7 +438,20 @@
     padding: 40px 32px;
     text-align: center;
   }
-  #collection-screen h1 { font-size: 2rem; color: #2d6a4f; margin-bottom: 12px; }
+  .collection-header-row {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  #collection-screen h1 { font-size: 2rem; color: #2d6a4f; margin-bottom: 0; }
+  #switch-user-from-home {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
   #collection-welcome { font-size: 1rem; color: #555; margin-bottom: 20px; }
   #picker-grid {
     display: grid;
@@ -686,6 +699,15 @@
       grid-template-columns: 1fr;
       gap: 18px;
     }
+    .collection-header-row {
+      justify-content: space-between;
+      gap: 12px;
+    }
+    #switch-user-from-home {
+      position: static;
+      transform: none;
+      flex-shrink: 0;
+    }
     #card.answered #info-img { display: none !important; }
     #next-btn {
       margin-bottom: 12px;
@@ -723,7 +745,10 @@
 
 <!-- Collection picker -->
 <div id="collection-screen">
-  <h1>🌸 משחק פרחים</h1>
+  <div class="collection-header-row">
+    <h1>🌸 משחק פרחים</h1>
+    <button id="switch-user-from-home" class="header-action">שנה משתמש</button>
+  </div>
   <p id="collection-welcome"></p>
   <div id="picker-grid">
     <div class="picker-section">
@@ -1153,14 +1178,13 @@ document.getElementById('change-collection').addEventListener('click', () => {
   });
   showCollectionPicker();
 });
-document.getElementById('switch-user').addEventListener('click', () => {
+function switchToLogin() {
   resetToLogin();
   showLogin().catch(console.error);
-});
-document.getElementById('switch-user-from-collection').addEventListener('click', () => {
-  resetToLogin();
-  showLogin().catch(console.error);
-});
+}
+document.getElementById('switch-user').addEventListener('click', switchToLogin);
+document.getElementById('switch-user-from-home').addEventListener('click', switchToLogin);
+document.getElementById('switch-user-from-collection').addEventListener('click', switchToLogin);
 
 function showCollectionPicker() {
   document.getElementById('collection-screen').style.display = 'block';
