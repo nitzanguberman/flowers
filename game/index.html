@@ -537,21 +537,6 @@
     cursor: default;
   }
   #start-game:not(:disabled):hover { background: #1b4332; }
-  #switch-user-from-collection {
-    width: 100%;
-    padding: 11px;
-    background: none;
-    border: 2px dashed #aaa;
-    border-radius: 12px;
-    font-size: 0.95rem;
-    font-family: inherit;
-    color: #777;
-    cursor: pointer;
-    margin-top: 4px;
-    transition: border-color 0.15s, color 0.15s;
-  }
-  #switch-user-from-collection:hover { border-color: #2d6a4f; color: #2d6a4f; }
-
   /* ── Home button ── */
 /* ── Loading / error ── */
   #loading { margin-top: 60px; font-size: 1.2rem; color: #2d6a4f; }
@@ -766,7 +751,6 @@
     </div>
   </div>
   <button id="start-game">התחל משחק</button>
-  <button id="switch-user-from-collection">החלף משתמש</button>
 </div>
 
 <!-- Game -->
@@ -1184,7 +1168,6 @@ function switchToLogin() {
 }
 document.getElementById('switch-user').addEventListener('click', switchToLogin);
 document.getElementById('switch-user-from-home').addEventListener('click', switchToLogin);
-document.getElementById('switch-user-from-collection').addEventListener('click', switchToLogin);
 
 function showCollectionPicker() {
   document.getElementById('collection-screen').style.display = 'block';
