@@ -11,12 +11,12 @@
 
   body {
     font-family: 'Heebo', 'Segoe UI', Arial, sans-serif;
-    background: #f0f7ee;
+    background: #f3f8f1;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 16px;
+    padding: 18px;
     color: #1a1a1a;
     direction: rtl;
     text-align: right;
@@ -101,76 +101,125 @@
   /* ── Header ── */
   header {
     width: 100%;
-    max-width: 560px;
+    max-width: 720px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 16px;
+    gap: 18px;
+    margin-bottom: 12px;
+    direction: rtl;
   }
-  .header-right { display: flex; align-items: center; gap: 10px; }
-  h1 { font-size: 1.3rem; color: #2d6a4f; }
+  .header-main {
+    display: grid;
+    gap: 4px;
+    min-width: 0;
+  }
+  .header-title-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+  }
+  h1 {
+    font-size: clamp(1.45rem, 3vw, 2.15rem);
+    line-height: 1.05;
+    color: #2d6a4f;
+    white-space: nowrap;
+  }
   #score-box {
     background: #2d6a4f;
     color: #fff;
-    border-radius: 20px;
-    padding: 4px 16px;
-    font-size: 1rem;
+    border-radius: 24px;
+    padding: 10px 22px;
+    font-size: 1.05rem;
     font-weight: bold;
+    min-width: 110px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(45, 106, 79, 0.18);
+    flex-shrink: 0;
   }
   #user-tag {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     color: #555;
     display: flex;
-    flex-direction: row-reverse;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
+    flex-wrap: wrap;
+    min-width: 0;
   }
-  #switch-user {
-    font-size: 0.75rem;
+  #username-label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: min(46vw, 360px);
+  }
+  .header-action {
+    min-height: 34px;
+    padding: 5px 12px;
+    border-radius: 999px;
+    border: 1px solid #b9d8c6;
+    background: #fff;
     color: #2d6a4f;
     cursor: pointer;
-    text-decoration: underline;
-    background: none;
-    border: none;
+    font-size: 0.84rem;
+    font-weight: 700;
     font-family: inherit;
-  }
-  #report-user {
-    font-size: 0.9rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
     line-height: 1;
+    transition: background 0.15s, border-color 0.15s, transform 0.1s;
+  }
+  .header-action:hover { background: #e8f5e0; border-color: #2d6a4f; }
+  .header-action:active { transform: translateY(1px); }
+  #report-user {
+    width: 34px;
+    padding: 5px;
+  }
+  #change-collection {
+    width: 34px;
+    padding: 5px;
+  }
+  #change-collection svg {
+    width: 18px;
+    height: 18px;
+    display: block;
+    margin: auto;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
   }
 
   /* ── Progress text ── */
   #progress {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     color: #555;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     text-align: right;
     width: 100%;
-    max-width: 560px;
+    max-width: 720px;
   }
 
   /* ── Game card ── */
   #card {
     width: 100%;
-    max-width: 560px;
+    max-width: 720px;
     background: #fff;
-    border-radius: 20px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    border-radius: 18px;
+    box-shadow: 0 16px 44px rgba(27, 67, 50, 0.11);
     overflow: hidden;
   }
   #photo {
     width: 100%;
-    height: 300px;
-    object-fit: cover;
+    aspect-ratio: 16 / 8.2;
+    height: auto;
+    max-height: 420px;
+    object-fit: contain;
+    background: #f0f7ee;
     display: block;
   }
   #question {
-    padding: 14px 20px 4px;
-    font-size: 1.05rem;
+    padding: 18px 24px 6px;
+    font-size: 1.28rem;
     font-weight: bold;
     color: #2d6a4f;
     display: flex;
@@ -178,39 +227,47 @@
     align-items: center;
   }
   #box-badge {
-    font-size: 0.75rem;
+    font-size: 0.9rem;
     background: #e8f5e0;
     color: #2d6a4f;
-    border-radius: 10px;
-    padding: 2px 8px;
-    font-weight: normal;
+    border-radius: 999px;
+    padding: 4px 12px;
+    font-weight: 700;
+    white-space: nowrap;
   }
 
   /* ── Choices ── */
+  #answer-panel {
+    display: block;
+  }
   #choices {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    padding: 12px 20px 16px;
+    gap: 12px;
+    padding: 16px 24px 24px;
     direction: rtl;
   }
   .choice {
-    background: #f8f8f8;
-    border: 2px solid #ddd;
+    min-height: 92px;
+    background: #fbfbfb;
+    border: 2px solid #d9d9d9;
     border-radius: 12px;
-    padding: 12px;
+    padding: 14px 16px;
     cursor: pointer;
     text-align: center;
     transition: background 0.15s, border-color 0.15s, transform 0.1s;
     user-select: none;
+    font-family: inherit;
+    color: #1a1a1a;
   }
-  .choice:hover:not(.disabled) { border-color: #2d6a4f; background: #e8f5e0; transform: scale(1.02); }
-  .choice .he { font-size: 1.05rem; font-weight: bold; direction: rtl; }
-  .choice .en { font-size: 0.75rem; color: #888; margin-top: 3px; direction: ltr; }
+  .choice:hover:not(.disabled) { border-color: #2d6a4f; background: #e8f5e0; transform: translateY(-1px); }
+  .choice .he { font-size: 1.18rem; font-weight: 900; line-height: 1.25; direction: rtl; }
+  .choice .en { font-size: 0.98rem; color: #777; margin-top: 5px; direction: ltr; line-height: 1.2; }
   .choice.correct { background: #d4edda; border-color: #28a745; }
   .choice.wrong   { background: #f8d7da; border-color: #dc3545; }
   .choice.reveal  { background: #d4edda; border-color: #28a745; }
   .choice.disabled { cursor: default; }
+  .choice:disabled { cursor: default; }
 
   /* ── Info box ── */
   #info-box {
@@ -221,7 +278,15 @@
     border: 1px solid #c8e6c9;
     background: #f0f7ee;
   }
-  #info-img { width: 100%; max-height: 180px; object-fit: cover; display: block; }
+  #info-img {
+    width: 100%;
+    aspect-ratio: 16 / 8.2;
+    height: auto;
+    max-height: 220px;
+    object-fit: contain;
+    background: #f0f7ee;
+    display: block;
+  }
   #info-text {
     padding: 10px 14px;
     font-size: 0.88rem;
@@ -229,7 +294,7 @@
     line-height: 1.6;
     text-align: right;
     direction: rtl;
-    border-right: 4px solid #2d6a4f;
+    border-top: 4px solid #2d6a4f;
   }
 
   /* ── Next button ── */
@@ -249,12 +314,72 @@
     transition: background 0.15s;
   }
   #next-btn:hover { background: #1b4332; }
+  #card.answered #answer-panel {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(240px, 0.72fr);
+    gap: 14px;
+    padding: 14px 20px 14px;
+    align-items: start;
+  }
+  #card.answered #choices {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 0;
+  }
+  #card.answered .choice {
+    min-height: 70px;
+    padding: 10px 12px;
+  }
+  #card.answered .choice.hidden-after-answer {
+    display: none;
+  }
+  #card.image-choice-mode #photo {
+    display: none;
+  }
+  #card.image-choice-mode #choices {
+    grid-template-columns: 1fr 1fr;
+  }
+  #card.image-choice-mode .choice {
+    min-height: 0;
+    padding: 8px;
+  }
+  .choice-img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 8px;
+    background: #f0f7ee;
+  }
+  #card.answered.image-choice-mode .choice {
+    min-height: 0;
+  }
+  #card.answered.image-choice-mode .choice-img {
+    aspect-ratio: 16 / 9;
+  }
+  #card.answered #info-box { margin: 0; }
+  #card.answered #info-img { max-height: 150px; }
+  #card.answered #info-text {
+    font-size: 0.84rem;
+    line-height: 1.45;
+  }
+  #card.answered #next-btn {
+    position: fixed;
+    left: 50%;
+    bottom: max(12px, env(safe-area-inset-bottom));
+    transform: translateX(-50%);
+    z-index: 20;
+    width: calc(100% - 40px);
+    max-width: 680px;
+    margin: 0 auto;
+    box-shadow: 0 10px 28px rgba(27, 67, 50, 0.22);
+  }
 
   /* ── Summary screen ── */
   #summary {
     display: none;
     width: 100%;
-    max-width: 560px;
+    max-width: 720px;
     background: #fff;
     border-radius: 20px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
@@ -301,7 +426,121 @@
   }
   #restart-btn:hover { background: #1b4332; }
 
-  /* ── Loading / error ── */
+  /* ── Collection screen ── */
+  #collection-screen {
+    display: none;
+    width: 100%;
+    max-width: 960px;
+    margin-top: 80px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    padding: 40px 32px;
+    text-align: center;
+  }
+  #collection-screen h1 { font-size: 2rem; color: #2d6a4f; margin-bottom: 12px; }
+  #collection-welcome { font-size: 1rem; color: #555; margin-bottom: 20px; }
+  #picker-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.8fr;
+    gap: 18px;
+    width: 100%;
+    margin-bottom: 18px;
+  }
+  .picker-section {
+    width: 100%;
+    text-align: right;
+  }
+  .picker-section h2 {
+    font-size: 0.92rem;
+    color: #777;
+    margin-bottom: 8px;
+    font-weight: 700;
+  }
+  #collection-list,
+  #game-mode-list,
+  #question-count-list { display: flex; flex-direction: column; gap: 10px; width: 100%; }
+  .collection-btn,
+  .game-mode-btn,
+  .question-count-btn {
+    width: 100%;
+    padding: 14px 16px;
+    background: #f0f7ee;
+    border: 2px solid #c8e6c9;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-family: inherit;
+    color: #1b4332;
+    cursor: pointer;
+    text-align: center;
+    direction: rtl;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .game-mode-btn {
+    display: grid;
+    gap: 4px;
+    text-align: right;
+  }
+  .game-mode-title { font-weight: 900; }
+  .game-mode-desc { font-size: 0.84rem; color: #666; font-weight: 400; line-height: 1.35; }
+  .collection-btn:hover,
+  .game-mode-btn:hover,
+  .question-count-btn:hover { background: #d4edda; border-color: #2d6a4f; }
+  .collection-btn.selected,
+  .game-mode-btn.selected,
+  .question-count-btn.selected { border-color: #2d6a4f; background: #e8f5e0; font-weight: bold; }
+  #custom-question-count {
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px solid #c8e6c9;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    color: #1b4332;
+    text-align: center;
+    direction: ltr;
+    outline: none;
+    margin-top: 10px;
+  }
+  #custom-question-count:focus {
+    border-color: #2d6a4f;
+    background: #f0f7ee;
+  }
+  #start-game {
+    width: 100%;
+    padding: 12px;
+    background: #2d6a4f;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: inherit;
+    margin-bottom: 10px;
+  }
+  #start-game:disabled {
+    opacity: 0.55;
+    cursor: default;
+  }
+  #start-game:not(:disabled):hover { background: #1b4332; }
+  #switch-user-from-collection {
+    width: 100%;
+    padding: 11px;
+    background: none;
+    border: 2px dashed #aaa;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    color: #777;
+    cursor: pointer;
+    margin-top: 4px;
+    transition: border-color 0.15s, color 0.15s;
+  }
+  #switch-user-from-collection:hover { border-color: #2d6a4f; color: #2d6a4f; }
+
+  /* ── Home button ── */
+/* ── Loading / error ── */
   #loading { margin-top: 60px; font-size: 1.2rem; color: #2d6a4f; }
   #error {
     display: none;
@@ -368,6 +607,92 @@
     flex-shrink: 0;
   }
   .report-btn:hover { opacity: 1; }
+
+  @media (max-width: 640px) {
+    body { padding: 12px; }
+    header {
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    h1 { font-size: 1.3rem; }
+    #score-box {
+      min-width: 82px;
+      padding: 8px 12px;
+      font-size: 0.92rem;
+      border-radius: 18px;
+    }
+    #user-tag {
+      gap: 6px;
+      font-size: 0.84rem;
+    }
+    #username-label { max-width: 100%; flex-basis: 100%; }
+    .header-action {
+      min-height: 30px;
+      padding: 4px 9px;
+      font-size: 0.76rem;
+    }
+    #report-user { width: 30px; }
+    #change-collection { width: 30px; }
+    #progress { font-size: 0.86rem; }
+    #card { border-radius: 14px; }
+    #photo {
+      aspect-ratio: 4 / 3;
+      max-height: min(48vh, 420px);
+    }
+    #question {
+      align-items: flex-start;
+      gap: 8px;
+      padding: 14px 16px 2px;
+      font-size: 1.08rem;
+    }
+    #box-badge { font-size: 0.78rem; padding: 3px 9px; }
+    #choices {
+      grid-template-columns: 1fr;
+      gap: 9px;
+      padding: 12px 16px 16px;
+    }
+    .choice {
+      min-height: 72px;
+      padding: 11px 12px;
+    }
+    .choice .he { font-size: 1.02rem; }
+    .choice .en { font-size: 0.88rem; }
+    #info-img { max-height: 140px; }
+    #info-text {
+      padding: 8px 12px;
+      font-size: 0.82rem;
+      line-height: 1.45;
+    }
+    #card.answered #photo { max-height: min(34vh, 300px); }
+    #card.answered #answer-panel {
+      grid-template-columns: 1fr;
+      gap: 8px;
+      padding: 10px 16px 12px;
+    }
+    #card.answered .choice {
+      min-height: 48px;
+      padding: 7px 10px;
+    }
+    #card.answered .choice .he { font-size: 0.95rem; }
+    #card.answered .choice .en { display: none; }
+    #card.image-choice-mode #choices {
+      grid-template-columns: 1fr 1fr;
+    }
+    #card.answered.image-choice-mode .choice-img {
+      aspect-ratio: 4 / 3;
+    }
+    #picker-grid {
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+    #card.answered #info-img { display: none !important; }
+    #next-btn {
+      margin-bottom: 12px;
+      padding: 10px;
+    }
+    #card.answered #next-btn { width: calc(100% - 32px); }
+  }
 </style>
 </head>
 <body>
@@ -396,14 +721,46 @@
   <button id="add-user-btn">+ משתמש חדש</button>
 </div>
 
+<!-- Collection picker -->
+<div id="collection-screen">
+  <h1>🌸 משחק פרחים</h1>
+  <p id="collection-welcome"></p>
+  <div id="picker-grid">
+    <div class="picker-section">
+      <h2>אוסף</h2>
+      <div id="collection-list"></div>
+    </div>
+    <div class="picker-section">
+      <h2>מצב משחק</h2>
+      <div id="game-mode-list"></div>
+    </div>
+    <div class="picker-section">
+      <h2>מספר שאלות</h2>
+      <div id="question-count-list"></div>
+      <input id="custom-question-count" type="number" min="1" step="1" inputmode="numeric" placeholder="מספר אחר">
+    </div>
+  </div>
+  <button id="start-game">התחל משחק</button>
+  <button id="switch-user-from-collection">החלף משתמש</button>
+</div>
+
 <!-- Game -->
 <header id="header" style="display:none">
-  <div class="header-right">
-    <h1>🌸 משחק פרחים</h1>
+  <div class="header-main">
+    <div class="header-title-row">
+      <h1>משחק פרחים 🌸</h1>
+    </div>
     <div id="user-tag">
       <span id="username-label"></span>
-      <button id="report-user">📊</button>
-      <button id="switch-user">שנה</button>
+      <button id="report-user" class="header-action" title="דוח התקדמות" aria-label="דוח התקדמות">📊</button>
+      <button id="change-collection" class="header-action" title="שנה משחק" aria-label="שנה משחק">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 11.5 12 4l9 7.5"></path>
+          <path d="M5 10.5V20h14v-9.5"></path>
+          <path d="M9.5 20v-6h5v6"></path>
+        </svg>
+      </button>
+      <button id="switch-user" class="header-action">שנה משתמש</button>
     </div>
   </div>
   <div id="score-box">ניקוד: <span id="score">0</span></div>
@@ -414,13 +771,15 @@
 <div id="card" style="display:none">
   <img id="photo" src="" alt="פרח">
   <div id="question">
-    <span>איזה פרח זה?</span>
+    <span id="question-text">איזה פרח זה?</span>
     <span id="box-badge"></span>
   </div>
-  <div id="choices"></div>
-  <div id="info-box">
-    <img id="info-img" src="" alt="">
-    <div id="info-text"></div>
+  <div id="answer-panel">
+    <div id="choices"></div>
+    <div id="info-box">
+      <img id="info-img" src="" alt="">
+      <div id="info-text"></div>
+    </div>
   </div>
   <button id="next-btn">הבא ◀</button>
 </div>
@@ -437,49 +796,125 @@
       <th>מתי חוזר</th>
     </tr>
   </table>
-  <button id="restart-btn">סשן נוסף</button>
+  <button id="restart-btn">משחק נוסף</button>
 </div>
 
 <script type="module">
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js';
 import { getFirestore, doc, getDoc, setDoc, collection, getDocs } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js';
+import { firebaseConfig } from './firebase-config.js';
 
-const firebaseConfig = {
-  apiKey: "AIzaSyChw-uXFymNKrZIVOE2DZbVtGBfuQOpcn4",
-  authDomain: "flowers-game-5e085.firebaseapp.com",
-  projectId: "flowers-game-5e085",
-  storageBucket: "flowers-game-5e085.firebasestorage.app",
-  messagingSenderId: "851425514637",
-  appId: "1:851425514637:web:04a2009058dda3d9ae3ec4"
-};
 const app = initializeApp(firebaseConfig);
 const db  = getFirestore(app);
 
 async function loadUserData(name) {
   const snap = await getDoc(doc(db, 'users', name));
-  return snap.exists() ? snap.data() : { sessionCount: 0, flowers: {} };
+  if (!snap.exists()) return { collections: {}, lastCollection: null };
+  const data = snap.data();
+  // Migrate old format: { sessionCount, flowers } → { collections: { flowers1: ... } }
+  if (data.flowers && !data.collections) {
+    return {
+      collections: { flowers1: { sessionCount: data.sessionCount || 0, flowers: data.flowers } },
+      lastCollection: 'flowers1'
+    };
+  }
+  if (!data.collections) data.collections = {};
+  return data;
 }
+
 async function saveUserData(name, userData) {
   await setDoc(doc(db, 'users', name), userData);
 }
 
 const USER_KEY   = 'flowers_current_user';
 const BOX_COLORS = ['#dc3545','#fd7e14','#ffc107','#20c997','#2d6a4f'];
-const BOX_LABELS = ['כל סשן','כל 2 סשנים','כל 4 סשנים','כל 8 סשנים','כל 16 סשנים'];
+const BOX_LABELS = ['כל משחק','כל 2 משחקים','כל 4 משחקים','כל 8 משחקים','כל 16 משחקים'];
 const BOX_NAMES  = ['חדש','מתחיל','מכיר','טוב','שולט!'];
+const PHOTO_PLACEHOLDER = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450"%3E%3Crect width="800" height="450" fill="%23f0f7ee"/%3E%3Ctext x="400" y="230" text-anchor="middle" font-family="Arial,sans-serif" font-size="34" fill="%232d6a4f"%3EPhoto unavailable%3C/text%3E%3C/svg%3E';
+const DEFAULT_GAME_MODE_ID = 'photo-to-name';
+const DEFAULT_QUESTION_COUNT = 10;
+const GAME_MODES = [
+  {
+    id: DEFAULT_GAME_MODE_ID,
+    name: 'תמונה ← שם',
+    description: 'מזהים את שם הפרח לפי התמונה',
+    question: () => 'איזה פרח זה?',
+    answerType: 'name'
+  },
+  {
+    id: 'name-to-photo',
+    name: 'שם ← תמונה',
+    description: 'בוחרים את התמונה שמתאימה לשם הפרח',
+    question: flower => `איזו תמונה מתאימה לפרח: ${answerKey(flower)}?`,
+    answerType: 'photo'
+  }
+];
+const QUESTION_COUNT_OPTIONS = [
+  { value: 5, label: '5 שאלות' },
+  { value: 10, label: '10 שאלות' },
+  { value: 20, label: '20 שאלות' },
+  { value: 'all', label: 'כל השאלות' }
+];
 
-let allFlowers    = [];
-let sessionQueue  = [];
-let currentIdx    = 0;
-let sessionScore  = 0;
-let currentUser   = null;
+let allCollections  = [];
+let currentCollection = null;
+let currentGameMode = null;
+let currentQuestionCount = DEFAULT_QUESTION_COUNT;
+let allFlowers      = [];
+let sessionQueue    = [];
+let currentIdx      = 0;
+let sessionScore    = 0;
+let currentUser     = null;
 let currentUserData = null;
 
-function getFlowerState(userData, file) {
-  if (!userData.flowers[file]) {
-    userData.flowers[file] = { box: 1, lastSession: -999, correct: 0, total: 0 };
+function getCollectionState(userData) {
+  const id = currentCollection.id;
+  if (!userData.collections[id]) {
+    userData.collections[id] = { sessionCount: 0, flowers: {} };
   }
-  return userData.flowers[file];
+  return userData.collections[id];
+}
+
+function getGameMode(id) {
+  return GAME_MODES.find(mode => mode.id === id) || GAME_MODES[0];
+}
+
+function getQuestionCount(value) {
+  if (value === 'all') return value;
+  const numericValue = Number(value);
+  if (Number.isInteger(numericValue) && numericValue > 0) return numericValue;
+  return DEFAULT_QUESTION_COUNT;
+}
+
+function modesDataFrom(colData) {
+  if (colData.modes) return colData.modes;
+  return {
+    [DEFAULT_GAME_MODE_ID]: {
+      sessionCount: colData.sessionCount || 0,
+      flowers: colData.flowers || {}
+    }
+  };
+}
+
+function getModeState(userData) {
+  const col = getCollectionState(userData);
+  if (!col.modes) {
+    col.modes = modesDataFrom(col);
+  }
+
+  const id = (currentGameMode || GAME_MODES[0]).id;
+  if (!col.modes[id]) {
+    col.modes[id] = { sessionCount: 0, flowers: {} };
+  }
+  return col.modes[id];
+}
+
+function getFlowerState(userData, file) {
+  const mode = getModeState(userData);
+  if (!mode.flowers[file]) {
+    mode.flowers[file] = { box: 1, lastSession: -999, correct: 0, total: 0 };
+  }
+  return mode.flowers[file];
 }
 
 function isDue(state, sessionCount) {
@@ -487,11 +922,15 @@ function isDue(state, sessionCount) {
   return (sessionCount - state.lastSession) >= interval;
 }
 
-function buildSessionQueue(userData) {
-  const sc = userData.sessionCount;
+function buildSessionQueue(userData, questionCount) {
+  const sc = getModeState(userData).sessionCount;
   let due = allFlowers.filter(f => isDue(getFlowerState(userData, f.file), sc));
+  const target = questionCount === 'all'
+    ? allFlowers.length
+    : Math.max(1, Number(questionCount) || DEFAULT_QUESTION_COUNT);
+  const sessionSize = Math.min(allFlowers.length, target);
 
-  if (due.length < 4) {
+  if (due.length < sessionSize) {
     const notDue = allFlowers
       .filter(f => !due.includes(f))
       .sort((a, b) => {
@@ -499,9 +938,9 @@ function buildSessionQueue(userData) {
         const sb = getFlowerState(userData, b.file);
         return sa.box - sb.box || (sc - sb.lastSession) - (sc - sa.lastSession);
       });
-    due = due.concat(notDue.slice(0, 4 - due.length));
+    due = due.concat(notDue.slice(0, sessionSize - due.length));
   }
-  return shuffle([...due]);
+  return shuffle([...due]).slice(0, sessionSize);
 }
 
 function shuffle(arr) {
@@ -512,48 +951,107 @@ function shuffle(arr) {
   return arr;
 }
 
+function answerKey(flower) {
+  return (flower.name_he || flower.name_en || flower.sci_name || '').trim();
+}
+
 function getOptions(correct) {
-  const pool = allFlowers.filter(f => f !== correct);
-  shuffle(pool);
-  return shuffle([...pool.slice(0, 3), correct]);
+  const correctKey = answerKey(correct);
+  const uniquePool = new Map();
+
+  shuffle([...allFlowers]).forEach(flower => {
+    const key = answerKey(flower);
+    if (!key || key === correctKey || uniquePool.has(key)) return;
+    uniquePool.set(key, flower);
+  });
+
+  return shuffle([...Array.from(uniquePool.values()).slice(0, 3), correct]);
+}
+
+function flowerLocalSrc(flower) {
+  return '../' + flower.file;
+}
+
+function setImageWithFallback(img, flower) {
+  const fallbackSrc = flower.photo_url || PHOTO_PLACEHOLDER;
+
+  img.onerror = () => {
+    img.onerror = () => {
+      img.onerror = null;
+      img.src = PHOTO_PLACEHOLDER;
+    };
+    img.src = fallbackSrc;
+  };
+  img.src = flowerLocalSrc(flower);
+}
+
+function setQuestionPhoto(flower) {
+  setImageWithFallback(document.getElementById('photo'), flower);
+}
+
+function collectionsDataFrom(raw) {
+  if (raw.collections) return raw.collections;
+  if (raw.flowers) return { flowers1: { sessionCount: raw.sessionCount || 0, flowers: raw.flowers } };
+  return {};
 }
 
 function showReport(username, data) {
-  const flowers = data.flowers || {};
-  const sessions = data.sessionCount || 0;
-
   document.getElementById('report-username').textContent = username;
-  document.getElementById('report-meta').textContent =
-    `${sessions} סשנים · ${Object.keys(flowers).length} פרחים נראו`;
-
-  // Group flowers by box, using allFlowers for Hebrew names
-  const byBox = {1:[], 2:[], 3:[], 4:[], 5:[]};
-  allFlowers.forEach(f => {
-    const s = flowers[f.file];
-    if (!s) return;
-    byBox[s.box].push({ name: f.name_he, correct: s.correct, total: s.total, box: s.box });
-  });
-
   const sections = document.getElementById('report-sections');
   sections.innerHTML = '';
-  [5,4,3,2,1].forEach(box => {
-    const items = byBox[box];
-    if (!items.length) return;
-    const sec = document.createElement('div');
-    sec.className = 'report-section';
-    sec.innerHTML = `<h3><span class="box-dot" style="background:${BOX_COLORS[box-1]}"></span>${BOX_NAMES[box-1]} — קופסה ${box}</h3>`;
-    items.forEach(item => {
-      const pct = item.total ? Math.round((item.correct / item.total) * 100) : 0;
-      const row = document.createElement('div');
-      row.className = 'report-flower-row';
-      row.innerHTML = `
-        <span class="report-flower-name">${item.name}</span>
-        <span class="report-flower-acc">${item.correct}/${item.total} (${pct}%)</span>
-      `;
-      sec.appendChild(row);
+
+  if (currentCollection && allFlowers.length > 0) {
+    // In-game: detailed per-flower report for the current collection and mode.
+    const colData = (data.collections || {})[currentCollection.id] || { sessionCount: 0, flowers: {} };
+    const modeData = modesDataFrom(colData)[(currentGameMode || GAME_MODES[0]).id] || { sessionCount: 0, flowers: {} };
+    const flowers  = modeData.flowers || {};
+    document.getElementById('report-meta').textContent =
+      `${modeData.sessionCount || 0} משחקים · ${Object.keys(flowers).length} פרחים נראו · ${currentCollection.name} · ${(currentGameMode || GAME_MODES[0]).name}`;
+
+    const byBox = {1:[], 2:[], 3:[], 4:[], 5:[]};
+    allFlowers.forEach(f => {
+      const s = flowers[f.file];
+      if (!s || !byBox[s.box]) return;
+      byBox[s.box].push({ name: f.name_he, correct: s.correct, total: s.total });
     });
-    sections.appendChild(sec);
-  });
+    [5,4,3,2,1].forEach(box => {
+      const items = byBox[box];
+      if (!items.length) return;
+      const sec = document.createElement('div');
+      sec.className = 'report-section';
+      sec.innerHTML = `<h3><span class="box-dot" style="background:${BOX_COLORS[box-1]}"></span>${BOX_NAMES[box-1]} — קופסה ${box}</h3>`;
+      items.forEach(item => {
+        const pct = item.total ? Math.round((item.correct / item.total) * 100) : 0;
+        const row = document.createElement('div');
+        row.className = 'report-flower-row';
+        row.innerHTML = `<span class="report-flower-name">${item.name}</span>
+          <span class="report-flower-acc">${item.correct}/${item.total} (${pct}%)</span>`;
+        sec.appendChild(row);
+      });
+      sections.appendChild(sec);
+    });
+  } else {
+    // Login screen: summary per collection
+    const cols = collectionsDataFrom(data);
+    const total = Object.values(cols)
+      .flatMap(c => Object.values(modesDataFrom(c)))
+      .reduce((sum, mode) => sum + (mode.sessionCount || 0), 0);
+    document.getElementById('report-meta').textContent = `${total} משחקים סה"כ`;
+    allCollections.forEach(col => {
+      const colData = cols[col.id];
+      if (!colData) return;
+      const modeEntries = Object.values(modesDataFrom(colData));
+      const flowersSeen = new Set(modeEntries.flatMap(mode => Object.keys(mode.flowers || {})));
+      const mastered = modeEntries.reduce((sum, mode) =>
+        sum + Object.values(mode.flowers || {}).filter(f => f.box === 5).length, 0);
+      const sessions = modeEntries.reduce((sum, mode) => sum + (mode.sessionCount || 0), 0);
+      const sec = document.createElement('div');
+      sec.className = 'report-section';
+      sec.innerHTML = `<h3>${col.name}</h3>
+        <div style="font-size:0.9rem;color:#555;padding:4px 0">${sessions} משחקים · ${mastered}/${flowersSeen.size} שולט!</div>`;
+      sections.appendChild(sec);
+    });
+  }
 
   document.getElementById('report-overlay').classList.add('open');
 }
@@ -566,9 +1064,23 @@ document.getElementById('report-overlay').addEventListener('click', e => {
     document.getElementById('report-overlay').classList.remove('open');
 });
 
+function resetToLogin() {
+  localStorage.removeItem(USER_KEY);
+  currentUser = null;
+  currentUserData = null;
+  currentCollection = null;
+  currentGameMode = null;
+  currentQuestionCount = DEFAULT_QUESTION_COUNT;
+  ['header', 'card', 'progress', 'summary', 'collection-screen'].forEach(id => {
+    document.getElementById(id).style.display = 'none';
+  });
+  document.getElementById('name-input').value = '';
+  document.getElementById('new-user-form').style.display = 'none';
+  document.getElementById('add-user-btn').style.display = 'block';
+}
+
 async function showLogin() {
-  const screen = document.getElementById('login-screen');
-  screen.style.display = 'block';
+  document.getElementById('login-screen').style.display = 'block';
 
   const list = document.getElementById('user-list');
   list.innerHTML = '<div style="color:#aaa;font-size:0.9rem;padding:8px 0">טוען משתמשים...</div>';
@@ -578,11 +1090,12 @@ async function showLogin() {
   snap.docs
     .sort((a, b) => a.id.localeCompare(b.id))
     .forEach(d => {
-      const data = d.data();
-      const flowers = data.flowers || {};
-      const mastered = Object.values(flowers).filter(f => f.box === 5).length;
-      const total    = Object.values(flowers).length;
-      const sessions = data.sessionCount || 0;
+      const cols = collectionsDataFrom(d.data());
+      const modeEntries = Object.values(cols).flatMap(c => Object.values(modesDataFrom(c)));
+      const totalSessions = modeEntries.reduce((s, mode) => s + (mode.sessionCount || 0), 0);
+      const allFlowersSeen = new Set(modeEntries.flatMap(mode => Object.keys(mode.flowers || {})));
+      const allMastered    = modeEntries.reduce((s, mode) =>
+        s + Object.values(mode.flowers || {}).filter(f => f.box === 5).length, 0);
 
       const row = document.createElement('div');
       row.style.cssText = 'display:flex;gap:8px;align-items:stretch;';
@@ -592,7 +1105,7 @@ async function showLogin() {
       btn.style.cssText = 'flex:1;width:auto;';
       btn.innerHTML = `
         <span class="user-name">${d.id}</span>
-        <span class="user-stats">${sessions} סשנים · ${mastered}/${total} שולט!</span>
+        <span class="user-stats">${totalSessions} משחקים · ${allMastered}/${allFlowersSeen.size} שולט!</span>
       `;
       btn.addEventListener('click', () => doLogin(d.id).catch(console.error));
 
@@ -610,8 +1123,7 @@ async function showLogin() {
 }
 
 document.getElementById('add-user-btn').addEventListener('click', () => {
-  const form = document.getElementById('new-user-form');
-  form.style.display = 'block';
+  document.getElementById('new-user-form').style.display = 'block';
   document.getElementById('add-user-btn').style.display = 'none';
   document.getElementById('name-input').focus();
 });
@@ -622,7 +1134,8 @@ async function doLogin(name) {
   localStorage.setItem(USER_KEY, name);
   currentUser = name;
   document.getElementById('login-screen').style.display = 'none';
-  await startSession();
+  currentUserData = await loadUserData(currentUser);
+  showCollectionPicker();
 }
 
 document.getElementById('login-btn').addEventListener('click', () => {
@@ -634,33 +1147,154 @@ document.getElementById('name-input').addEventListener('keydown', e => {
 document.getElementById('report-user').addEventListener('click', () => {
   showReport(currentUser, currentUserData);
 });
-
+document.getElementById('change-collection').addEventListener('click', () => {
+  ['header', 'card', 'progress', 'summary'].forEach(id => {
+    document.getElementById(id).style.display = 'none';
+  });
+  showCollectionPicker();
+});
 document.getElementById('switch-user').addEventListener('click', () => {
-  localStorage.removeItem(USER_KEY);
-  document.getElementById('header').style.display = 'none';
-  document.getElementById('card').style.display = 'none';
-  document.getElementById('progress').style.display = 'none';
-  document.getElementById('summary').style.display = 'none';
-  document.getElementById('name-input').value = '';
-  document.getElementById('new-user-form').style.display = 'none';
-  document.getElementById('add-user-btn').style.display = 'block';
+  resetToLogin();
   showLogin().catch(console.error);
+});
+document.getElementById('switch-user-from-collection').addEventListener('click', () => {
+  resetToLogin();
+  showLogin().catch(console.error);
+});
+
+function showCollectionPicker() {
+  document.getElementById('collection-screen').style.display = 'block';
+  document.getElementById('collection-welcome').style.color = '#555';
+  document.getElementById('collection-welcome').textContent = `שלום, ${currentUser}! בחר אוסף ומצב משחק:`;
+
+  const lastCol = currentUserData ? currentUserData.lastCollection : null;
+  const lastMode = currentUserData ? currentUserData.lastGameMode : null;
+  const lastQuestionCount = currentUserData ? currentUserData.lastQuestionCount : null;
+  currentCollection = allCollections.find(col => col.id === lastCol) || allCollections[0] || null;
+  currentGameMode = getGameMode(lastMode || DEFAULT_GAME_MODE_ID);
+  currentQuestionCount = getQuestionCount(lastQuestionCount || DEFAULT_QUESTION_COUNT);
+
+  const collectionList = document.getElementById('collection-list');
+  const modeList = document.getElementById('game-mode-list');
+  const questionCountList = document.getElementById('question-count-list');
+  const customQuestionCount = document.getElementById('custom-question-count');
+  const startBtn = document.getElementById('start-game');
+  const isPresetQuestionCount = QUESTION_COUNT_OPTIONS.some(option => option.value === currentQuestionCount);
+  customQuestionCount.value = !isPresetQuestionCount && currentQuestionCount !== 'all'
+    ? currentQuestionCount
+    : '';
+
+  function renderSelection() {
+    collectionList.querySelectorAll('.collection-btn').forEach(btn => {
+      btn.classList.toggle('selected', btn.dataset.collectionId === (currentCollection && currentCollection.id));
+    });
+    modeList.querySelectorAll('.game-mode-btn').forEach(btn => {
+      btn.classList.toggle('selected', btn.dataset.modeId === (currentGameMode && currentGameMode.id));
+    });
+    questionCountList.querySelectorAll('.question-count-btn').forEach(btn => {
+      btn.classList.toggle('selected', btn.dataset.questionCount === String(currentQuestionCount));
+    });
+    startBtn.disabled = !(currentCollection && currentGameMode && currentQuestionCount);
+  }
+
+  collectionList.innerHTML = '';
+  allCollections.forEach(col => {
+    const isLast = col.id === lastCol;
+    const btn = document.createElement('button');
+    btn.className = 'collection-btn';
+    btn.dataset.collectionId = col.id;
+    btn.textContent = col.name + (isLast ? ' ★' : '');
+    btn.addEventListener('click', () => {
+      currentCollection = col;
+      renderSelection();
+    });
+    collectionList.appendChild(btn);
+  });
+
+  modeList.innerHTML = '';
+  GAME_MODES.forEach(mode => {
+    const isLast = mode.id === lastMode;
+    const btn = document.createElement('button');
+    btn.className = 'game-mode-btn';
+    btn.dataset.modeId = mode.id;
+    btn.innerHTML = `
+      <span class="game-mode-title">${mode.name}${isLast ? ' ★' : ''}</span>
+      <span class="game-mode-desc">${mode.description}</span>
+    `;
+    btn.addEventListener('click', () => {
+      currentGameMode = mode;
+      renderSelection();
+    });
+    modeList.appendChild(btn);
+  });
+
+  questionCountList.innerHTML = '';
+  QUESTION_COUNT_OPTIONS.forEach(option => {
+    const isLast = option.value === lastQuestionCount;
+    const btn = document.createElement('button');
+    btn.className = 'question-count-btn';
+    btn.dataset.questionCount = String(option.value);
+    btn.textContent = option.label + (isLast ? ' ★' : '');
+    btn.addEventListener('click', () => {
+      currentQuestionCount = option.value;
+      customQuestionCount.value = '';
+      renderSelection();
+    });
+    questionCountList.appendChild(btn);
+  });
+
+  customQuestionCount.oninput = () => {
+    if (!customQuestionCount.value) {
+      currentQuestionCount = null;
+      renderSelection();
+      return;
+    }
+    const count = Number(customQuestionCount.value);
+    if (Number.isInteger(count) && count > 0) {
+      currentQuestionCount = count;
+    } else {
+      currentQuestionCount = null;
+    }
+    renderSelection();
+  };
+
+  renderSelection();
+}
+
+document.getElementById('start-game').addEventListener('click', () => {
+  if (!currentCollection || !currentGameMode || !currentQuestionCount) return;
+  document.getElementById('collection-screen').style.display = 'none';
+  startSession().catch(err => {
+    document.getElementById('loading').style.display = 'none';
+    showCollectionPicker();
+    document.getElementById('collection-welcome').textContent = `שגיאה: ${err.message}`;
+    document.getElementById('collection-welcome').style.color = '#dc3545';
+  });
 });
 
 async function startSession() {
   document.getElementById('loading').style.display = 'block';
-  document.getElementById('loading').textContent = 'טוען נתוני משתמש... 🌸';
+  document.getElementById('loading').textContent = 'טוען... 🌸';
+
+  const resp = await fetch('../' + currentCollection.file);
+  if (!resp.ok) throw new Error('לא ניתן לטעון את האוסף');
+  allFlowers = await resp.json();
+  if (allFlowers.length < 4) throw new Error('צריך לפחות 4 פרחים כדי לשחק');
 
   currentUserData = await loadUserData(currentUser);
-  currentUserData.sessionCount++;
+  currentUserData.lastCollection = currentCollection.id;
+  currentUserData.lastGameMode = currentGameMode.id;
+  currentUserData.lastQuestionCount = currentQuestionCount;
+  const modeState = getModeState(currentUserData);
+  modeState.sessionCount++;
   await saveUserData(currentUser, currentUserData);
 
-  sessionQueue = buildSessionQueue(currentUserData);
-  currentIdx = 0;
+  sessionQueue = buildSessionQueue(currentUserData, currentQuestionCount);
+  currentIdx   = 0;
   sessionScore = 0;
 
   document.getElementById('loading').style.display = 'none';
-  document.getElementById('username-label').textContent = currentUser;
+  document.getElementById('username-label').textContent = `${currentUser} · ${currentCollection.name} · ${currentGameMode.name}`;
   document.getElementById('score').textContent = '0';
   document.getElementById('header').style.display = 'flex';
   document.getElementById('progress').style.display = 'block';
@@ -672,8 +1306,13 @@ async function startSession() {
 function showQuestion() {
   const flower = sessionQueue[currentIdx];
   const state  = getFlowerState(currentUserData, flower.file);
+  const mode = currentGameMode || GAME_MODES[0];
+  const isPhotoAnswerMode = mode.answerType === 'photo';
 
-  document.getElementById('photo').src = '../' + flower.file;
+  document.getElementById('card').classList.remove('answered');
+  document.getElementById('card').classList.toggle('image-choice-mode', isPhotoAnswerMode);
+  if (!isPhotoAnswerMode) setQuestionPhoto(flower);
+  document.getElementById('question-text').textContent = mode.question(flower);
   document.getElementById('progress').textContent =
     `שאלה ${currentIdx + 1} מתוך ${sessionQueue.length}`;
   document.getElementById('box-badge').textContent = `${BOX_NAMES[state.box - 1]} (רמה ${state.box}/5)`;
@@ -684,19 +1323,37 @@ function showQuestion() {
   const choicesEl = document.getElementById('choices');
   choicesEl.innerHTML = '';
   options.forEach(opt => {
-    const btn = document.createElement('div');
+    const btn = document.createElement('button');
+    btn.type = 'button';
     btn.className = 'choice';
-    btn.innerHTML = `<div class="he">${opt.name_he}</div><div class="en">${opt.name_en}</div>`;
+    btn.dataset.answerKey = answerKey(opt);
+    btn.dataset.isCorrect = opt === flower ? 'true' : 'false';
+    if (isPhotoAnswerMode) {
+      const img = document.createElement('img');
+      img.className = 'choice-img';
+      img.alt = answerKey(opt);
+      setImageWithFallback(img, opt);
+      btn.appendChild(img);
+    } else {
+      btn.innerHTML = `<div class="he">${opt.name_he}</div><div class="en">${opt.name_en}</div>`;
+    }
     btn.addEventListener('click', () => handleAnswer(btn, opt, flower));
     choicesEl.appendChild(btn);
   });
 
   document.getElementById('next-btn').style.display = 'none';
   document.getElementById('info-box').style.display = 'none';
+  requestAnimationFrame(() => {
+    document.getElementById('card').scrollIntoView({ block: 'start' });
+  });
 }
 
 function handleAnswer(btn, chosen, correct) {
-  document.querySelectorAll('.choice').forEach(b => b.classList.add('disabled'));
+  document.getElementById('card').classList.add('answered');
+  document.querySelectorAll('.choice').forEach(b => {
+    b.classList.add('disabled');
+    b.disabled = true;
+  });
 
   const isCorrect = chosen === correct;
 
@@ -707,9 +1364,15 @@ function handleAnswer(btn, chosen, correct) {
   } else {
     btn.classList.add('wrong');
     document.querySelectorAll('.choice').forEach(b => {
-      if (b.querySelector('.he').textContent === correct.name_he) b.classList.add('reveal');
+      if (b.dataset.answerKey === answerKey(correct)) b.classList.add('reveal');
     });
   }
+
+  document.querySelectorAll('.choice').forEach(b => {
+    const isSelected = b === btn;
+    const isCorrectChoice = b.dataset.isCorrect === 'true';
+    if (!isSelected && !isCorrectChoice) b.classList.add('hidden-after-answer');
+  });
 
   const state = getFlowerState(currentUserData, correct.file);
   state.total++;
@@ -719,7 +1382,7 @@ function handleAnswer(btn, chosen, correct) {
   } else {
     state.box = 1;
   }
-  state.lastSession = currentUserData.sessionCount;
+  state.lastSession = getModeState(currentUserData).sessionCount;
 
   saveUserData(currentUser, currentUserData).catch(console.error);
 
@@ -759,7 +1422,7 @@ function showSummary() {
     pct === 100 ? 'מושלם! אתה מומחה פרחים! 🌟' :
     pct >= 70  ? 'כל הכבוד! עשית עבודה נהדרת 🌻' :
     pct >= 40  ? 'לא רע! כדאי להתאמן עוד קצת 🌱' :
-                 'המשך להתאמן, אתה תשתפר! 💪';
+               'המשך להתאמן, אתה תשתפר! 💪';
 
   const boxCounts = [0, 0, 0, 0, 0];
   allFlowers.forEach(f => {
@@ -782,22 +1445,23 @@ function showSummary() {
 }
 
 document.getElementById('restart-btn').addEventListener('click', () => {
-  startSession().catch(console.error);
+  document.getElementById('summary').style.display = 'none';
+  showCollectionPicker();
 });
 
 (async () => {
   try {
-    const resp = await fetch('../flowers.json');
-    if (!resp.ok) throw new Error('לא ניתן לטעון את flowers.json');
-    allFlowers = await resp.json();
-    if (allFlowers.length < 4) throw new Error('צריך לפחות 4 פרחים כדי לשחק');
+    const resp = await fetch('../collections.json');
+    if (!resp.ok) throw new Error('לא ניתן לטעון את רשימת הקולקציות');
+    allCollections = await resp.json();
 
     document.getElementById('loading').style.display = 'none';
 
     const saved = localStorage.getItem(USER_KEY);
     if (saved) {
       currentUser = saved;
-      await startSession();
+      currentUserData = await loadUserData(currentUser);
+      showCollectionPicker();
     } else {
       await showLogin();
     }

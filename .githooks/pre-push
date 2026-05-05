@@ -1,0 +1,23 @@
+#!/bin/sh
+# Block direct pushes to main and preserve Git LFS pre-push behavior.
+
+remote_name=$1
+remote_url=$2
+
+while read local_ref local_sha remote_ref remote_sha
+do
+  if [ "$remote_ref" = "refs/heads/main" ]; then
+    echo ""
+    echo "Blocked: do not push directly to main."
+    echo "Push a feature branch and open a PR into main instead."
+    echo ""
+    exit 1
+  fi
+done
+
+if command -v git-lfs >/dev/null 2>&1; then
+  git lfs pre-push "$remote_name" "$remote_url"
+else
+  printf >&2 "\n%s\n\n" "This repository uses Git LFS but 'git-lfs' was not found on your path."
+  exit 2
+fi

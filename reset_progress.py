@@ -11,10 +11,13 @@ Usage:
 """
 import argparse
 import json
+import os
 import requests
+from dotenv import load_dotenv
+load_dotenv()
 
 PROJECT_ID = "flowers-game-5e085"
-API_KEY    = "AIzaSyChw-uXFymNKrZIVOE2DZbVtGBfuQOpcn4"
+API_KEY    = os.environ["FIREBASE_API_KEY"]
 BASE_URL   = f"https://firestore.googleapis.com/v1/projects/{PROJECT_ID}/databases/(default)/documents"
 
 
@@ -102,6 +105,8 @@ def main():
     if args.dry_run:
         print("Dry run — לא בוצעו שינויים.")
     else:
+        # Touch sentinel file so the pre-commit hook knows reset was run
+        open(".last_reset", "w").close()
         print("סיום.")
 
 

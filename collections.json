@@ -1,0 +1,5 @@
+[
+  { "id": "walks",   "name": "הטיולים שלי — 31 פרחים",        "file": "flowers_walks.json" },
+  { "id": "top30",   "name": "30 פרחי ירושלים הנפוצים",       "file": "flowers_top30.json" },
+  { "id": "flowers2","name": "פרחי ירושלים — אוסף מלא (562)", "file": "flowers2.json" }
+]
