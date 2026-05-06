@@ -1,4 +1,7 @@
 [
+  { "id": "flags",   "name": "דגלי מדינות — 195 דגלים",       "file": "country_flags.json", "question": "איזו מדינה זו?", "itemLabel": "דגלים" },
+  { "id": "top50-flags", "name": "50 הדגלים הגדולים באוכלוסייה", "file": "top50_flags.json", "question": "איזו מדינה זו?", "itemLabel": "דגלים" },
+  { "id": "emea-flags", "name": "דגלי EMEA",                    "file": "emea_flags.json", "question": "איזו מדינה זו?", "itemLabel": "דגלים" },
   { "id": "walks",   "name": "הטיולים שלי — 31 פרחים",        "file": "flowers_walks.json" },
   { "id": "top30",   "name": "30 פרחי ירושלים הנפוצים",       "file": "flowers_top30.json" },
   { "id": "flowers2","name": "פרחי ירושלים — אוסף מלא (562)", "file": "flowers2.json" }
