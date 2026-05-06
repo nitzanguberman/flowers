@@ -443,7 +443,7 @@
   #collection-welcome { font-size: 1rem; color: #555; margin-bottom: 20px; }
   #picker-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 0.8fr;
+    grid-template-columns: 0.8fr 1.1fr 1fr 0.8fr;
     gap: 18px;
     width: 100%;
     margin-bottom: 18px;
@@ -458,9 +458,11 @@
     margin-bottom: 8px;
     font-weight: 700;
   }
+  #topic-list,
   #collection-list,
   #game-mode-list,
   #question-count-list { display: flex; flex-direction: column; gap: 10px; width: 100%; }
+  .topic-btn,
   .collection-btn,
   .game-mode-btn,
   .question-count-btn {
@@ -484,9 +486,11 @@
   }
   .game-mode-title { font-weight: 900; }
   .game-mode-desc { font-size: 0.84rem; color: #666; font-weight: 400; line-height: 1.35; }
+  .topic-btn:hover,
   .collection-btn:hover,
   .game-mode-btn:hover,
   .question-count-btn:hover { background: #d4edda; border-color: #2d6a4f; }
+  .topic-btn.selected,
   .collection-btn.selected,
   .game-mode-btn.selected,
   .question-count-btn.selected { border-color: #2d6a4f; background: #e8f5e0; font-weight: bold; }
@@ -727,6 +731,10 @@
   <p id="collection-welcome"></p>
   <div id="picker-grid">
     <div class="picker-section">
+      <h2>נושא</h2>
+      <div id="topic-list"></div>
+    </div>
+    <div class="picker-section">
       <h2>אוסף</h2>
       <div id="collection-list"></div>
     </div>
@@ -852,6 +860,7 @@ const QUESTION_COUNT_OPTIONS = [
 ];
 
 let allCollections  = [];
+let currentTopic = null;
 let currentCollection = null;
 let allFlowers      = [];
 let sessionQueue    = [];
@@ -879,6 +888,23 @@ function itemKey(item) {
 
 function collectionItemLabel() {
   return currentCollection.itemLabel || 'פרחים';
+}
+
+function collectionTopic(collection) {
+  return collection.topic || { id: 'general', name: 'כללי' };
+}
+
+function collectionTopics() {
+  const topics = new Map();
+  allCollections.forEach(collection => {
+    const topic = collectionTopic(collection);
+    if (!topics.has(topic.id)) topics.set(topic.id, topic);
+  });
+  return Array.from(topics.values());
+}
+
+function collectionsForTopic(topicId) {
+  return allCollections.filter(collection => collectionTopic(collection).id === topicId);
 }
 
 function getFlowerState(userData, key) {
@@ -1114,6 +1140,7 @@ function resetToLogin() {
   localStorage.removeItem(USER_KEY);
   currentUser = null;
   currentUserData = null;
+  currentTopic = null;
   currentCollection = null;
   ['header', 'card', 'progress', 'summary', 'collection-screen'].forEach(id => {
     document.getElementById(id).style.display = 'none';
@@ -1211,10 +1238,13 @@ function showCollectionPicker() {
   const lastCol = currentUserData ? currentUserData.lastCollection : null;
   const lastMode = currentUserData ? currentUserData.lastGameMode : null;
   const lastQuestionCount = currentUserData ? currentUserData.lastQuestionCount : null;
+  const topics = collectionTopics();
   currentCollection = allCollections.find(col => col.id === lastCol) || allCollections[0] || null;
+  currentTopic = currentCollection ? collectionTopic(currentCollection).id : (topics[0] && topics[0].id);
   currentGameMode = GAME_MODES.some(mode => mode.id === lastMode) ? lastMode : DEFAULT_GAME_MODE;
   currentQuestionCount = normalizeQuestionCount(lastQuestionCount || DEFAULT_QUESTION_COUNT);
 
+  const topicList = document.getElementById('topic-list');
   const collectionList = document.getElementById('collection-list');
   const modeList = document.getElementById('game-mode-list');
   const questionCountList = document.getElementById('question-count-list');
@@ -1226,6 +1256,9 @@ function showCollectionPicker() {
     : '';
 
   function renderSelection() {
+    topicList.querySelectorAll('.topic-btn').forEach(btn => {
+      btn.classList.toggle('selected', btn.dataset.topicId === currentTopic);
+    });
     collectionList.querySelectorAll('.collection-btn').forEach(btn => {
       btn.classList.toggle('selected', btn.dataset.collectionId === (currentCollection && currentCollection.id));
     });
@@ -1238,19 +1271,39 @@ function showCollectionPicker() {
     startBtn.disabled = !(currentCollection && currentGameMode && currentQuestionCount);
   }
 
-  collectionList.innerHTML = '';
-  allCollections.forEach(col => {
-    const isLast = col.id === lastCol;
-    const btn = document.createElement('button');
-    btn.className = 'collection-btn';
-    btn.dataset.collectionId = col.id;
-    btn.textContent = col.name + (isLast ? ' ★' : '');
-    btn.addEventListener('click', () => {
-      currentCollection = col;
-      renderSelection();
+  function renderCollections() {
+    collectionList.innerHTML = '';
+    collectionsForTopic(currentTopic).forEach(col => {
+      const isLast = col.id === lastCol;
+      const btn = document.createElement('button');
+      btn.className = 'collection-btn';
+      btn.dataset.collectionId = col.id;
+      btn.textContent = col.name + (isLast ? ' ★' : '');
+      btn.addEventListener('click', () => {
+        currentCollection = col;
+        renderSelection();
+      });
+      collectionList.appendChild(btn);
     });
-    collectionList.appendChild(btn);
+    renderSelection();
+  }
+
+  topicList.innerHTML = '';
+  topics.forEach(topic => {
+    const btn = document.createElement('button');
+    btn.className = 'topic-btn';
+    btn.dataset.topicId = topic.id;
+    btn.textContent = topic.name;
+    btn.addEventListener('click', () => {
+      currentTopic = topic.id;
+      currentCollection = collectionsForTopic(currentTopic)[0] || null;
+      renderCollections();
+    });
+    topicList.appendChild(btn);
   });
+
+  collectionList.innerHTML = '';
+  renderCollections();
 
   modeList.innerHTML = '';
   GAME_MODES.forEach(mode => {
